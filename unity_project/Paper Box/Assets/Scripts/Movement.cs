@@ -6,7 +6,8 @@ public class Movement : MonoBehaviour
 {
     public float accMove;
     public float dccMove;
-    public float speedMoveMax;
+    public float speedWalkMax;
+    public float speedRunMax;
     public float gravity;
     public float speedJump;
 
@@ -42,18 +43,21 @@ public class Movement : MonoBehaviour
             velocityMovement.y = Mathf.MoveTowards(velocityMovement.y, 0, dccMove * Time.deltaTime);
         }
 
+        // get move speed
+        float speedMove = Input.GetKey(KeyCode.LeftShift) ? speedRunMax : speedWalkMax;
+
         // update movement velocity
         if (inputMovement.x != 0)
         {
-            velocityMovement.x = Mathf.MoveTowards(velocityMovement.x, inputMovement.x * speedMoveMax, accMove * Time.deltaTime);
+            velocityMovement.x = Mathf.MoveTowards(velocityMovement.x, inputMovement.x * speedMove, accMove * Time.deltaTime);
         }
         if (inputMovement.y != 0)
         {
-            velocityMovement.y = Mathf.MoveTowards(velocityMovement.y, inputMovement.y * speedMoveMax, accMove * Time.deltaTime);
+            velocityMovement.y = Mathf.MoveTowards(velocityMovement.y, inputMovement.y * speedMove, accMove * Time.deltaTime);
         }
 
         // clamp movement velocity
-        velocityMovement = Vector3.ClampMagnitude(velocityMovement, speedMoveMax);
+        velocityMovement = Vector3.ClampMagnitude(velocityMovement, speedMove);
 
         // calculate movement
         Vector3 movement = Vector3.zero;
