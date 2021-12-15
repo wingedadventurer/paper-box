@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    public GameObject ui;
     public GameObject panelInventory, panelPause;
 
     private bool paused;
 
     void Start()
     {
+        ui.SetActive(true);
         panelInventory.SetActive(false);
         panelPause.SetActive(false);
         SetPaused(false);

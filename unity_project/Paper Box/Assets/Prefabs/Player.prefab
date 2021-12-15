@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 6
+  active: 0
   transformHead: {fileID: 4970877875814414149}
 --- !u!114 &5762246057294669704
 MonoBehaviour:
@@ -153,12 +154,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c8828fb41b88540b892d034562ea20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accMove: 12
+  accMove: 10
   dccMove: 16
-  speedWalkMax: 2.5
+  speedWalkMax: 2.25
   speedRunMax: 4
   gravity: 10
   speedJump: 4.5
+  active: 0
   characterController: {fileID: 4470392158604051388}
   camHead: {fileID: 884386163586549319}
   ceilingChecker: {fileID: 3196667378994553876}
