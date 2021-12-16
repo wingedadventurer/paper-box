@@ -6,4 +6,5 @@ using UnityEngine;
 public class DataItem : ScriptableObject
 {
     new public string name;
+    public Sprite sprite;
 }

@@ -46,6 +46,13 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void CloseInventory()
+    {
+        SetPaused(false);
+        LockMouse(true);
+        panelInventory.SetActive(false);
+    }
+
     private void SetPaused(bool value)
     {
         paused = value;
