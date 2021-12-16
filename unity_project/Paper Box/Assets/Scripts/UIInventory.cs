@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PanelInventory : MonoBehaviour
+public class UIInventory : MonoBehaviour
 {
     [Header("Ref")]
     public GameObject prefabUIItem;
@@ -25,25 +25,25 @@ public class PanelInventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            AddItem();
+            AddItem(dataItemTest);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            DeleteItem();
+            DeleteLastItem();
         }
     }
 
-    private void AddItem()
+    public void AddItem(DataItem data)
     {
         GameObject go = Instantiate(prefabUIItem);
         go.transform.SetParent(goItemGrid.transform);
         UIItem uiItem = go.GetComponent<UIItem>();
-        uiItem.panelInventory = this;
-        uiItem.SetDataItem(dataItemTest);
+        uiItem.uiInventory = this;
+        uiItem.SetDataItem(data);
         UpdateItemGridSize();
     }
 
-    private void DeleteItem()
+    private void DeleteLastItem()
     {
         if (goItemGrid.transform.childCount > 0)
         {

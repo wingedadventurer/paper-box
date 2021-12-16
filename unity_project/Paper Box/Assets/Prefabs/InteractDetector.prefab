@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2045415934697652572}
   - component: {fileID: 2045415934697652575}
   - component: {fileID: 2045415934697652571}
+  - component: {fileID: 692736221299365033}
   m_Layer: 6
   m_Name: InteractDetector
   m_TagString: InteractDetector
@@ -111,3 +112,22 @@ MonoBehaviour:
   matIdle: {fileID: 2100000, guid: 975b4cb4ae44aa14493d4b2d824553f8, type: 2}
   matHighlighted: {fileID: 2100000, guid: b422524b5673296479a158df2e7d2ae0, type: 2}
   matSelected: {fileID: 2100000, guid: f4b4d2701c2bea146802aad57c71074c, type: 2}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls: []
+  eventTest2:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &692736221299365033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045415934697652574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []

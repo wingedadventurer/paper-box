@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIItem : MonoBehaviour
 {
-    [HideInInspector] public PanelInventory panelInventory;
+    [HideInInspector] public UIInventory uiInventory;
 
     [Header("Ref")]
     public Image image;
@@ -14,17 +14,17 @@ public class UIItem : MonoBehaviour
 
     public void OnClick()
     {
-        panelInventory.OnUIItemClick(dataItem);
+        uiInventory.OnUIItemClick(dataItem);
     }
 
     public void OnPointerEnter()
     {
-        panelInventory.OnUIItemPointerEnter(dataItem);
+        uiInventory.OnUIItemPointerEnter(dataItem);
     }
 
     public void OnPointerExit()
     {
-        panelInventory.OnUIItemPointerExit();
+        uiInventory.OnUIItemPointerExit();
     }
 
     public void SetDataItem(DataItem dataItem2)

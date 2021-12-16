@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractDetector : MonoBehaviour
 {
     public Material matIdle, matHighlighted, matSelected;
+    public UnityEvent Interacted;
 
     private MeshRenderer meshRenderer;
     private bool highlighted;
@@ -38,7 +40,11 @@ public class InteractDetector : MonoBehaviour
     {
         if (highlighted)
         {
-            selected = true;
+            if (!selected)
+            {
+                Interacted.Invoke();
+                selected = true;
+            }
             meshRenderer.material = matSelected;
         }
     }

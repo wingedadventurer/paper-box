@@ -7,6 +7,7 @@ public class Game : MonoBehaviour
 {
     public GameObject ui;
     public GameObject panelInventory, panelPause;
+    public UIInventory uiInventory;
 
     private bool paused;
 
@@ -44,6 +45,11 @@ public class Game : MonoBehaviour
                 panelPause.SetActive(paused);
             }
         }
+    }
+
+    public void OnItemCollected(DataItem dataItem)
+    {
+        uiInventory.AddItem(dataItem);
     }
 
     public void CloseInventory()
