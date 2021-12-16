@@ -43,6 +43,19 @@ public class UIInventory : MonoBehaviour
         UpdateItemGridSize();
     }
 
+    public void DeleteItem(DataItem data)
+    {
+        for (int i = 0; i < goItemGrid.transform.childCount; i++)
+        {
+            UIItem uiItem = goItemGrid.transform.GetChild(i).GetComponent<UIItem>();
+            if (uiItem.GetDataItem() == data)
+            {
+                Destroy(uiItem.gameObject);
+                break;
+            }
+        }
+    }
+
     private void DeleteLastItem()
     {
         if (goItemGrid.transform.childCount > 0)
@@ -63,7 +76,7 @@ public class UIInventory : MonoBehaviour
         if (game)
         {
             textItemName.text = "";
-            game.CloseInventory();
+            game.OnInventoryItemSelected(dataItem);
         }
     }
 

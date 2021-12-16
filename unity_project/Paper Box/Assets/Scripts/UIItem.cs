@@ -33,4 +33,9 @@ public class UIItem : MonoBehaviour
         image.sprite = dataItem.sprite;
         image.enabled = true;
     }
+
+    public DataItem GetDataItem()
+    {
+        return dataItem;
+    }
 }

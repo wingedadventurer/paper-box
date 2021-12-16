@@ -9,6 +9,10 @@ public class Game : MonoBehaviour
     public GameObject panelInventory, panelPause;
     public UIInventory uiInventory;
 
+    public Image imageSelectedItem;
+
+    public DataItem dataItemSelected;
+
     private bool paused;
 
     void Start()
@@ -16,19 +20,27 @@ public class Game : MonoBehaviour
         ui.SetActive(true);
         panelInventory.SetActive(false);
         panelPause.SetActive(false);
+        imageSelectedItem.enabled = false;
         SetPaused(false);
         LockMouse(true);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetMouseButtonDown(1))
         {
             if (!panelPause.activeSelf)
             {
-                SetPaused(!paused);
-                LockMouse(!paused);
-                panelInventory.SetActive(paused);
+                if (dataItemSelected)
+                {
+                    ClearSelectedItem();
+                }
+                else
+                {
+                    SetPaused(!paused);
+                    LockMouse(!paused);
+                    panelInventory.SetActive(paused);
+                }
             }
         }
 
@@ -52,11 +64,32 @@ public class Game : MonoBehaviour
         uiInventory.AddItem(dataItem);
     }
 
-    public void CloseInventory()
+    public void OnInventoryItemSelected(DataItem dataItem)
     {
         SetPaused(false);
         LockMouse(true);
         panelInventory.SetActive(false);
+
+        dataItemSelected = dataItem;
+
+        // show item in game panel
+        imageSelectedItem.sprite = dataItem.sprite;
+        imageSelectedItem.enabled = true;
+    }
+
+    public void DeleteSelectedItem()
+    {
+        uiInventory.DeleteItem(dataItemSelected);
+        dataItemSelected = null;
+        imageSelectedItem.sprite = null;
+        imageSelectedItem.enabled = false;
+    }
+
+    public void ClearSelectedItem()
+    {
+        dataItemSelected = null;
+        imageSelectedItem.sprite = null;
+        imageSelectedItem.enabled = false;
     }
 
     private void SetPaused(bool value)
