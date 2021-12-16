@@ -4,38 +4,76 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    const float DETECT_DISTANCE = 1.0f;
+    const float DETECT_DISTANCE = 1.5f;
 
-    ClickDetector lastClickDetector;
+    InteractDetector lastClickDetector;
 
-    int layerInteraction;
+    bool interacting;
+    bool interactingLast;
 
-    //private void Start()
-    //{
-        //layerInteraction = LayerMask.GetMask("Interaction");
-    //}
-
+    private void Update()
+    {
+        // update interact input
+        interacting = Input.GetMouseButton(0) || Input.GetKey(KeyCode.E);
+    }
+    
     private void FixedUpdate()
     {
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-        RaycastHit raycastHit;
-        //Physics.Raycast(ray, out raycastHit, DETECT_DISTANCE, layerInteraction);
-        Physics.Raycast(ray, out raycastHit, DETECT_DISTANCE);
-        if (raycastHit.collider)
+        // check if interact changed
+        if (interactingLast != interacting)
         {
-            GameObject go = raycastHit.collider.gameObject;
-            if (go.tag == "ClickDetector")
+            interactingLast = interacting;
+            if (interacting)
             {
-                ClickDetector clickDetector = go.GetComponent<ClickDetector>();
-                if (lastClickDetector != clickDetector)
+                if (lastClickDetector)
                 {
-                    lastClickDetector = clickDetector;
-                    
+                    lastClickDetector.OnInteractStart();
                 }
             }
             else
             {
+                if (lastClickDetector)
+                {
+                    lastClickDetector.OnInteractEnd();
+                }
+            }
+        }
 
+        // update click detector
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        RaycastHit raycastHit;
+        Physics.Raycast(ray, out raycastHit, DETECT_DISTANCE);
+        if (raycastHit.collider)
+        {
+            GameObject go = raycastHit.collider.gameObject;
+            if (go.tag == "InteractDetector")
+            {
+                InteractDetector clickDetector = go.GetComponent<InteractDetector>();
+                if (lastClickDetector != clickDetector)
+                {
+                    if (lastClickDetector)
+                    {
+                        lastClickDetector.OnInteractExit();
+                    }
+                    lastClickDetector = clickDetector;
+                    lastClickDetector.OnInteractEnter();
+                }
+            }
+            else
+            {
+                if (lastClickDetector)
+                {
+                    lastClickDetector.OnInteractExit();
+                    lastClickDetector = null;
+                }
+            }
+        }
+        else
+        {
+            if (lastClickDetector)
+            {
+                lastClickDetector.OnInteractExit();
+                lastClickDetector = null;
             }
         }
     }

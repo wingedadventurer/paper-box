@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    const float ANGLE_Y_OFFSET_MAX = 89.0f;
+
     public float mouseSensitivity;
 
     [HideInInspector] public bool active;
@@ -26,7 +28,7 @@ public class MouseLook : MonoBehaviour
             transform.Rotate(Vector3.up, lookInput.x * mouseSensitivity);
 
             // apply look y input
-            mouseOffsetY = Mathf.Clamp(mouseOffsetY + lookInput.y * mouseSensitivity, -85.0f, 85.0f);
+            mouseOffsetY = Mathf.Clamp(mouseOffsetY + lookInput.y * mouseSensitivity, -ANGLE_Y_OFFSET_MAX, ANGLE_Y_OFFSET_MAX);
             transformHead.localEulerAngles = new Vector3(-mouseOffsetY, 0, 0);
         }
     }
