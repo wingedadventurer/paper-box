@@ -5,11 +5,10 @@ using UnityEngine;
 public class Pipe : MonoBehaviour
 {
     public GameObject goValve;
-    public Animation anim;
     public GameObject goIDPlace, goIDUse;
-    public DataItem requiredItem;
-
+    public Animation anim;
     public AnimationClip acPlace, acUse;
+    public DataItem requiredItem;
 
     private Game game;
 
@@ -24,8 +23,8 @@ public class Pipe : MonoBehaviour
         goIDPlace.SetActive(true);
         goIDUse.SetActive(false);
 
-        anim.AddClip(acPlace, "Place");
-        anim.AddClip(acUse, "Use");
+        anim.AddClip(acPlace, acPlace.name);
+        anim.AddClip(acUse, acUse.name);
     }
 
     public void OnIDPlace()
@@ -35,7 +34,7 @@ public class Pipe : MonoBehaviour
             goValve.SetActive(true);
             goIDPlace.SetActive(false);
             goIDUse.SetActive(true);
-            anim.Play("Place");
+            anim.Play(acPlace.name);
             game.DeleteSelectedItem();
             game.ClearSelectedItem();
         }
@@ -44,6 +43,6 @@ public class Pipe : MonoBehaviour
     public void OnIDUse()
     {
         goIDUse.SetActive(false);
-        anim.Play("Use");
+        anim.Play(acUse.name);
     }
 }

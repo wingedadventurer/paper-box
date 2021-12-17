@@ -1,8 +1,17 @@
 fileFormatVersion: 2
-guid: ef5dc570edeed6141890cc7e8755287c
+guid: 6f87e47d4f1f5ce468a9624e0a99279b
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -6414093867293338518
+    second: Valve|ValveUse
+  - first:
+      74: -5281307758016303150
+    second: Valve|VPlace
+  - first:
+      74: -7994269844306476840
+    second: Valve|VUse
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,13 +45,13 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -88,11 +97,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
