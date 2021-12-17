@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Pipe : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Pipe : MonoBehaviour
     public Animation anim;
     public AnimationClip acPlace, acUse;
     public DataItem requiredItem;
+
+    public UnityEvent Activated;
 
     private Game game;
 
@@ -44,5 +47,6 @@ public class Pipe : MonoBehaviour
     {
         goIDUse.SetActive(false);
         anim.Play(acUse.name);
+        Activated.Invoke();
     }
 }
