@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Game : MonoBehaviour
 
     public Image imageSelectedItem;
 
-    public DataItem dataItemSelected;
+    [HideInInspector] public DataItem dataItemSelected;
 
     private bool paused;
 
@@ -72,9 +73,7 @@ public class Game : MonoBehaviour
 
     public void OnInventoryItemSelected(DataItem dataItem)
     {
-        SetPaused(false);
-        LockMouse(true);
-        panelInventory.SetActive(false);
+        HideInventory();
 
         dataItemSelected = dataItem;
 
@@ -136,5 +135,30 @@ public class Game : MonoBehaviour
     private void LockMouse(bool value)
     {
         Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
+    }
+
+    public void HideInventory()
+    {
+        SetPaused(false);
+        LockMouse(true);
+        panelInventory.SetActive(false);
+    }
+
+    public void ResumeGame()
+    {
+        SetPaused(!paused);
+        LockMouse(!paused);
+        panelPause.SetActive(paused);
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("quit");
+        Application.Quit();
     }
 }

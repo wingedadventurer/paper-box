@@ -100,10 +100,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.0627451}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.1254902}
-    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.2509804}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.1254902}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.0627451}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.1254902}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0.2509804}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.1254902}
     m_DisabledColor: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 0.1254902}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aeb481bd700ac742a6035dcd5f682dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelInventory: {fileID: 0}
+  uiInventory: {fileID: 0}
   image: {fileID: 3949242032646369985}
 --- !u!1 &6956808416352335620
 GameObject:
