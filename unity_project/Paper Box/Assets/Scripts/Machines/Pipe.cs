@@ -38,8 +38,11 @@ public class Pipe : MonoBehaviour
             goIDPlace.SetActive(false);
             goIDUse.SetActive(true);
             anim.Play(acPlace.name);
-            game.DeleteSelectedItem();
-            game.ClearSelectedItem();
+            game.OnInteractSuccess();
+        }
+        else
+        {
+            game.OnInteractFail();
         }
     }
 
@@ -48,5 +51,6 @@ public class Pipe : MonoBehaviour
         goIDUse.SetActive(false);
         anim.Play(acUse.name);
         Activated.Invoke();
+        game.OnInteractSuccess();
     }
 }

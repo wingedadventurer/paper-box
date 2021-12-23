@@ -15,6 +15,8 @@ public class Game : MonoBehaviour
 
     private bool paused;
 
+    private Crosshair crosshair;
+
     void Start()
     {
         ui.SetActive(true);
@@ -23,6 +25,8 @@ public class Game : MonoBehaviour
         imageSelectedItem.enabled = false;
         SetPaused(false);
         LockMouse(true);
+
+        crosshair = FindObjectOfType<Crosshair>();
     }
 
     void Update()
@@ -34,6 +38,7 @@ public class Game : MonoBehaviour
                 if (dataItemSelected)
                 {
                     ClearSelectedItem();
+                    crosshair.SetEquipped(false);
                 }
                 else
                 {
@@ -62,6 +67,7 @@ public class Game : MonoBehaviour
     public void OnItemCollected(DataItem dataItem)
     {
         uiInventory.AddItem(dataItem);
+        crosshair.OnInteractSuccess();
     }
 
     public void OnInventoryItemSelected(DataItem dataItem)
@@ -72,17 +78,17 @@ public class Game : MonoBehaviour
 
         dataItemSelected = dataItem;
 
+        crosshair.SetEquipped(true);
+
         // show item in game panel
         imageSelectedItem.sprite = dataItem.sprite;
         imageSelectedItem.enabled = true;
     }
 
-    public void DeleteSelectedItem()
+    public void DeleteAndClearSelectedItem()
     {
         uiInventory.DeleteItem(dataItemSelected);
-        dataItemSelected = null;
-        imageSelectedItem.sprite = null;
-        imageSelectedItem.enabled = false;
+        ClearSelectedItem();
     }
 
     public void ClearSelectedItem()
@@ -90,6 +96,18 @@ public class Game : MonoBehaviour
         dataItemSelected = null;
         imageSelectedItem.sprite = null;
         imageSelectedItem.enabled = false;
+        crosshair.SetEquipped(false);
+    }
+
+    public void OnInteractSuccess()
+    {
+        DeleteAndClearSelectedItem();
+        crosshair.OnInteractSuccess();
+    }
+
+    public void OnInteractFail()
+    {
+        crosshair.OnInteractFail();
     }
 
     private void SetPaused(bool value)

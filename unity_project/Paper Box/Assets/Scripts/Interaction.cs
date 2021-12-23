@@ -6,15 +6,23 @@ public class Interaction : MonoBehaviour
 {
     const float DETECT_DISTANCE = 1.5f;
 
-    InteractDetector lastClickDetector;
+    private InteractDetector lastClickDetector;
 
-    bool interacting;
-    bool interactingLast;
+    private bool interacting;
+    private bool interactingLast;
+
+    private Crosshair crosshair;
+
+    private void Start()
+    {
+        crosshair = FindObjectOfType<Crosshair>();
+    }
 
     private void Update()
     {
         // update interact input
         interacting = Input.GetMouseButton(0) || Input.GetKey(KeyCode.E);
+        crosshair.SetCanInteract(lastClickDetector != null);
     }
     
     private void FixedUpdate()
