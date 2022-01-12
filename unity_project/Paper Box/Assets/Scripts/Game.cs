@@ -18,9 +18,13 @@ public class Game : MonoBehaviour
 
     private Crosshair crosshair;
 
-    void Start()
+    private void Awake()
     {
         ui.SetActive(true);
+    }
+
+    void Start()
+    {
         panelInventory.SetActive(false);
         panelPause.SetActive(false);
         imageSelectedItem.enabled = false;

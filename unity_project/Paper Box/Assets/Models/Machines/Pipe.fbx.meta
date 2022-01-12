@@ -1,20 +1,14 @@
 fileFormatVersion: 2
-guid: 6f87e47d4f1f5ce468a9624e0a99279b
+guid: 108f63178ed723445aff6c32b5e148c7
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -5281307758016303150
-    second: Valve|VPlace
+      74: 7022280372352786926
+    second: Armature|ValvePlace
   - first:
-      74: -7994269844306476840
-    second: Valve|VUse
-  - first:
-      74: -5364838448200262180
-    second: PipeVertical.010|VPlace
-  - first:
-      74: 2663100883251199230
-    second: PipeVertical.010|VUse
+      74: -1518455918344527407
+    second: Armature|ValveUse
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -100,11 +94,11 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1

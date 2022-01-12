@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Pipe : MonoBehaviour
 {
     public GameObject goValve;
-    public GameObject goIDPlace, goIDUse;
+    public InteractDetector idPlace, idUse;
     public Animation anim;
     public AnimationClip acPlace, acUse;
     public DataItem requiredItem;
@@ -18,13 +18,18 @@ public class Pipe : MonoBehaviour
     private void Awake()
     {
         game = FindObjectOfType<Game>();
+
+        idPlace.Interacted.AddListener(OnIDPlace);
+        idUse.Interacted.AddListener(OnIDUse);
     }
 
     void Start()
     {
+        
+
         goValve.SetActive(false);
-        goIDPlace.SetActive(true);
-        goIDUse.SetActive(false);
+        idPlace.enabled = true;
+        idUse.enabled = false;
 
         anim.AddClip(acPlace, acPlace.name);
         anim.AddClip(acUse, acUse.name);
@@ -35,8 +40,8 @@ public class Pipe : MonoBehaviour
         if (game.dataItemSelected && game.dataItemSelected == requiredItem)
         {
             goValve.SetActive(true);
-            goIDPlace.SetActive(false);
-            goIDUse.SetActive(true);
+            idPlace.enabled = false;
+            idUse.enabled = true;
             anim.Play(acPlace.name);
             game.OnInteractSuccess();
         }
@@ -48,7 +53,7 @@ public class Pipe : MonoBehaviour
 
     public void OnIDUse()
     {
-        goIDUse.SetActive(false);
+        idUse.enabled = false;
         anim.Play(acUse.name);
         Activated.Invoke();
         game.OnInteractSuccess();
