@@ -121,15 +121,6 @@ public class Game : MonoBehaviour
         {
             o.active = !paused;
         }
-
-        if (paused)
-        {
-            
-        }
-        else
-        {
-
-        }
     }
 
     private void LockMouse(bool value)

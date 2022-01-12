@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045415934697652574}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -108,9 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matIdle: {fileID: 2100000, guid: 975b4cb4ae44aa14493d4b2d824553f8, type: 2}
-  matHighlighted: {fileID: 2100000, guid: b422524b5673296479a158df2e7d2ae0, type: 2}
-  matSelected: {fileID: 2100000, guid: f4b4d2701c2bea146802aad57c71074c, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
