@@ -1,41 +1,9 @@
 fileFormatVersion: 2
-guid: 6f87e47d4f1f5ce468a9624e0a99279b
+guid: fbf5e1ee32758894fad3cec9b409d185
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: -6414093867293338518
-    second: Valve|ValveUse
-  - first:
-      74: -5281307758016303150
-    second: Valve|VPlace
-  - first:
-      74: -7994269844306476840
-    second: Valve|VUse
-  - first:
-      74: 9096672580050308841
-    second: Valve|Shader NodetreeAction
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DoorFrame
-    second: {fileID: 2100000, guid: 31963a8dc140ab14b8987c857c932267, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Paper
-    second: {fileID: 2100000, guid: d28ce62aa590c3e44bf75c7dea01332b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pipe
-    second: {fileID: 2100000, guid: 52224fbe7df8054418cf1cfb80c907fe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Red
-    second: {fileID: 2100000, guid: a6e111fb9856dc0498aa74bcdd4a8e75, type: 2}
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -68,7 +36,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
