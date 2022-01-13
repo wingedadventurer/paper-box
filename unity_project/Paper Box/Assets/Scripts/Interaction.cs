@@ -57,7 +57,7 @@ public class Interaction : MonoBehaviour
             if (go.tag == "InteractDetector")
             {
                 InteractDetector clickDetector = go.GetComponent<InteractDetector>();
-                if (lastClickDetector != clickDetector)
+                if (lastClickDetector != clickDetector && clickDetector.enabled)
                 {
                     if (lastClickDetector)
                     {

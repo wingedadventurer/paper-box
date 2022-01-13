@@ -11,7 +11,6 @@ public class InteractDetector : MonoBehaviour
     private bool highlighted;
     private bool selected;
 
-
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -30,13 +29,10 @@ public class InteractDetector : MonoBehaviour
 
     public void OnInteractStart()
     {
-        if (highlighted)
+        if (enabled && highlighted && !selected)
         {
-            if (!selected)
-            {
-                Interacted.Invoke();
-                selected = true;
-            }
+            selected = true;
+            Interacted.Invoke();
         }
     }
 
