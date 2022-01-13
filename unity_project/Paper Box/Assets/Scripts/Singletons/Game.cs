@@ -20,6 +20,8 @@ public class Game : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
+
         ui.SetActive(true);
     }
 
@@ -72,7 +74,6 @@ public class Game : MonoBehaviour
     public void OnItemCollected(DataItem data)
     {
         Inventory.instance.AddItem(data);
-        crosshair.OnInteractSuccess();
     }
 
     public void OnInventoryItemSelected(DataItem data)
@@ -94,7 +95,7 @@ public class Game : MonoBehaviour
         ClearSelectedItem();
     }
 
-    public void ClearSelectedItem()
+    public void ClearSelectedItem() // TODO: move to Inventory
     {
         dataItemSelected = null;
         imageSelectedItem.sprite = null;
@@ -102,15 +103,14 @@ public class Game : MonoBehaviour
         crosshair.SetEquipped(false);
     }
 
-    public void OnInteractSuccess()
+    public void OnInteractSuccess() // TODO: move to Interacting
     {
         DeleteAndClearSelectedItem();
-        crosshair.OnInteractSuccess();
     }
 
-    public void OnInteractFail()
+    public void OnInteractFail() // TODO: move to Interacting
     {
-        crosshair.OnInteractFail();
+
     }
 
     private void SetPaused(bool value)

@@ -17,9 +17,13 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        game = Game.instance;
 
         textItemName.text = "";
+    }
+
+    private void Start()
+    {
+        game = Game.instance;
     }
 
     public void AddItem(DataItem data)

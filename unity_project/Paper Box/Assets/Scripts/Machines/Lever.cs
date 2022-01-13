@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Lever : MonoBehaviour
 {
@@ -9,9 +8,7 @@ public class Lever : MonoBehaviour
     public GameObject goIDPlace, goIDUse;
     public Animation anim;
     public AnimationClip acPlace, acUse;
-    public DataItem requiredItem;
-
-    public UnityEvent Activated;
+    public DataItem itemRequired;
 
     private Game game;
 
@@ -32,7 +29,7 @@ public class Lever : MonoBehaviour
 
     public void OnIDPlace()
     {
-        if (game.dataItemSelected && game.dataItemSelected == requiredItem)
+        if (game.dataItemSelected && game.dataItemSelected == itemRequired)
         {
             goLeverHandle.SetActive(true);
             goIDPlace.SetActive(false);
@@ -50,7 +47,6 @@ public class Lever : MonoBehaviour
     {
         goIDUse.SetActive(false);
         anim.Play(acUse.name);
-        Activated.Invoke();
         game.OnInteractSuccess();
     }
 }

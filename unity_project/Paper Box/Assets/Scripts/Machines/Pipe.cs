@@ -1,17 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Pipe : MonoBehaviour
 {
     public GameObject goValve;
-    public InteractDetector idPlace, idUse;
+    public Interactable interactablePlace, interactableUse;
     public Animation anim;
     public AnimationClip acPlace, acUse;
     public DataItem requiredItem;
-
-    public UnityEvent Activated;
 
     private Game game;
 
@@ -19,17 +16,15 @@ public class Pipe : MonoBehaviour
     {
         game = Game.instance;
 
-        idPlace.Interacted.AddListener(OnIDPlace);
-        idUse.Interacted.AddListener(OnIDUse);
+        interactablePlace.AddListener(OnIDPlace);
+        interactableUse.AddListener(OnIDUse);
     }
 
     void Start()
     {
-        
-
         goValve.SetActive(false);
-        idPlace.enabled = true;
-        idUse.enabled = false;
+        interactablePlace.enabled = true;
+        interactableUse.enabled = false;
 
         anim.AddClip(acPlace, acPlace.name);
         anim.AddClip(acUse, acUse.name);
@@ -40,8 +35,8 @@ public class Pipe : MonoBehaviour
         if (game.dataItemSelected && game.dataItemSelected == requiredItem)
         {
             goValve.SetActive(true);
-            idPlace.enabled = false;
-            idUse.enabled = true;
+            interactablePlace.enabled = false;
+            interactableUse.enabled = true;
             anim.Play(acPlace.name);
             game.OnInteractSuccess();
         }
@@ -53,9 +48,8 @@ public class Pipe : MonoBehaviour
 
     public void OnIDUse()
     {
-        idUse.enabled = false;
+        interactableUse.enabled = false;
         anim.Play(acUse.name);
-        Activated.Invoke();
         game.OnInteractSuccess();
     }
 }

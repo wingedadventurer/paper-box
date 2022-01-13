@@ -5,20 +5,27 @@ using UnityEngine.UI;
 
 public class Crosshair : MonoBehaviour
 {
-    public Animator animator;
-    public float radius;
+    [HideInInspector] public float radius;
 
-    private Material mat;
+    private Animator animator;
+    private Material material;
 
-    void Start()
+    private void Awake()
     {
-        mat = GetComponent<Image>().material;
+        material = GetComponent<Image>().material;
         animator = GetComponent<Animator>();
+
+        Interacting interacting = Interacting.instance;
+        interacting.Entered.AddListener( delegate { SetCanInteract(true); } );
+        interacting.Exited.AddListener( delegate { SetCanInteract(false); } );
+        interacting.Interacted.AddListener(OnInteract);
+        
+        // TODO: connect events from Inventory item equipped and unequipped to SetEquipped()
     }
 
     void Update()
     {
-        mat.SetFloat("_Radius", radius);
+        material.SetFloat("_Radius", radius);
     }
 
     public void SetEquipped(bool value)
@@ -31,12 +38,7 @@ public class Crosshair : MonoBehaviour
         animator.SetBool("canInteract", value);
     }
 
-    public void OnInteractSuccess()
-    {
-        animator.SetTrigger("interactSuccess");
-    }
-
-    public void OnInteractFail()
+    public void OnInteract()
     {
         animator.SetTrigger("interactFail");
     }
