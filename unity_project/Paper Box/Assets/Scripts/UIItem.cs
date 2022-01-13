@@ -5,37 +5,33 @@ using UnityEngine.UI;
 
 public class UIItem : MonoBehaviour
 {
-    [HideInInspector] public UIInventory uiInventory;
-
-    [Header("Ref")]
-    public Image image;
-
-    private DataItem dataItem;
+    [SerializeField] private Image image;
+    private DataItem data;
 
     public void OnClick()
     {
-        uiInventory.OnUIItemClick(dataItem);
+        Inventory.instance.OnUIItemClick(data);
     }
 
     public void OnPointerEnter()
     {
-        uiInventory.OnUIItemPointerEnter(dataItem);
+        Inventory.instance.OnUIItemPointerEnter(data);
     }
 
     public void OnPointerExit()
     {
-        uiInventory.OnUIItemPointerExit();
+        Inventory.instance.OnUIItemPointerExit();
     }
 
-    public void SetDataItem(DataItem dataItem2)
+    public void SetData(DataItem d)
     {
-        dataItem = dataItem2;
-        image.sprite = dataItem.sprite;
+        data = d;
+        image.sprite = data.sprite;
         image.enabled = true;
     }
 
-    public DataItem GetDataItem()
+    public DataItem GetData()
     {
-        return dataItem;
+        return data;
     }
 }

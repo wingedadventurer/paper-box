@@ -8,7 +8,6 @@ public class Game : MonoBehaviour
 {
     public GameObject ui;
     public GameObject panelInventory, panelPause;
-    public UIInventory uiInventory;
 
     public Image imageSelectedItem;
 
@@ -69,28 +68,28 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void OnItemCollected(DataItem dataItem)
+    public void OnItemCollected(DataItem data)
     {
-        uiInventory.AddItem(dataItem);
+        Inventory.instance.AddItem(data);
         crosshair.OnInteractSuccess();
     }
 
-    public void OnInventoryItemSelected(DataItem dataItem)
+    public void OnInventoryItemSelected(DataItem data)
     {
         HideInventory();
 
-        dataItemSelected = dataItem;
+        dataItemSelected = data;
 
         crosshair.SetEquipped(true);
 
         // show item in game panel
-        imageSelectedItem.sprite = dataItem.sprite;
+        imageSelectedItem.sprite = data.sprite;
         imageSelectedItem.enabled = true;
     }
 
     public void DeleteAndClearSelectedItem()
     {
-        uiInventory.DeleteItem(dataItemSelected);
+        Inventory.instance.DeleteItem(dataItemSelected);
         ClearSelectedItem();
     }
 
