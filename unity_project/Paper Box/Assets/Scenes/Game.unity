@@ -2450,6 +2450,10 @@ MonoBehaviour:
   goContainer: {fileID: 1626161374}
   textItemName: {fileID: 1610607480}
   dataItemEmpty: {fileID: 11400000, guid: ca46743e86e96684e92431ca937c50cc, type: 2}
+  initialItems:
+  - {fileID: 11400000, guid: 43b2a22bf8073b5469bb6d311cc75d2b, type: 2}
+  - {fileID: 11400000, guid: 43b2a22bf8073b5469bb6d311cc75d2b, type: 2}
+  - {fileID: 11400000, guid: cc982055e0ef91e44b7e090e17d9acc0, type: 2}
 --- !u!1 &1105769340
 GameObject:
   m_ObjectHideFlags: 0
@@ -5315,7 +5319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideOnRun: 0
+  hideOnRun: 1
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -5331,7 +5335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideOnRun: 0
+  hideOnRun: 1
   Interacted:
     m_PersistentCalls:
       m_Calls: []

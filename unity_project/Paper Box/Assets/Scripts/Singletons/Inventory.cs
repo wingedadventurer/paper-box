@@ -14,6 +14,8 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
+    public List<DataItem> initialItems = new List<DataItem>();
+
     private void Awake()
     {
         instance = this;
@@ -24,6 +26,11 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         game = Game.instance;
+
+        foreach (DataItem data in initialItems)
+        {
+            AddItem(data);
+        }
     }
 
     public void AddItem(DataItem data)
