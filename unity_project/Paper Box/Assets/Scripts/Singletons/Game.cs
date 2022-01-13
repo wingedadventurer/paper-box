@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Game : MonoBehaviour
 {
     public GameObject ui;
-    public GameObject panelInventory, panelPause;
+    public GameObject panelGame, panelInventory, panelPause;
 
     public Image imageSelectedItem;
 
@@ -117,6 +117,8 @@ public class Game : MonoBehaviour
     {
         paused = value;
 
+        panelGame.SetActive(!paused);
+
         foreach (Movement o in FindObjectsOfType<Movement>())
         {
             o.active = !paused;
@@ -124,6 +126,11 @@ public class Game : MonoBehaviour
         foreach (MouseLook o in FindObjectsOfType<MouseLook>())
         {
             o.active = !paused;
+        }
+        foreach (Interacting o in FindObjectsOfType<Interacting>())
+        {
+            //o.active = !paused;
+            o.enabled = !paused;
         }
     }
 

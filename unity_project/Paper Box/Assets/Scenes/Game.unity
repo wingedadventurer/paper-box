@@ -5059,6 +5059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1692936792}
+  panelGame: {fileID: 274822784}
   panelInventory: {fileID: 975621961}
   panelPause: {fileID: 1916150326}
   imageSelectedItem: {fileID: 1454072532}
