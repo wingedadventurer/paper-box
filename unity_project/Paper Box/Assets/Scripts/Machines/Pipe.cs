@@ -17,7 +17,7 @@ public class Pipe : MonoBehaviour
 
     private void Awake()
     {
-        game = FindObjectOfType<Game>();
+        game = Game.instance;
 
         idPlace.Interacted.AddListener(OnIDPlace);
         idUse.Interacted.AddListener(OnIDUse);

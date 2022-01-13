@@ -6,16 +6,9 @@ public class Item : MonoBehaviour
 {
     public DataItem data;
 
-    private Game game;
-
-    private void Awake()
-    {
-        game = FindObjectOfType<Game>();
-    }
-
     public void OnInteracted()
     {
-        game.OnItemCollected(data);
+        Game.instance.OnItemCollected(data);
         Destroy(gameObject);
     }
 }

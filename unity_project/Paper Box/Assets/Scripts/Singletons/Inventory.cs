@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        game = FindObjectOfType<Game>();
+        game = Game.instance;
 
         textItemName.text = "";
     }

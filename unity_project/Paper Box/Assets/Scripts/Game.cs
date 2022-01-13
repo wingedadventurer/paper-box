@@ -17,6 +17,8 @@ public class Game : MonoBehaviour
 
     private Crosshair crosshair;
 
+    public static Game instance;
+
     private void Awake()
     {
         ui.SetActive(true);

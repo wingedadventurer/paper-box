@@ -17,7 +17,7 @@ public class Lever : MonoBehaviour
 
     private void Awake()
     {
-        game = FindObjectOfType<Game>();
+        game = Game.instance;
     }
 
     void Start()
