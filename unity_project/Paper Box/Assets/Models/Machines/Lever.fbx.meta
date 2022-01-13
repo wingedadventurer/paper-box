@@ -4,14 +4,11 @@ ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 4626553514426215196
-    second: ArmatureBase|InsertPipe
+      74: -2704865452367443278
+    second: Armature|InsertLever
   - first:
-      74: -5405031355707892235
-    second: ArmatureBase|Pull
-  - first:
-      74: 4837581060583726150
-    second: ArmaturePipe|InsertPipe
+      74: 2807633003185206315
+    second: Armature|Pull
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -32,7 +29,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -97,7 +94,7 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
