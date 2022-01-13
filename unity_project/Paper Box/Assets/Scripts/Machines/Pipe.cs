@@ -16,27 +16,27 @@ public class Pipe : MonoBehaviour
     {
         game = Game.instance;
 
-        interactablePlace.AddListener(OnIDPlace);
-        interactableUse.AddListener(OnIDUse);
+        interactablePlace.AddListener(OnInteractablePlace);
+        interactableUse.AddListener(OnInteractableUse);
     }
 
     void Start()
     {
         goValve.SetActive(false);
-        interactablePlace.enabled = true;
-        interactableUse.enabled = false;
+        interactablePlace.gameObject.SetActive(true);
+        interactableUse.gameObject.SetActive(false);
 
         anim.AddClip(acPlace, acPlace.name);
         anim.AddClip(acUse, acUse.name);
     }
 
-    public void OnIDPlace()
+    public void OnInteractablePlace()
     {
         if (game.dataItemSelected && game.dataItemSelected == requiredItem)
         {
             goValve.SetActive(true);
-            interactablePlace.enabled = false;
-            interactableUse.enabled = true;
+            interactablePlace.gameObject.SetActive(false);
+            interactableUse.gameObject.SetActive(true);
             anim.Play(acPlace.name);
             game.OnInteractSuccess();
         }
@@ -46,9 +46,9 @@ public class Pipe : MonoBehaviour
         }
     }
 
-    public void OnIDUse()
+    public void OnInteractableUse()
     {
-        interactableUse.enabled = false;
+        interactableUse.gameObject.SetActive(false);
         anim.Play(acUse.name);
         game.OnInteractSuccess();
     }

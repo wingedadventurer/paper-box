@@ -5,7 +5,17 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
+    [SerializeField] private bool hideOnRun;
+
     [SerializeField] private UnityEvent Interacted;
+
+    private void Start()
+    {
+        if (hideOnRun)
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
 
     public void AddListener(UnityAction call)
     {

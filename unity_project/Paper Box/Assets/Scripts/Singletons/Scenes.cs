@@ -9,9 +9,7 @@ public class Scenes : MonoBehaviour
 
     private void Awake()
     {
-        if (instance) { Destroy(gameObject); }
         instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void LoadGame()
