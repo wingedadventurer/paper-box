@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -149,12 +148,11 @@ public class Game : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadScene(0);
+        Scenes.instance.LoadMenu();
     }
 
     public void QuitGame()
     {
-        Debug.Log("quit");
-        Application.Quit();
+        Scenes.instance.QuitGame();
     }
 }

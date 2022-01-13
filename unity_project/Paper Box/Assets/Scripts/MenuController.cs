@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
@@ -18,12 +16,11 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        Scenes.instance.LoadGame();
     }
 
     public void QuitGame()
     {
-        Debug.Log("quit");
-        Application.Quit();
+        Scenes.instance.QuitGame();
     }
 }
