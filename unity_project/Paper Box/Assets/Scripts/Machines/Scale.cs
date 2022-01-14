@@ -10,6 +10,8 @@ public class Scale : MonoBehaviour
     public Transform transformRod;
     public Transform transformRopesLeft, transformRopesRight;
     public DataItem itemWeight;
+    public AnimationClip acContainerOpen;
+    public Animation anim;
 
     public GameObject[] weights;
 
@@ -19,6 +21,8 @@ public class Scale : MonoBehaviour
     {
         UpdateStuff();
         interactablePlate.AddListener(AddWeight);
+
+        anim.AddClip(acContainerOpen, acContainerOpen.name);
     }
 
     public void AddWeight()
@@ -30,6 +34,8 @@ public class Scale : MonoBehaviour
             if (weightsCollected == 5)
             {
                 interactablePlate.gameObject.SetActive(false);
+
+                anim.Play(acContainerOpen.name);
             }
             Game.instance.OnInteractSuccess();
         }
