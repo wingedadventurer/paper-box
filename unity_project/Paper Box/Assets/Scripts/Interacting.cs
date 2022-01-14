@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class Interacting : MonoBehaviour
@@ -9,7 +10,8 @@ public class Interacting : MonoBehaviour
     [HideInInspector] public UnityEvent Exited;
     [HideInInspector] public UnityEvent Interacted;
 
-    const float DETECT_DISTANCE = 1.5f;
+    const float DETECT_DISTANCE = 1.25f;
+    const float DETECT_DISTANCE_DOWN = 2.0f;
 
     private Interactable lastInteractable;
 
@@ -17,6 +19,8 @@ public class Interacting : MonoBehaviour
     private bool interactingLast;
 
     public static Interacting instance;
+
+    public Text t;
 
     private void Awake()
     {
@@ -50,9 +54,16 @@ public class Interacting : MonoBehaviour
         }
 
         // update interact detector
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        Camera cam = Camera.main;
+        Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit raycastHit;
-        Physics.Raycast(ray, out raycastHit, DETECT_DISTANCE);
+
+        float rayLength = DETECT_DISTANCE;
+        float angle = Vector3.Angle(Vector3.down, cam.transform.forward);
+        float angleClamped = Mathf.Clamp(angle, 0, 90);
+        rayLength += (DETECT_DISTANCE_DOWN - DETECT_DISTANCE) * Mathf.Cos(Mathf.Deg2Rad * angleClamped);
+        
+        Physics.Raycast(ray, out raycastHit, rayLength);
         if (raycastHit.collider)
         {
             GameObject go = raycastHit.collider.gameObject;
