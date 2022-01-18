@@ -11,13 +11,6 @@ public class Lever : MonoBehaviour
     public AnimationClip acPlace, acUse;
     public DataItem itemRequired;
 
-    private Game game;
-
-    private void Awake()
-    {
-        game = Game.instance;
-    }
-
     void Start()
     {
         goLeverHandle.SetActive(false);
@@ -33,17 +26,14 @@ public class Lever : MonoBehaviour
 
     public void OnInteractablePlace()
     {
-        if (game.dataItemSelected && game.dataItemSelected == itemRequired)
+
+        if (Inventory.instance.GetEquippedItem() == itemRequired)
         {
+            Inventory.instance.ConsumeEquippedItem();
             goLeverHandle.SetActive(true);
             interactablePlace.gameObject.SetActive(false);
             interactableUse.gameObject.SetActive(true);
             anim.Play(acPlace.name);
-            game.OnInteractSuccess();
-        }
-        else
-        {
-            game.OnInteractFail();
         }
     }
 
@@ -51,6 +41,5 @@ public class Lever : MonoBehaviour
     {
         interactableUse.gameObject.SetActive(false);
         anim.Play(acUse.name);
-        game.OnInteractSuccess();
     }
 }

@@ -1665,6 +1665,7 @@ MonoBehaviour:
   textItemName: {fileID: 1610607480}
   dataItemEmpty: {fileID: 11400000, guid: ca46743e86e96684e92431ca937c50cc, type: 2}
   initialItems: []
+  imageEquippedItem: {fileID: 1454072532}
 --- !u!4 &1211132287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3181049158681903843, guid: c7909b7ea0be6dd4f8a34180ba18182d, type: 3}
@@ -2609,7 +2610,7 @@ GameObject:
   - component: {fileID: 1454072533}
   - component: {fileID: 1454072532}
   m_Layer: 5
-  m_Name: ImageSelectedItem
+  m_Name: ImageEquippedItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3838,8 +3839,6 @@ MonoBehaviour:
   panelGame: {fileID: 274822784}
   panelInventory: {fileID: 975621961}
   panelPause: {fileID: 1916150326}
-  imageSelectedItem: {fileID: 1454072532}
-  dataItemSelected: {fileID: 0}
 --- !u!4 &2009288834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6435899958750881332, guid: 7661d29bc4241114186c746eaa39283a, type: 3}
@@ -4126,7 +4125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771793974192032870, guid: cf1f4b4ec71b76848a5317f1c9234472, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 8771793974192032870, guid: cf1f4b4ec71b76848a5317f1c9234472, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4134,7 +4133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771793974192032870, guid: cf1f4b4ec71b76848a5317f1c9234472, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.95
+      value: -12.06
       objectReference: {fileID: 0}
     - target: {fileID: 8771793974192032870, guid: cf1f4b4ec71b76848a5317f1c9234472, type: 3}
       propertyPath: m_LocalRotation.w

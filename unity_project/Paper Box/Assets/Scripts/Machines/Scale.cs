@@ -27,8 +27,9 @@ public class Scale : MonoBehaviour
 
     public void AddWeight()
     {
-        if (Game.instance.dataItemSelected && Game.instance.dataItemSelected == itemWeight)
+        if (Inventory.instance.GetEquippedItem() == itemWeight)
         {
+            Inventory.instance.ConsumeEquippedItem();
             weightsCollected++;
             UpdateStuff();
             if (weightsCollected == 5)
@@ -37,7 +38,6 @@ public class Scale : MonoBehaviour
 
                 anim.Play(acContainerOpen.name);
             }
-            Game.instance.OnInteractSuccess();
         }
     }
 

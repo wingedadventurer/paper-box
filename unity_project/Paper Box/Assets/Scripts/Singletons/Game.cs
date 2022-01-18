@@ -8,13 +8,10 @@ public class Game : MonoBehaviour
     public GameObject ui;
     public GameObject panelGame, panelInventory, panelPause;
 
-    public Image imageSelectedItem;
-
-    [HideInInspector] public DataItem dataItemSelected;
-
     private bool paused;
 
     private Crosshair crosshair;
+    private Inventory inventory;
 
     public static Game instance;
 
@@ -27,9 +24,10 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        inventory = Inventory.instance;
+
         panelInventory.SetActive(false);
         panelPause.SetActive(false);
-        imageSelectedItem.enabled = false;
         SetPaused(false);
         LockMouse(true);
 
@@ -42,10 +40,10 @@ public class Game : MonoBehaviour
         {
             if (!panelPause.activeSelf)
             {
-                if (dataItemSelected)
+                if (inventory.GetEquippedItem())
                 {
-                    ClearSelectedItem();
-                    crosshair.SetEquipped(false);
+                    inventory.ClearEquippedItem();
+                    crosshair.SetEquipped(false); // TODO: use events
                 }
                 else
                 {
@@ -71,46 +69,10 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void OnItemCollected(DataItem data)
-    {
-        Inventory.instance.AddItem(data);
-    }
-
     public void OnInventoryItemSelected(DataItem data)
     {
         HideInventory();
-
-        dataItemSelected = data;
-
-        crosshair.SetEquipped(true);
-
-        // show item in game panel
-        imageSelectedItem.sprite = data.sprite;
-        imageSelectedItem.enabled = true;
-    }
-
-    public void DeleteAndClearSelectedItem()
-    {
-        Inventory.instance.DeleteItem(dataItemSelected);
-        ClearSelectedItem();
-    }
-
-    public void ClearSelectedItem() // TODO: move to Inventory
-    {
-        dataItemSelected = null;
-        imageSelectedItem.sprite = null;
-        imageSelectedItem.enabled = false;
-        crosshair.SetEquipped(false);
-    }
-
-    public void OnInteractSuccess() // TODO: move to Interacting
-    {
-        DeleteAndClearSelectedItem();
-    }
-
-    public void OnInteractFail() // TODO: move to Interacting
-    {
-
+        //crosshair.SetEquipped(true); // TODO: use events
     }
 
     private void SetPaused(bool value)

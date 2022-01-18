@@ -11,6 +11,7 @@ public class Cake : MonoBehaviour
     [SerializeField] private Interactable[] iCandles;
 
     private int countLitCandles;
+    private Inventory inventory;
 
     private void Awake()
     {
@@ -20,12 +21,16 @@ public class Cake : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        inventory = Inventory.instance;
+    }
+
     public void OnCandleSlotInteracted(int index)
     {
-        Debug.Log(index);
-
-        if (Game.instance.dataItemSelected && Game.instance.dataItemSelected == dataItemCandle)
+        if (inventory.GetEquippedItem() == dataItemCandle)
         {
+            inventory.ConsumeEquippedItem();
             goCandles[index].SetActive(true);
             iCandleSlots[index].gameObject.SetActive(false);
         }
@@ -33,7 +38,7 @@ public class Cake : MonoBehaviour
 
     public void OnCandleInteracted(int index)
     {
-        if (Game.instance.dataItemSelected && Game.instance.dataItemSelected == dataItemLighter)
+        if (inventory.GetEquippedItem() == dataItemLighter)
         {
             iCandles[index].gameObject.SetActive(false);
             countLitCandles++;

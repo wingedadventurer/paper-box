@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
 
     public void OnInteracted()
     {
-        Game.instance.OnItemCollected(data); // TODO: replace with inventory AddItem()
+        Inventory.instance.AddItem(data);
         Destroy(gameObject);
     }
 }

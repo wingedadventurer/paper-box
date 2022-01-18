@@ -23,11 +23,11 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
-        if (Game.instance.dataItemSelected && Game.instance.dataItemSelected == dataItemKey)
+        if (Inventory.instance.GetEquippedItem() == dataItemKey)
         {
+            Inventory.instance.ConsumeEquippedItem();
             iLock.gameObject.SetActive(false);
             anim.Play(acOpen.name);
-            Game.instance.OnInteractSuccess();
             goKey.SetActive(true);
             Invoke("HideKey", 2);
         }

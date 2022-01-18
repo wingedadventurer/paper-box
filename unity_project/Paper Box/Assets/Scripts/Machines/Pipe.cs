@@ -10,12 +10,8 @@ public class Pipe : MonoBehaviour
     public AnimationClip acPlace, acUse;
     public DataItem requiredItem;
 
-    private Game game;
-
     private void Awake()
     {
-        game = Game.instance;
-
         interactablePlace.AddListener(OnInteractablePlace);
         interactableUse.AddListener(OnInteractableUse);
     }
@@ -32,17 +28,13 @@ public class Pipe : MonoBehaviour
 
     public void OnInteractablePlace()
     {
-        if (game.dataItemSelected && game.dataItemSelected == requiredItem)
+        if (Inventory.instance.GetEquippedItem() == requiredItem)
         {
+            Inventory.instance.ConsumeEquippedItem();
             goValve.SetActive(true);
             interactablePlace.gameObject.SetActive(false);
             interactableUse.gameObject.SetActive(true);
             anim.Play(acPlace.name);
-            game.OnInteractSuccess();
-        }
-        else
-        {
-            game.OnInteractFail();
         }
     }
 
@@ -50,6 +42,5 @@ public class Pipe : MonoBehaviour
     {
         interactableUse.gameObject.SetActive(false);
         anim.Play(acUse.name);
-        game.OnInteractSuccess();
     }
 }
