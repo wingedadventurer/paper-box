@@ -4,34 +4,37 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    [Header("Setup")]
+    public DataItem dataItemKey;
+
+    [Header("Ref")]
     public Animation anim;
     public AnimationClip acOpen;
-    public Interactable interactableKey;
-    public DataItem requiredItem;
+    public Interactable iLock;
     public GameObject goKey;
 
     private void Start()
     {
         anim.AddClip(acOpen, acOpen.name);
 
-        interactableKey.AddListener(Open);
+        iLock.AddListener(Open);
         goKey.SetActive(false);
     }
 
     public void Open()
     {
-        if (Game.instance.dataItemSelected && Game.instance.dataItemSelected == requiredItem)
+        if (Game.instance.dataItemSelected && Game.instance.dataItemSelected == dataItemKey)
         {
-            interactableKey.gameObject.SetActive(false);
+            iLock.gameObject.SetActive(false);
             anim.Play(acOpen.name);
             Game.instance.OnInteractSuccess();
             goKey.SetActive(true);
-            Invoke("ShowKey", 2);
+            Invoke("HideKey", 2);
         }
     }
 
-    private void ShowKey()
+    private void HideKey()
     {
-        goKey.SetActive(true);
+        goKey.SetActive(false);
     }
 }
