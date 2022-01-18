@@ -10,9 +10,7 @@ public class Inventory : MonoBehaviour
     public Text textItemName;
     public DataItem dataItemEmpty;
     public List<DataItem> initialItems = new List<DataItem>();
-
-    private DataItem dataItemEquipped;
-    [SerializeField] private Image imageEquippedItem;
+    [SerializeField] private UIItem uiItemEquipped;
 
     private Game game;
 
@@ -24,7 +22,7 @@ public class Inventory : MonoBehaviour
 
         textItemName.text = "";
 
-        imageEquippedItem.enabled = false;
+        uiItemEquipped.gameObject.SetActive(false);
     }
 
     private void Start()
@@ -39,48 +37,74 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(DataItem data)
     {
+        // add to current one if it exists
+        foreach (UIItem uiItem in goContainer.transform.GetComponentsInChildren<UIItem>())
+        {
+            if (uiItem.GetData() == data)
+            {
+                uiItem.AddOne();
+                return;
+            }
+        }
+
+        // otherwise add new one
         GameObject go = Instantiate(prefabUIItem);
         go.transform.SetParent(goContainer.transform);
-        UIItem uiItem = go.GetComponent<UIItem>();
-        uiItem.SetData(data);
-        UpdateItemGridSize();
+        UIItem uiItem2 = go.GetComponent<UIItem>();
+        uiItem2.SetData(data);
+        uiItem2.AddOne();
     }
 
-    public void DeleteItem(DataItem data)
+    public bool DeleteItem(DataItem data)
     {
         foreach (UIItem uiItem in goContainer.transform.GetComponentsInChildren<UIItem>())
         {
             if (uiItem.GetData() == data)
             {
-                Destroy(uiItem.gameObject);
-                return;
+                // remove one
+                uiItem.RemoveOne();
+
+                // delete if no amount left
+                if (uiItem.GetAmount() == 0)
+                {
+                    Destroy(uiItem.gameObject);
+                    return true;
+                }
+                return false;
             }
         }
+
+        return true;
     }
 
     public DataItem GetEquippedItem()
     {
-        return dataItemEquipped;
+        return uiItemEquipped.GetData();
     }
 
     public void ConsumeEquippedItem()
     {
-        Inventory.instance.DeleteItem(dataItemEquipped);
-        ClearEquippedItem();
+        if (DeleteItem(uiItemEquipped.GetData()))
+        {
+            ClearEquippedItem();
+        }
+        else
+        {
+            uiItemEquipped.RemoveOne();
+        }
     }
 
     public void EquipItem(DataItem data)
     {
-        dataItemEquipped = data;
-        imageEquippedItem.sprite = data.sprite;
-        imageEquippedItem.enabled = true;
+        uiItemEquipped.gameObject.SetActive(true);
+        uiItemEquipped.SetData(data);
+        uiItemEquipped.SetAmount(GetItemCount(data));
     }
 
     public void ClearEquippedItem()
     {
-        dataItemEquipped = null;
-        imageEquippedItem.sprite = null;
-        imageEquippedItem.enabled = false;
+        uiItemEquipped.SetData(null);
+        uiItemEquipped.gameObject.SetActive(false);
         //crosshair.SetEquipped(false); // TODO: use events
     }
 
@@ -105,5 +129,19 @@ public class Inventory : MonoBehaviour
     public void OnUIItemPointerExit()
     {
         textItemName.text = "";
+    }
+
+    public int GetItemCount(DataItem data)
+    {
+        foreach (UIItem uiItem in goContainer.transform.GetComponentsInChildren<UIItem>())
+        {
+            if (uiItem.GetData() == data)
+            {
+
+                return uiItem.GetAmount();
+            }
+        }
+
+        return 0;
     }
 }

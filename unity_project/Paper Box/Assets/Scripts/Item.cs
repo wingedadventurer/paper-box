@@ -8,7 +8,10 @@ public class Item : MonoBehaviour
 
     public void OnInteracted()
     {
-        Inventory.instance.AddItem(data);
-        Destroy(gameObject);
+        if (!Inventory.instance.GetEquippedItem())
+        {
+            Inventory.instance.AddItem(data);
+            Destroy(gameObject);
+        }
     }
 }

@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class UIItem : MonoBehaviour
 {
     [SerializeField] private Image image;
+    [SerializeField] private Text textAmount;
+
     private DataItem data;
+    private int amount;
 
     public void OnClick()
     {
@@ -26,12 +29,43 @@ public class UIItem : MonoBehaviour
     public void SetData(DataItem d)
     {
         data = d;
-        image.sprite = data.sprite;
-        image.enabled = true;
+        if (data)
+        {
+            image.enabled = true;
+            image.sprite = data.sprite;
+        }
+        else
+        {
+            image.enabled = false;
+        }
     }
 
     public DataItem GetData()
     {
         return data;
+    }
+
+    public void SetAmount(int n)
+    {
+        amount = n;
+        textAmount.text = amount > 1 ? amount.ToString() : "";
+    }
+
+    public void AddOne()
+    {
+        amount++;
+        textAmount.text = amount > 1 ? amount.ToString() : "";
+    }
+
+    public void RemoveOne()
+    {
+        amount--;
+        if (amount < 0) { amount = 0; }
+        textAmount.text = amount > 1 ? amount.ToString() : "";
+    }
+
+    public int GetAmount()
+    {
+        return amount;
     }
 }
