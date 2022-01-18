@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] private bool hideOnRun;
 
-    [SerializeField] private UnityEvent Interacted;
+    public UnityEvent Interacted;
 
     private void Start()
     {
@@ -25,5 +25,6 @@ public class Interactable : MonoBehaviour
     public void Interact()
     {
         Interacted.Invoke();
+        
     }
 }
