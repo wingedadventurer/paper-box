@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Lighter
   m_EditorClassIdentifier: 
   name: Lighter
-  sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}
+  sprite: {fileID: 21300000, guid: df46b11276c4b5e49864c4fe3cfb9f16, type: 3}

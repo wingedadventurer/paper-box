@@ -673,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d3692674aa70d8b44a2b4740b0670236, type: 2}
     - target: {fileID: 7855661573102122865, guid: 7e1cc2d0e66c7db4182a1a9085770763, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7855661573102122865, guid: 7e1cc2d0e66c7db4182a1a9085770763, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3538,7 +3538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1692936793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4105,6 +4105,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4427049679631572993, guid: c7909b7ea0be6dd4f8a34180ba18182d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427192215501535249, guid: c7909b7ea0be6dd4f8a34180ba18182d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772603319173893029, guid: c7909b7ea0be6dd4f8a34180ba18182d, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

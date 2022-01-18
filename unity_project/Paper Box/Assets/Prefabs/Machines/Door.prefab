@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02921c2c15d8c749ab9b36094344302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredItem: {fileID: 0}
+  dataItemKey: {fileID: 0}
   anim: {fileID: 2573980131039592246}
   acOpen: {fileID: -3767692559409771237, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
   iLock: {fileID: 7102312112102615516}
@@ -103,6 +103,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016591169505441273, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
