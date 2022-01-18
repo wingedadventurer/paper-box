@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private bool hideOnRun;
+    [SerializeField] private bool hideOnRun = true;
 
     public UnityEvent Interacted;
 
