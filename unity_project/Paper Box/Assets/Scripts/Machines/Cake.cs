@@ -7,23 +7,24 @@ public class Cake : MonoBehaviour
     [SerializeField] private DataItem dataItemCandle;
     [SerializeField] private DataItem dataItemLighter;
     [SerializeField] private GameObject[] goCandles;
+    [SerializeField] private GameObject[] goFires;
     [SerializeField] private Interactable[] iCandleSlots;
     [SerializeField] private Interactable[] iCandles;
+    [SerializeField] private GameObject goCakeModel;
+    [SerializeField] private GameObject goItemCherry;
 
     private int countLitCandles;
     private Inventory inventory;
 
-    private void Awake()
-    {
-        for(int i = 0; i < 6; i++)
-        {
-            goCandles[i].SetActive(false);
-        }
-    }
-
     private void Start()
     {
         inventory = Inventory.instance;
+
+        for (int i = 0; i < 6; i++)
+        {
+            goCandles[i].SetActive(false);
+        }
+        goItemCherry.SetActive(false);
     }
 
     public void OnCandleSlotInteracted(int index)
@@ -41,12 +42,19 @@ public class Cake : MonoBehaviour
         if (inventory.GetEquippedItem() == dataItemLighter)
         {
             iCandles[index].gameObject.SetActive(false);
+            goFires[index].GetComponent<ParticleSystem>().Play();
             countLitCandles++;
 
             if (countLitCandles == 6)
             {
                 // TODO: completed
-                Debug.Log("done");
+                goCakeModel.SetActive(false);
+                goItemCherry.SetActive(true);
+
+                foreach (GameObject g in goFires)
+                {
+                    g.SetActive(false);
+                }
             }
         }
     }
