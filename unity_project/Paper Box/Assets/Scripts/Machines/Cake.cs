@@ -12,9 +12,14 @@ public class Cake : MonoBehaviour
     [SerializeField] private Interactable[] iCandles;
     [SerializeField] private GameObject goCakeModel;
     [SerializeField] private GameObject goItemCherry;
+    [SerializeField] private float dInflating;
+    [SerializeField] private float scaleInflateMax;
 
     private int countLitCandles;
     private Inventory inventory;
+
+    private bool inflating;
+    private float tInflating;
 
     private void Start()
     {
@@ -25,6 +30,28 @@ public class Cake : MonoBehaviour
             goCandles[i].SetActive(false);
         }
         goItemCherry.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (inflating)
+        {
+            tInflating += Time.deltaTime;
+            goCakeModel.transform.localScale = Vector3.one * Mathf.Lerp(1, scaleInflateMax, tInflating/dInflating);
+            if (tInflating >= dInflating)
+            {
+                inflating = false;
+
+                // explode the cake
+                goCakeModel.SetActive(false);
+                goItemCherry.SetActive(true);
+
+                foreach (GameObject g in goFires)
+                {
+                    g.SetActive(false);
+                }
+            }
+        }
     }
 
     public void OnCandleSlotInteracted(int index)
@@ -47,14 +74,7 @@ public class Cake : MonoBehaviour
 
             if (countLitCandles == 6)
             {
-                // TODO: completed
-                goCakeModel.SetActive(false);
-                goItemCherry.SetActive(true);
-
-                foreach (GameObject g in goFires)
-                {
-                    g.SetActive(false);
-                }
+                inflating = true;
             }
         }
     }
