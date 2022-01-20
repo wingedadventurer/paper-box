@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
@@ -13,6 +14,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private UIItem uiItemEquipped;
 
     private Game game;
+
+    public UnityEvent Equipped, Unequipped;
 
     public static Inventory instance;
 
@@ -99,13 +102,14 @@ public class Inventory : MonoBehaviour
         uiItemEquipped.gameObject.SetActive(true);
         uiItemEquipped.SetData(data);
         uiItemEquipped.SetAmount(GetItemCount(data));
+        Equipped.Invoke();
     }
 
     public void ClearEquippedItem()
     {
         uiItemEquipped.SetData(null);
         uiItemEquipped.gameObject.SetActive(false);
-        //crosshair.SetEquipped(false); // TODO: use events
+        Unequipped.Invoke();
     }
 
     private void UpdateItemGridSize()

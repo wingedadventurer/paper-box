@@ -12,6 +12,7 @@ public class Game : MonoBehaviour
 
     private Crosshair crosshair;
     private Inventory inventory;
+    private Interacting interacting;
 
     public static Game instance;
 
@@ -25,13 +26,23 @@ public class Game : MonoBehaviour
     void Start()
     {
         inventory = Inventory.instance;
+        crosshair = FindObjectOfType<Crosshair>();
+        interacting = Interacting.instance;
 
         panelInventory.SetActive(false);
         panelPause.SetActive(false);
         SetPaused(false);
         LockMouse(true);
 
-        crosshair = FindObjectOfType<Crosshair>();
+
+        // connect Inventory to Crosshair
+        inventory.Equipped.AddListener( delegate { crosshair.SetEquipped(true); Debug.Log("a"); });
+        inventory.Unequipped.AddListener( delegate { crosshair.SetEquipped(false); Debug.Log("b"); });
+
+        // connect Interacting to Crosshair
+        interacting.Entered.AddListener(delegate { crosshair.SetCanInteract(true); });
+        interacting.Exited.AddListener(delegate { crosshair.SetCanInteract(false); });
+        interacting.Interacted.AddListener(crosshair.OnInteract);
     }
 
     void Update()
@@ -82,7 +93,6 @@ public class Game : MonoBehaviour
     public void OnInventoryItemSelected(DataItem data)
     {
         HideInventory();
-        //crosshair.SetEquipped(true); // TODO: use events
     }
 
     private void SetPaused(bool value)

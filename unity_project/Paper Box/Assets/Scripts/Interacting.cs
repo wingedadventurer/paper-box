@@ -45,10 +45,11 @@ public class Interacting : MonoBehaviour
                 {
                     lastInteractable.Interact();
                     Interacted.Invoke();
-                    if (!lastInteractable || !lastInteractable.enabled)
-                    {
-                        Exited.Invoke();
-                    }
+                    //if (!lastInteractable || !lastInteractable.enabled)
+                    //{
+                    //    Exited.Invoke();
+                    //}
+                    Exited.Invoke();
                 }
             }
         }
