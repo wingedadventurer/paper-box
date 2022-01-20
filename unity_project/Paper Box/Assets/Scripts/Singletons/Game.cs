@@ -36,6 +36,7 @@ public class Game : MonoBehaviour
 
     void Update()
     {
+        // INVENTORY
         if (Input.GetKeyDown(KeyCode.Tab) || Input.GetMouseButtonDown(1))
         {
             if (!panelPause.activeSelf)
@@ -54,6 +55,15 @@ public class Game : MonoBehaviour
             }
         }
 
+        // DEBUG: TELEPORTING
+        if (Input.GetKeyDown(KeyCode.Alpha1)) { PlayerTeleporter.instance.TeleportToRoom(0); }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) { PlayerTeleporter.instance.TeleportToRoom(1); }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) { PlayerTeleporter.instance.TeleportToRoom(2); }
+        if (Input.GetKeyDown(KeyCode.Alpha4)) { PlayerTeleporter.instance.TeleportToRoom(3); }
+        if (Input.GetKeyDown(KeyCode.Alpha5)) { PlayerTeleporter.instance.TeleportToRoom(4); }
+        if (Input.GetKeyDown(KeyCode.Alpha6)) { PlayerTeleporter.instance.TeleportToRoom(5); }
+
+        // PAUSE
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SetPaused(!paused);
