@@ -85,7 +85,7 @@ public class Game : MonoBehaviour
         {
             o.active = !paused;
         }
-        foreach (MouseLook o in FindObjectsOfType<MouseLook>())
+        foreach (Looking o in FindObjectsOfType<Looking>())
         {
             o.active = !paused;
         }
