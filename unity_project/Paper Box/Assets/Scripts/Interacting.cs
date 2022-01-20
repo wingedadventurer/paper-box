@@ -20,7 +20,7 @@ public class Interacting : MonoBehaviour
 
     public static Interacting instance;
 
-    public Text t;
+    public Text textDebug;
 
     private void Awake()
     {
@@ -31,6 +31,8 @@ public class Interacting : MonoBehaviour
     {
         // update interact input
         interacting = Input.GetMouseButton(0) || Input.GetKey(KeyCode.E);
+
+        textDebug.text = lastInteractable ? lastInteractable.gameObject.name : "";
     }
     
     private void FixedUpdate()
@@ -45,25 +47,23 @@ public class Interacting : MonoBehaviour
                 {
                     lastInteractable.Interact();
                     Interacted.Invoke();
-                    //if (!lastInteractable || !lastInteractable.enabled)
-                    //{
-                    //    Exited.Invoke();
-                    //}
-                    Exited.Invoke();
+                    lastInteractable = null;
                 }
             }
         }
-
-        // update interact detector
+        // get ray from camera
         Camera cam = Camera.main;
         Ray ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
         RaycastHit raycastHit;
 
+        // calculate interact ray length
         float rayLength = DETECT_DISTANCE;
         float angle = Vector3.Angle(Vector3.down, cam.transform.forward);
         float angleClamped = Mathf.Clamp(angle, 0, 90);
         rayLength += (DETECT_DISTANCE_DOWN - DETECT_DISTANCE) * Mathf.Cos(Mathf.Deg2Rad * angleClamped);
-        
+
+        // get new interactable
+        Interactable newInteractable = null;
         Physics.Raycast(ray, out raycastHit, rayLength);
         if (raycastHit.collider)
         {
@@ -71,28 +71,23 @@ public class Interacting : MonoBehaviour
 
             if (go.TryGetComponent(out Interactable interactable))
             {
-                if (interactable.enabled && lastInteractable != interactable)
-                {
-                    lastInteractable = interactable;
-                    Entered.Invoke();
-                }
+                newInteractable = interactable;
             }
-            else
+        }
+
+        // update old interactable
+        if (newInteractable)
+        {
+            if (lastInteractable != newInteractable)
             {
-                if (lastInteractable)
-                {
-                    Exited.Invoke();
-                    lastInteractable = null;
-                }
+                lastInteractable = newInteractable;
+                Entered.Invoke();
             }
         }
         else
         {
-            if (lastInteractable)
-            {
-                Exited.Invoke();
-                lastInteractable = null;
-            }
+            lastInteractable = null;
+            Exited.Invoke();
         }
     }
 }

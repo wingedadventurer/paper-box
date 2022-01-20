@@ -967,7 +967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &717923903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1762,7 +1762,7 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls: []
-  t: {fileID: 717923904}
+  textDebug: {fileID: 717923904}
 --- !u!1001 &1074334351
 PrefabInstance:
   m_ObjectHideFlags: 0
