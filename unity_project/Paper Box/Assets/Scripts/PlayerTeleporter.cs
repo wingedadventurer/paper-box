@@ -8,7 +8,10 @@ public class PlayerTeleporter : MonoBehaviour
 
     [SerializeField] private Transform[] posPlayerTeleports;
 
+    public bool teleportOnStart;
+
     public static PlayerTeleporter instance;
+
 
     private void Awake()
     {
@@ -17,7 +20,10 @@ public class PlayerTeleporter : MonoBehaviour
 
     void Start()
     {
-        TeleportToRoom(0);
+        if (teleportOnStart)
+        {
+            TeleportToRoom(0);
+        }
     }
 
     public void TeleportToRoom(int indexRoom)

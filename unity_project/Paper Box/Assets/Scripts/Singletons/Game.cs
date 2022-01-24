@@ -36,8 +36,8 @@ public class Game : MonoBehaviour
 
 
         // connect Inventory to Crosshair
-        inventory.Equipped.AddListener( delegate { crosshair.SetEquipped(true); Debug.Log("a"); });
-        inventory.Unequipped.AddListener( delegate { crosshair.SetEquipped(false); Debug.Log("b"); });
+        inventory.Equipped.AddListener( delegate { crosshair.SetEquipped(true); });
+        inventory.Unequipped.AddListener( delegate { crosshair.SetEquipped(false); });
 
         // connect Interacting to Crosshair
         interacting.Entered.AddListener(delegate { crosshair.SetCanInteract(true); });
@@ -55,7 +55,7 @@ public class Game : MonoBehaviour
                 if (inventory.GetEquippedItem())
                 {
                     inventory.ClearEquippedItem();
-                    crosshair.SetEquipped(false); // TODO: use events
+                    //crosshair.SetEquipped(false); // TODO: use events
                 }
                 else
                 {
