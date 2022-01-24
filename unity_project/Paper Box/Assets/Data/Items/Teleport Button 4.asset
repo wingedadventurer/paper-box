@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Teleport Button 4
   m_EditorClassIdentifier: 
   name: Square Button Green
-  sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}
+  sprite: {fileID: 21300000, guid: 26ae0c11fc170eb41b820040cb59406b, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Escape Box 2
   m_EditorClassIdentifier: 
   name: Escape Box Orange
-  sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}
+  sprite: {fileID: 21300000, guid: e722ed5a60b5bbc4f97a33b334510978, type: 3}

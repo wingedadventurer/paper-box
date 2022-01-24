@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Escape Box 3
   m_EditorClassIdentifier: 
   name: Escape Box Yellow
-  sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}
+  sprite: {fileID: 21300000, guid: b2c4742a96e721949a172d1787c3cff9, type: 3}
