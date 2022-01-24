@@ -18,12 +18,18 @@ public class PlayerTeleporter : MonoBehaviour
         instance = this;
     }
 
-    void Start()
+    private void Start()
     {
         if (teleportOnStart)
         {
             TeleportToRoom(0);
         }
+    }
+
+    public void TeleportToPosition(Vector3 position)
+    {
+        goPlayer.transform.position = position;
+        Physics.SyncTransforms();
     }
 
     public void TeleportToRoom(int indexRoom)

@@ -14,6 +14,8 @@ public class Game : MonoBehaviour
     private Inventory inventory;
     private Interacting interacting;
 
+    [SerializeField] private GameObject goPlayer;
+
     public static Game instance;
 
     private void Awake()
@@ -143,5 +145,10 @@ public class Game : MonoBehaviour
     public void QuitGame()
     {
         Scenes.instance.QuitGame();
+    }
+
+    public Vector3 GetPlayerPosition()
+    {
+        return goPlayer.transform.position;
     }
 }
