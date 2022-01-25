@@ -8,6 +8,7 @@ public class Plates : MonoBehaviour
     [SerializeField] private PressurePlate[] plateSequence;
     [SerializeField] private Interactable iEnd;
     [SerializeField] private Interactable iRetry;
+    [SerializeField] private Animation anim;
 
     private int indexCurrent;
     private bool failed;
@@ -20,9 +21,6 @@ public class Plates : MonoBehaviour
         {
             plate.Pressed.AddListener( delegate { OnPlatePressed(plate); } );
         }
-
-        iEnd.AddListener(OnEndInteract);
-        iRetry.AddListener(OnRetryInteract);
     }
 
     private void Update()
@@ -56,16 +54,16 @@ public class Plates : MonoBehaviour
 
     public void OnEndInteract()
     {
-        iEnd.gameObject.SetActive(false);
+        iEnd.SetActive(false);
 
         if (succeeded)
         {
-            iRetry.gameObject.SetActive(false);
-            Debug.Log("success!");
+            iRetry.SetActive(false);
+            anim.Play("Armature|ConsoleLift");
         }
         else
         {
-            Debug.Log("fail!");
+            // fail
         }
 
         foreach (PressurePlate plate in plates)
@@ -89,8 +87,6 @@ public class Plates : MonoBehaviour
         indexCurrent = 0;
         failed = false;
         succeeded = false;
-        iEnd.gameObject.SetActive(true);
-
-        Debug.Log("retry");
+        iEnd.SetActive(true);
     }
 }

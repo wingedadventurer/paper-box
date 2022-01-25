@@ -25,6 +25,10 @@ public class Interactable : MonoBehaviour
     public void Interact()
     {
         Interacted.Invoke();
-        
+    }
+
+    public void SetActive(bool value)
+    {
+        GetComponent<Collider>().enabled = value;
     }
 }
