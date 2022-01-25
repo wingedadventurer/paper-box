@@ -86,6 +86,7 @@ GameObject:
   - component: {fileID: 4470392158604051388}
   - component: {fileID: 2351375404618190326}
   - component: {fileID: 5762246057294669704}
+  - component: {fileID: 7033732765841943439}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -164,6 +165,20 @@ MonoBehaviour:
   characterController: {fileID: 4470392158604051388}
   camHead: {fileID: 884386163586549319}
   ceilingChecker: {fileID: 3196667378994553876}
+--- !u!136 &7033732765841943439
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308661514319966151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5163562771236228989
 GameObject:
   m_ObjectHideFlags: 0
