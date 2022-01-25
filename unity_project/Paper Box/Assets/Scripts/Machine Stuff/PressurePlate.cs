@@ -7,14 +7,24 @@ public class PressurePlate : MonoBehaviour
 {
     [SerializeField] private bool releaseOnExit;
 
+    const float PRESS_AMOUNT = 0.075f;
+
     private bool pressed;
 
     public UnityEvent Pressed;
+
+    private float posYStart;
+
+    private void Start()
+    {
+        posYStart = transform.position.y;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!pressed && other.gameObject.tag == "Player")
         {
+            Debug.Log("player in " + gameObject.name);
             Press();
         }
     }
@@ -23,6 +33,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (releaseOnExit && pressed && other.gameObject.tag == "Player")
         {
+            Debug.Log("player out " + gameObject.name);
             Release();
         }
     }
@@ -31,7 +42,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (pressed) { return; }
 
-        transform.position = new Vector3(transform.position.x, -0.075f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, posYStart - PRESS_AMOUNT, transform.position.z);
         pressed = true;
         Pressed.Invoke();
     }
@@ -40,7 +51,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (!pressed) { return; }
 
-        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+        transform.position = new Vector3(transform.position.x, posYStart, transform.position.z);
         pressed = false;
     }
 }
