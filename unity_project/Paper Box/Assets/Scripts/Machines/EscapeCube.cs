@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EscapeCube : MonoBehaviour
 {
-    [SerializeField] private Animation anim;
-    [SerializeField] private AnimationClip[] clips;
+    [SerializeField] private Animator anim;
     [SerializeField] private DataItem[] datas;
     [SerializeField] private Interactable[] interactables;
     [SerializeField] private GameObject[] bones;
@@ -27,11 +26,6 @@ public class EscapeCube : MonoBehaviour
         interactables[4].AddListener(delegate { OnInteract(4); });
         interactables[5].AddListener(delegate { OnInteract(5); });
 
-        foreach (AnimationClip ac in clips)
-        {
-            anim.AddClip(ac, ac.name);
-        }
-
         foreach (GameObject bone in bones)
         {
             bone.SetActive(false);
@@ -50,12 +44,15 @@ public class EscapeCube : MonoBehaviour
 
     private void OnInteract(int i)
     {
+        Debug.Log(i);
+
         if (Inventory.instance.GetEquippedItem() == datas[i])
         {
             Inventory.instance.ConsumeEquippedItem();
             interactables[i].gameObject.SetActive(false);
             bones[i].SetActive(true);
-            anim.Play(clips[i].name);
+
+            anim.Play("B" + i, anim.GetLayerIndex("L" + i));
 
             placedCount++;
             if (placedCount == 6)
