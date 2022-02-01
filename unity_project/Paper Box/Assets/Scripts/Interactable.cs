@@ -29,6 +29,7 @@ public class Interactable : MonoBehaviour
 
     public void SetActive(bool value)
     {
-        GetComponent<Collider>().enabled = value;
+        //GetComponent<Collider>().enabled = value;
+        gameObject.SetActive(value);
     }
 }
