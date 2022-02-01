@@ -30,8 +30,6 @@ public class Bridge : MonoBehaviour
             INs[i].SetActive(false);
             sliderBones[i].SetActive(true);
         }
-
-        Debug.Log("placed " + i);
     }
 
     public void OnSliderPull()
@@ -43,10 +41,7 @@ public class Bridge : MonoBehaviour
                 interactable.SetActive(false);
             }
             anim.Play();
-            Debug.Log("done");
         }
-
-        Debug.Log("pulled");
     }
 
     private bool IsSequenceCorrect()
