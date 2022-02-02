@@ -3204,7 +3204,7 @@ Transform:
   - {fileID: 660383830}
   - {fileID: 1218082329}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1287143355
 PrefabInstance:
@@ -4658,6 +4658,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1788892173597935750, guid: 1e118df52460df042b838e2edc3ed3c1, type: 3}
   m_PrefabInstance: {fileID: 1548689061}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1558491759
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 14536278498004264, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_Name
+      value: Water Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20.285564
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0641575
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11f6e1d8ca2ad06409631100802fc62b, type: 3}
 --- !u!4 &1594445604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 525009045553124852, guid: d3ee21c3465130c4fbf3d018294619ba, type: 3}
@@ -5331,7 +5388,7 @@ RectTransform:
   - {fileID: 975621962}
   - {fileID: 1916150327}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
