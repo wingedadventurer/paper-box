@@ -116,6 +116,8 @@ public class Game : MonoBehaviour
             //o.active = !paused;
             o.enabled = !paused;
         }
+
+        Time.timeScale = paused ? 0 : 1;
     }
 
     private void LockMouse(bool value)
