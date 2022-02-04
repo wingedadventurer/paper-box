@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LiquidBowl : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class LiquidBowl : MonoBehaviour
     public bool filled;
 
     [SerializeField] private GameObject goWater;
+
+    public UnityEvent FillChanged;
 
     private void Start()
     {
@@ -28,6 +31,7 @@ public class LiquidBowl : MonoBehaviour
                 inventory.EquipItem(dataBottleFull);
                 filled = false;
                 goWater.SetActive(filled);
+                FillChanged.Invoke();
             }
         }
         else
@@ -40,6 +44,7 @@ public class LiquidBowl : MonoBehaviour
                 //inventory.ClearEquippedItem();
                 filled = true;
                 goWater.SetActive(filled);
+                FillChanged.Invoke();
             }
         }
         
