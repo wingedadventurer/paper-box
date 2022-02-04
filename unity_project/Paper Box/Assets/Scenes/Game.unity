@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 4.7
-  m_AmbientSkyColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
+  m_AmbientSkyColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -2837,6 +2837,10 @@ PrefabInstance:
     - target: {fileID: 6702116990216556423, guid: 0364ed9a1d18c5546a6da0966206bce3, type: 3}
       propertyPath: m_Name
       value: Maze
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839349449341486652, guid: 0364ed9a1d18c5546a6da0966206bce3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0364ed9a1d18c5546a6da0966206bce3, type: 3}
