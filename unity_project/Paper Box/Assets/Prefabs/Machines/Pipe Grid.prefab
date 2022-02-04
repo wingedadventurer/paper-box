@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4280279887499252777}
   - component: {fileID: 4757538554751570607}
-  m_Layer: 0
-  m_Name: Collision
+  m_Layer: 8
+  m_Name: Solid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.222069, y: 2.525501, z: 0.2432555}
-  m_Center: {x: -0.072070956, y: 1.0510339, z: 0.1141122}
+  m_Size: {x: 3.222069, y: 2.525501, z: 0.45096433}
+  m_Center: {x: -0.072070956, y: 1.0510339, z: 0.21796662}
 --- !u!1 &7491147941670895687
 GameObject:
   m_ObjectHideFlags: 0

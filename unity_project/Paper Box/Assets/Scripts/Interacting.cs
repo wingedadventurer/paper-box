@@ -22,9 +22,16 @@ public class Interacting : MonoBehaviour
 
     public Text textDebug;
 
+    private int mask;
+
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        mask = ~(1 << LayerMask.NameToLayer("SolidTransparent"));
     }
 
     private void Update()
@@ -62,7 +69,7 @@ public class Interacting : MonoBehaviour
 
         // get new interactable
         Interactable newInteractable = null;
-        Physics.Raycast(ray, out raycastHit, rayLength);
+        Physics.Raycast(ray, out raycastHit, rayLength, mask);
         if (raycastHit.collider)
         {
             GameObject go = raycastHit.collider.gameObject;

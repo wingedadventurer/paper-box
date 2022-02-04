@@ -19,7 +19,7 @@ public class Maze : MonoBehaviour
     {
         cellCurrent = new Vector2(0, 5);
         trThing.localPosition = new Vector3(-cellCurrent.x, 0, -cellCurrent.y) * CELL_SIZE;
-        mask = LayerMask.NameToLayer("MazeWall");
+        mask = 1 << LayerMask.NameToLayer("MazeWall");
     }
 
     void Update()
@@ -57,8 +57,7 @@ public class Maze : MonoBehaviour
         // prevent moving through walls
         Ray ray = new Ray(trRaycast.position, new Vector3(-dir.x, -dir.y, 0));
         RaycastHit hit;
-        //Physics.Raycast(ray, out hit, 0.3f, mask); // TODO: figure out why this doesn't work
-        Physics.Raycast(ray, out hit, 0.3f);
+        Physics.Raycast(ray, out hit, 0.3f, mask);
         if (hit.collider) { return; }
 
 
