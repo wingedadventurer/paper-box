@@ -31,8 +31,6 @@ public class Interacting : MonoBehaviour
     {
         // update interact input
         interacting = Input.GetMouseButton(0) || Input.GetKey(KeyCode.E);
-
-        textDebug.text = lastInteractable ? lastInteractable.gameObject.name : "";
     }
     
     private void FixedUpdate()
@@ -59,8 +57,8 @@ public class Interacting : MonoBehaviour
         // calculate interact ray length
         float rayLength = DETECT_DISTANCE;
         float angle = Vector3.Angle(Vector3.down, cam.transform.forward);
-        float angleClamped = Mathf.Clamp(angle, 0, 90);
-        rayLength += (DETECT_DISTANCE_DOWN - DETECT_DISTANCE) * Mathf.Cos(Mathf.Deg2Rad * angleClamped);
+        float angleClamped = Mathf.Clamp(angle, 0, 180);
+        rayLength += (DETECT_DISTANCE_DOWN - DETECT_DISTANCE) * (1 - Mathf.Sin(Mathf.Deg2Rad * angleClamped));
 
         // get new interactable
         Interactable newInteractable = null;
