@@ -142,12 +142,12 @@ MonoBehaviour:
   - {fileID: 5970411058406145012}
   - {fileID: 1422315906151993397}
   INsSliders:
-  - {fileID: 8169085949592563405}
-  - {fileID: 2739848375266380051}
-  - {fileID: 4061848349980380845}
-  - {fileID: 3391661969027133139}
-  - {fileID: 5924433307292269708}
-  - {fileID: 5961668769932809630}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   sliderBones:
   - {fileID: 1487945069321592733}
   - {fileID: 2223320723946542081}
@@ -428,34 +428,19 @@ Animation:
   m_CorrespondingSourceObject: {fileID: 2223639932434330405, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1487945069321592733 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -7093431232214057085, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+--- !u!4 &6293669318590737775 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2414293140255208079, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5998236085729972812 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2731666025990819246, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
-  m_PrefabInstance: {fileID: 660111357685604382}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2073652356552498088 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -7643109821855843402, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+--- !u!4 &6003781365540615631 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6519128273465988561, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &952587058345559808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 293133277368117022, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
-  m_PrefabInstance: {fileID: 660111357685604382}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6241997025791708339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -2339293513871446867, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
-  m_PrefabInstance: {fileID: 660111357685604382}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5723748906014136329 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4159082477827262441, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2223320723946542081 stripped
@@ -468,24 +453,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5332256259705342624, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1597972664059198625 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -6988447099729388353, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
-  m_PrefabInstance: {fileID: 660111357685604382}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7262376388984246884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7917340313928741498, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6003781365540615631 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6519128273465988561, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+--- !u!1 &2073652356552498088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7643109821855843402, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+  m_PrefabInstance: {fileID: 660111357685604382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1038293226535794800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8700411353693611922, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7252399196671396053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1329514699747727157, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+  m_PrefabInstance: {fileID: 660111357685604382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1487945069321592733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7093431232214057085, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+  m_PrefabInstance: {fileID: 660111357685604382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6895607704022575559 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6240636015690336729, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+  m_PrefabInstance: {fileID: 660111357685604382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5998236085729972812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2731666025990819246, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+  m_PrefabInstance: {fileID: 660111357685604382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6921929574219541537 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7576899065677171775, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+  m_PrefabInstance: {fileID: 660111357685604382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1597972664059198625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6988447099729388353, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3580287949842510088 stripped
@@ -498,24 +508,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2537835764985913174, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1038293226535794800 stripped
+--- !u!1 &6241997025791708339 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -8700411353693611922, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+  m_CorrespondingSourceObject: {fileID: -2339293513871446867, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6293669318590737775 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -2414293140255208079, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
-  m_PrefabInstance: {fileID: 660111357685604382}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6895607704022575559 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6240636015690336729, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
-  m_PrefabInstance: {fileID: 660111357685604382}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6921929574219541537 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7576899065677171775, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
+--- !u!1 &5723748906014136329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4159082477827262441, guid: b4691a0982b877d4e9b99e5f99482ee9, type: 3}
   m_PrefabInstance: {fileID: 660111357685604382}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &4335948067198917093
@@ -1015,67 +1015,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: S1
       objectReference: {fileID: 0}
+    - target: {fileID: 6313823071378408690, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!1 &2962606672101028125 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2325990764922218683, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
-  m_PrefabInstance: {fileID: 674096649165838758}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &8218377793537800257
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2962606672101028125}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1817652811896305685, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!114 &8169085949592563405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2962606672101028125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnRun: 1
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4347944829817295831}
-        m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &2904719828974720071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1147,67 +1092,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: S3
       objectReference: {fileID: 0}
+    - target: {fileID: 6313823071378408690, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!1 &578773083307212028 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2325990764922218683, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
-  m_PrefabInstance: {fileID: 2904719828974720071}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1844272427754731158
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578773083307212028}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1817652811896305685, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!114 &4061848349980380845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578773083307212028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnRun: 1
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 372914140122132278}
-        m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &5269714537510719024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1279,67 +1169,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: S5
       objectReference: {fileID: 0}
+    - target: {fileID: 6313823071378408690, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!1 &7594860305064060555 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2325990764922218683, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
-  m_PrefabInstance: {fileID: 5269714537510719024}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &3133955870805391669
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7594860305064060555}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1817652811896305685, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!114 &5924433307292269708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7594860305064060555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnRun: 1
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 515598103721640179}
-        m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &5598392654398233884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1411,67 +1246,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: S6
       objectReference: {fileID: 0}
+    - target: {fileID: 6313823071378408690, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!1 &7923775903511295399 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2325990764922218683, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
-  m_PrefabInstance: {fileID: 5598392654398233884}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &6658723086233804316
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7923775903511295399}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1817652811896305685, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!114 &5961668769932809630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7923775903511295399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnRun: 1
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7637174083542113579}
-        m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &6746842464032471463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1543,67 +1323,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: S4
       objectReference: {fileID: 0}
+    - target: {fileID: 6313823071378408690, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!1 &9071953065332576540 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2325990764922218683, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
-  m_PrefabInstance: {fileID: 6746842464032471463}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &91677788455218794
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071953065332576540}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1817652811896305685, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!114 &3391661969027133139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9071953065332576540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnRun: 1
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3103874655639014884}
-        m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &8608984565778126361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1675,64 +1400,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: S2
       objectReference: {fileID: 0}
+    - target: {fileID: 6313823071378408690, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!1 &6286697009906826914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2325990764922218683, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
-  m_PrefabInstance: {fileID: 8608984565778126361}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &2526680996008364221
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6286697009906826914}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1817652811896305685, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
---- !u!114 &2739848375266380051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6286697009906826914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnRun: 1
-  Interacted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3073861540621435585}
-        m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

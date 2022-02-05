@@ -2377,22 +2377,6 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5646031839339361534, guid: b7031f955b02fc94e98798ea82801c6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.a
-      value: 0.78431374
-      objectReference: {fileID: 0}
-    - target: {fileID: 5646031839339361534, guid: b7031f955b02fc94e98798ea82801c6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5646031839339361534, guid: b7031f955b02fc94e98798ea82801c6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5646031839339361534, guid: b7031f955b02fc94e98798ea82801c6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.r
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7031f955b02fc94e98798ea82801c6c, type: 3}
 --- !u!224 &726433117 stripped
@@ -4172,7 +4156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1235476879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4686,7 +4670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380777063512616270, guid: 144d2b4b97490e447ab3c790396edbc2, type: 3}
       propertyPath: m_Text
-      value: BACK
+      value: < BACK
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 144d2b4b97490e447ab3c790396edbc2, type: 3}
