@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Shovel
   m_EditorClassIdentifier: 
   name: Shovel
-  sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}
+  sprite: {fileID: 21300000, guid: ecb61948197b03848ad2e4d010777aa6, type: 3}
