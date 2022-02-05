@@ -216,6 +216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Items.fbx_Cherry
       objectReference: {fileID: 0}
+    - target: {fileID: 8923898457164891388, guid: 2cd6d2d44154491408f0c5609f07ff10, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cd6d2d44154491408f0c5609f07ff10, type: 3}
 --- !u!4 &3717547658581477209 stripped
