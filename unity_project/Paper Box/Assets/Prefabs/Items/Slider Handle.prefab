@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6313823071378408690, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
@@ -115,3 +115,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
   m_PrefabInstance: {fileID: 4223518582896377747}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8944048098741831664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5081001138846660707, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+  m_PrefabInstance: {fileID: 4223518582896377747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6650880367440812398
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944048098741831664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5534486782960791122, guid: 1faa73438d1a40d49a06fe7de357e5f5, type: 3}
+--- !u!114 &6949912651319575154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8944048098741831664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnRun: 1
+  Interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7876239074569880398}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
+        m_MethodName: OnInteracted
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
