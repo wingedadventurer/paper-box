@@ -2859,10 +2859,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maze
       objectReference: {fileID: 0}
-    - target: {fileID: 6839349449341486652, guid: 0364ed9a1d18c5546a6da0966206bce3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.00175
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0364ed9a1d18c5546a6da0966206bce3, type: 3}
 --- !u!1 &958386371
@@ -6897,7 +6893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1692936793
 MonoBehaviour:
   m_ObjectHideFlags: 0

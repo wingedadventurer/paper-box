@@ -9,7 +9,7 @@ public class Maze : MonoBehaviour
 
     private const int GRID_WIDTH = 18;
     private const int GRID_HEIGHT = 8;
-    private const float CELL_SIZE = 0.003f;
+    private const float CELL_SIZE = 0.3f; // [m]
 
     private Vector2 cellCurrent;
     private int mask;
@@ -57,7 +57,7 @@ public class Maze : MonoBehaviour
         // prevent moving through walls
         Ray ray = new Ray(trRaycast.position, new Vector3(-dir.x, -dir.y, 0));
         RaycastHit hit;
-        Physics.Raycast(ray, out hit, 0.3f, mask);
+        Physics.Raycast(ray, out hit, CELL_SIZE, mask);
         if (hit.collider) { return; }
 
 
