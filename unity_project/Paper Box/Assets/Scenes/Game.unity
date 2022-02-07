@@ -4162,45 +4162,7 @@ MonoBehaviour:
   goContainer: {fileID: 1626161374}
   textItemName: {fileID: 1610607480}
   dataItemEmpty: {fileID: 11400000, guid: ca46743e86e96684e92431ca937c50cc, type: 2}
-  initialItems:
-  - {fileID: 11400000, guid: 33e8e61e590e3354a94234e25d3d2701, type: 2}
-  - {fileID: 11400000, guid: a5d9846dc996f244b9860b99ba8a6bcb, type: 2}
-  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
-  - {fileID: 11400000, guid: ca46743e86e96684e92431ca937c50cc, type: 2}
-  - {fileID: 11400000, guid: 281a61a9beb739746982705781622808, type: 2}
-  - {fileID: 11400000, guid: d9c9b26ecad9c0d4ca9a774627c471da, type: 2}
-  - {fileID: 11400000, guid: f64d014af83035a428a5ad70af7f4f2c, type: 2}
-  - {fileID: 11400000, guid: cbf6d09475cbb2e40ab3acf3bca08578, type: 2}
-  - {fileID: 11400000, guid: 2d5e690314994344fad25c441d3eec75, type: 2}
-  - {fileID: 11400000, guid: daa325ec9de731c40918a415c18011b8, type: 2}
-  - {fileID: 11400000, guid: e19a0510a79846941b194c3ef33af0f0, type: 2}
-  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
-  - {fileID: 11400000, guid: d3692674aa70d8b44a2b4740b0670236, type: 2}
-  - {fileID: 11400000, guid: cc982055e0ef91e44b7e090e17d9acc0, type: 2}
-  - {fileID: 11400000, guid: d5a47570e3ee0ff4f9a9e47f4a60d778, type: 2}
-  - {fileID: 11400000, guid: 23b440adf6e4caf44a1d9b607a170d8c, type: 2}
-  - {fileID: 11400000, guid: fa52fabe09d3441488f94e43c3a21d26, type: 2}
-  - {fileID: 11400000, guid: 43b2a22bf8073b5469bb6d311cc75d2b, type: 2}
-  - {fileID: 11400000, guid: 64c192a3f3396cf48897b59dd5698ad1, type: 2}
-  - {fileID: 11400000, guid: f0afe77a506b5d04f8c34fbc8b382981, type: 2}
-  - {fileID: 11400000, guid: 75926e1fea27546478a1b5490fe3a319, type: 2}
-  - {fileID: 11400000, guid: ec101dc39f7779b4cb4d04c9ef9dcd48, type: 2}
-  - {fileID: 11400000, guid: ade4fd8d276ef634082859d51425029c, type: 2}
-  - {fileID: 11400000, guid: 20ee578d091068b4ab96a6f5800c37cc, type: 2}
-  - {fileID: 11400000, guid: 8574aee7a6df531448e15ab4f6c34049, type: 2}
-  - {fileID: 11400000, guid: f6c1b6f237ea1c548b3a3e5202e585d5, type: 2}
-  - {fileID: 11400000, guid: afd3cc7afc5de55499ca26dd209ddc5d, type: 2}
-  - {fileID: 11400000, guid: a7055b0023b650f41af9089e6f03cd15, type: 2}
-  - {fileID: 11400000, guid: 040bcb2375df4434aa5de5f1708b06d2, type: 2}
-  - {fileID: 11400000, guid: a5f8b018c2191554986875a3d025ff14, type: 2}
-  - {fileID: 11400000, guid: b2e58e2949c761b40b5c3998c6116e56, type: 2}
-  - {fileID: 11400000, guid: d2b5db8ebab3b4945b4c5bcc2c155fbf, type: 2}
-  - {fileID: 11400000, guid: f02e67c86c7d3a04cb723aa2b41701b8, type: 2}
-  - {fileID: 11400000, guid: 4545bfd74de15394e84d5ad9b96beb6f, type: 2}
-  - {fileID: 11400000, guid: 9d13f20a96014854690929f6d4fc55b4, type: 2}
-  - {fileID: 11400000, guid: 5ea21a2fa2815df4a9f7e1a17fbef311, type: 2}
-  - {fileID: 11400000, guid: 18fc9aae6a1b514458e614f6dddf565f, type: 2}
-  - {fileID: 11400000, guid: e0b11c15421f5414c8c9e25a2329a31b, type: 2}
+  initialItems: []
   uiItemEquipped: {fileID: 2115237263}
   Equipped:
     m_PersistentCalls:
