@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -337,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: 43b2a22bf8073b5469bb6d311cc75d2b, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []

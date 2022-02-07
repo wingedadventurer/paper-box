@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -206,6 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -247,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls:

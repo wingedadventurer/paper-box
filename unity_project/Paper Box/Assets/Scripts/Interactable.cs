@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] private bool hideOnRun = true;
+    public DataItem requiredItem;
 
     public UnityEvent Interacted;
 
@@ -29,7 +30,6 @@ public class Interactable : MonoBehaviour
 
     public void SetActive(bool value)
     {
-        //GetComponent<Collider>().enabled = value;
         gameObject.SetActive(value);
     }
 }

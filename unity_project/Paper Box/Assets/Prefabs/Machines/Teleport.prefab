@@ -187,6 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -363,6 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: 4545bfd74de15394e84d5ad9b96beb6f, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -393,6 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: 040bcb2375df4434aa5de5f1708b06d2, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -423,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: a5f8b018c2191554986875a3d025ff14, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -453,6 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: b2e58e2949c761b40b5c3998c6116e56, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -483,6 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: d2b5db8ebab3b4945b4c5bcc2c155fbf, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -513,6 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: f02e67c86c7d3a04cb723aa2b41701b8, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -630,6 +637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -747,6 +755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -864,6 +873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -981,6 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls: []
@@ -1098,6 +1109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls: []

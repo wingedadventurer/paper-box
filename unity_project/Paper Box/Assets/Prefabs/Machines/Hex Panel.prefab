@@ -266,6 +266,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1995516754737357419, guid: 046cf0fe3af6f594fac0ef9b95201717, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 046cf0fe3af6f594fac0ef9b95201717, type: 3}
       propertyPath: m_Name
       value: Screw Panel
@@ -360,6 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 11400000, guid: e0b11c15421f5414c8c9e25a2329a31b, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls:

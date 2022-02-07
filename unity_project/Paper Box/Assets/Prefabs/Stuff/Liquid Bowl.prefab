@@ -48,6 +48,10 @@ MonoBehaviour:
   dataBottleFull: {fileID: 11400000, guid: 18fc9aae6a1b514458e614f6dddf565f, type: 2}
   filled: 1
   goWater: {fileID: 2288410842816720287}
+  interactable: {fileID: 828800647674398194}
+  FillChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4968821994707997614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -155,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requiredItem: {fileID: 0}
   Interacted:
     m_PersistentCalls:
       m_Calls:

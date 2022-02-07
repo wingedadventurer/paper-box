@@ -11,12 +11,14 @@ public class LiquidBowl : MonoBehaviour
     public bool filled;
 
     [SerializeField] private GameObject goWater;
+    [SerializeField] private Interactable interactable;
 
     public UnityEvent FillChanged;
 
     private void Start()
     {
         goWater.SetActive(filled);
+        interactable.requiredItem = filled ? dataBottleEmpty : dataBottleFull;
     }
 
     public void OnInteract()
@@ -31,6 +33,7 @@ public class LiquidBowl : MonoBehaviour
                 inventory.EquipItem(dataBottleFull);
                 filled = false;
                 goWater.SetActive(filled);
+                interactable.requiredItem = filled ? dataBottleEmpty : dataBottleFull;
                 FillChanged.Invoke();
             }
         }
@@ -44,6 +47,7 @@ public class LiquidBowl : MonoBehaviour
                 //inventory.ClearEquippedItem();
                 filled = true;
                 goWater.SetActive(filled);
+                interactable.requiredItem = filled ? dataBottleEmpty : dataBottleFull;
                 FillChanged.Invoke();
             }
         }
