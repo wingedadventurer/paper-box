@@ -38,24 +38,27 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddItem(DataItem data)
+    public void AddItem(DataItem data, int amount = 1)
     {
-        // add to current one if it exists
-        foreach (UIItem uiItem in goContainer.transform.GetComponentsInChildren<UIItem>())
+        for (int i = 0; i < amount; i++)
         {
-            if (uiItem.GetData() == data)
+            // add to current one if it exists
+            foreach (UIItem uiItem in goContainer.transform.GetComponentsInChildren<UIItem>())
             {
-                uiItem.AddOne();
-                return;
+                if (uiItem.GetData() == data)
+                {
+                    uiItem.AddOne();
+                    return;
+                }
             }
-        }
 
-        // otherwise add new one
-        GameObject go = Instantiate(prefabUIItem);
-        go.transform.SetParent(goContainer.transform);
-        UIItem uiItem2 = go.GetComponent<UIItem>();
-        uiItem2.SetData(data);
-        uiItem2.AddOne();
+            // otherwise add new one
+            GameObject go = Instantiate(prefabUIItem);
+            go.transform.SetParent(goContainer.transform);
+            UIItem uiItem2 = go.GetComponent<UIItem>();
+            uiItem2.SetData(data);
+            uiItem2.AddOne();
+        }
     }
 
     public bool DeleteItem(DataItem data)
