@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Screwdriver
   m_EditorClassIdentifier: 
   name: Screwdriver
+  sortName: screwdriver
   sprite: {fileID: 21300000, guid: 0589c2b2233e8a749b08b83101521580, type: 3}

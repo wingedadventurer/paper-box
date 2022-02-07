@@ -44,8 +44,6 @@ public class EscapeCube : MonoBehaviour
 
     private void OnInteract(int i)
     {
-        Debug.Log(i);
-
         if (Inventory.instance.GetEquippedItem() == datas[i])
         {
             Inventory.instance.ConsumeEquippedItem();
@@ -57,7 +55,7 @@ public class EscapeCube : MonoBehaviour
             placedCount++;
             if (placedCount == 6)
             {
-                Debug.Log("done");
+                // TODO: win the game?
             }
         }
     }

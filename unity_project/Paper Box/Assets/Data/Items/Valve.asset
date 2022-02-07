@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Valve
   m_EditorClassIdentifier: 
   name: Valve
+  sortName: valve
   sprite: {fileID: 21300000, guid: 6873c63838ec78744ac78256d96e2400, type: 3}

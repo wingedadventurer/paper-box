@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bf27d5cf04a274fa4c79a29c42099a, type: 3}
   m_Name: Escape Box 6
   m_EditorClassIdentifier: 
-  name: Escape Box Purple
+  name: Purple Escape Box
+  sortName: escape box 6
   sprite: {fileID: 21300000, guid: 39699c56eb622df4b90df29077a80d66, type: 3}

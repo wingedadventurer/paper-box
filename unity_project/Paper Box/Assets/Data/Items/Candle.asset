@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Candle
   m_EditorClassIdentifier: 
   name: Candle
+  sortName: candle
   sprite: {fileID: 21300000, guid: fc4b599f613391f4ea5244bfcbc75867, type: 3}

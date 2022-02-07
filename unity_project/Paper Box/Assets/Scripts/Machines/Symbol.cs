@@ -40,7 +40,6 @@ public class Symbol : MonoBehaviour
                 interactable.gameObject.SetActive(false);
             }
             anim.Play(ac.name);
-            Debug.Log("done!");
         }
     }
 

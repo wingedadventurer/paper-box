@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Key 1
   m_EditorClassIdentifier: 
   name: Key
+  sortName: 0 1
   sprite: {fileID: 21300000, guid: 371beae9df76d264f90f4afbdf803483, type: 3}

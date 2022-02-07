@@ -6,5 +6,6 @@ using UnityEngine;
 public class DataItem : ScriptableObject
 {
     new public string name;
+    public string sortName;
     public Sprite sprite;
 }

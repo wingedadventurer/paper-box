@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Tangram Piece 2
   m_EditorClassIdentifier: 
   name: Tangram Piece
+  sortName: tangram piece 2
   sprite: {fileID: 21300000, guid: 4e4db1d4744f9094aa9ca28071c42014, type: 3}

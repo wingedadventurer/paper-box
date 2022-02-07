@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Scale Weight
   m_EditorClassIdentifier: 
   name: Scale Weight
+  sortName: scale weight
   sprite: {fileID: 21300000, guid: ab8f154c2fec5444daeb2c0aba64d926, type: 3}

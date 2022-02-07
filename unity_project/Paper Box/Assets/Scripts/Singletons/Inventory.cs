@@ -58,6 +58,8 @@ public class Inventory : MonoBehaviour
             UIItem uiItem2 = go.GetComponent<UIItem>();
             uiItem2.SetData(data);
             uiItem2.AddOne();
+
+            SortItems();
         }
     }
 
@@ -155,5 +157,22 @@ public class Inventory : MonoBehaviour
         }
 
         return 0;
+    }
+
+    private void SortItems()
+    {
+        List<UIItem> uiItems = new List<UIItem>(goContainer.GetComponentsInChildren<UIItem>());
+        uiItems.Sort(SortItemsByDisplayName);
+
+        for (int i = 0; i < uiItems.Count; i++)
+        {
+            uiItems[i].transform.SetSiblingIndex(i);
+        }
+    }
+
+    // custom sorter for items
+    static int SortItemsByDisplayName(UIItem a, UIItem b)
+    {
+        return a.GetData().sortName.CompareTo(b.GetData().sortName);
     }
 }

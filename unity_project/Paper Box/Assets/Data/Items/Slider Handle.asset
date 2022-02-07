@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Slider Handle
   m_EditorClassIdentifier: 
   name: Slider Handle
+  sortName: slider handle
   sprite: {fileID: 21300000, guid: e0cb33d715c6cc0408d6eb77f7951c47, type: 3}

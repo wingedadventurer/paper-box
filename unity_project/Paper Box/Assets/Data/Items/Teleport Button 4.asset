@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22bf27d5cf04a274fa4c79a29c42099a, type: 3}
   m_Name: Teleport Button 4
   m_EditorClassIdentifier: 
-  name: Square Button Green
+  name: Green Square Button
+  sortName: teleport button 4
   sprite: {fileID: 21300000, guid: 26ae0c11fc170eb41b820040cb59406b, type: 3}

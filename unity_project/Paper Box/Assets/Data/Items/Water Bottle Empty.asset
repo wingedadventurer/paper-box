@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Water Bottle Empty
   m_EditorClassIdentifier: 
   name: Water Bottle (Empty)
+  sortName: water bottle
   sprite: {fileID: 21300000, guid: 6e325728c71fbd845b604d001147526a, type: 3}

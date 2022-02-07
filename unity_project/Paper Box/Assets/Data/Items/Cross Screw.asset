@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Cross Screw
   m_EditorClassIdentifier: 
   name: Cross Screw
+  sortName: screw cross
   sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}

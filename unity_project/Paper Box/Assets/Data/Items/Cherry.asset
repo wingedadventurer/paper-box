@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Cherry
   m_EditorClassIdentifier: 
   name: Cherry
+  sortName: cherry
   sprite: {fileID: 21300000, guid: 7305cb7fe01ae114288a15a2dea5ba0b, type: 3}
