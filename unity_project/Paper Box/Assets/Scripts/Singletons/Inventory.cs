@@ -88,6 +88,11 @@ public class Inventory : MonoBehaviour
         return uiItemEquipped.GetData();
     }
 
+    public bool HasEquippedItem(DataItem data)
+    {
+        return uiItemEquipped.GetData() == data;
+    }
+
     public void ConsumeEquippedItem()
     {
         if (DeleteItem(uiItemEquipped.GetData()))
