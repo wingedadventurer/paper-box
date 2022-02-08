@@ -18,7 +18,8 @@ public class LiquidBowl : MonoBehaviour
     private void Start()
     {
         goWater.SetActive(filled);
-        interactable.requiredItem = filled ? dataBottleEmpty : dataBottleFull;
+        interactable.requestedItems.Clear();
+        interactable.requestedItems.Add(filled ? dataBottleEmpty : dataBottleFull);
     }
 
     public void OnInteract()
@@ -33,7 +34,8 @@ public class LiquidBowl : MonoBehaviour
                 inventory.EquipItem(dataBottleFull);
                 filled = false;
                 goWater.SetActive(filled);
-                interactable.requiredItem = filled ? dataBottleEmpty : dataBottleFull;
+                interactable.requestedItems.Clear();
+                interactable.requestedItems.Add(filled ? dataBottleEmpty : dataBottleFull);
                 FillChanged.Invoke();
             }
         }
@@ -44,10 +46,10 @@ public class LiquidBowl : MonoBehaviour
                 inventory.DeleteItem(dataBottleFull);
                 inventory.AddItem(dataBottleEmpty);
                 inventory.EquipItem(dataBottleEmpty);
-                //inventory.ClearEquippedItem();
                 filled = true;
                 goWater.SetActive(filled);
-                interactable.requiredItem = filled ? dataBottleEmpty : dataBottleFull;
+                interactable.requestedItems.Clear();
+                interactable.requestedItems.Add(filled ? dataBottleEmpty : dataBottleFull);
                 FillChanged.Invoke();
             }
         }

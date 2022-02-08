@@ -364,7 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
-  requiredItem: {fileID: 11400000, guid: e0b11c15421f5414c8c9e25a2329a31b, type: 2}
+  requestedItems:
+  - {fileID: 11400000, guid: e0b11c15421f5414c8c9e25a2329a31b, type: 2}
   Interacted:
     m_PersistentCalls:
       m_Calls:

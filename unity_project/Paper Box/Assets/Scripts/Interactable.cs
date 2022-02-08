@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] private bool hideOnRun = true;
-    public DataItem requiredItem;
+    public List<DataItem> requestedItems = new List<DataItem>();
 
     public UnityEvent Interacted;
 
