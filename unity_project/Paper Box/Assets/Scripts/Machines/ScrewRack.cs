@@ -38,7 +38,7 @@ public class ScrewRack : MonoBehaviour
         GameObject screw = Instantiate(data == dataCrossScrew ? prefabCrossScrew : prefabHexScrew);
         screw.transform.SetParent(containers[indexPlace].transform, true);
         screw.transform.localPosition = Vector3.zero;
-        screw.transform.Rotate(Vector3.forward, -90);
+        screw.transform.localEulerAngles = new Vector3(90, 0, 0);
 
         screw.GetComponent<Item>().Picked.AddListener(delegate { OnTake(indexPlace); });
 

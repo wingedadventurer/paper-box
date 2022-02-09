@@ -164,6 +164,16 @@ Animation:
   m_CorrespondingSourceObject: {fileID: 2223639932434330405, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
   m_PrefabInstance: {fileID: 458913954053148119}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4834119693607808936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4992343474712371839, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5971193184875479515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3133498875991405556, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2821869375070500959 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2411441143891867016, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
@@ -449,6 +459,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!64 &1252537909403223898
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4834119693607808936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2619086233303812490, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
 --- !u!64 &1957797372554016732
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -494,3 +518,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!64 &5720234679032520441
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5971193184875479515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3909233067320746374, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
