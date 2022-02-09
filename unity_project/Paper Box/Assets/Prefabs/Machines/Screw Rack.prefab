@@ -1,0 +1,496 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6559348173323634632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7147957054503791856}
+  - component: {fileID: 8557106933388146862}
+  m_Layer: 0
+  m_Name: Screw Rack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7147957054503791856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6559348173323634632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 131970748002839100}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8557106933388146862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6559348173323634632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cbf4dafb2949f64e99911fd40c1052d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1766984953097223922}
+  prefabCrossScrew: {fileID: 14536278498004264, guid: e0bf03774bd0c364b961cf7da0044d71, type: 3}
+  prefabHexScrew: {fileID: 14536278498004264, guid: 51e3726e9675d88428f18642099dd5f6, type: 3}
+  dataCrossScrew: {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  datas:
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  containers:
+  - {fileID: 8651487498398774590}
+  - {fileID: 728139590134316779}
+  - {fileID: 8480829387971843689}
+  - {fileID: 8426076542253199651}
+  - {fileID: 7573398701928779873}
+  - {fileID: 2962107566216053550}
+  interactablesPlace:
+  - {fileID: 2438116810184383081}
+  - {fileID: 3592359554845131508}
+  - {fileID: 7651500697408453094}
+  - {fileID: 3345983414139925748}
+  - {fileID: 7938555309364678100}
+  - {fileID: 600054477434738868}
+--- !u!1001 &458913954053148119
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7147957054503791856}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6781673004207360681, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6717048058959592390, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5841400564706855168, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_Name
+      value: Screw Rack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567572731303203403, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2223639932434330405, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088083375587703477, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7151400338799711534, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+--- !u!4 &131970748002839100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &1766984953097223922 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 2223639932434330405, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2821869375070500959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2411441143891867016, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2322594010594606034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2766865198789572101, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1035472671189603492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8646665922579310221, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1547047120346314415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7843488347643790472, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5630579851988337137 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3999841588880454618, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1890381895085849938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7177154929392013179, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8651487498398774590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9101249029588941033, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &728139590134316779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8339332981649542340, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8480829387971843689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8354061492077697982, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8426076542253199651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -958971813100110604, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7573398701928779873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8017671986200206774, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2962107566216053550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5816989440328806663, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7979591483644229990
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035472671189603492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2361130075998819763, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+--- !u!114 &7651500697408453094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035472671189603492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnRun: 0
+  requestedItems:
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8557106933388146862}
+        m_TargetAssemblyTypeName: ScrewRack, Assembly-CSharp
+        m_MethodName: OnPlace
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &2896047962288307633
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547047120346314415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2361130075998819763, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+--- !u!114 &3345983414139925748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547047120346314415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnRun: 0
+  requestedItems:
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8557106933388146862}
+        m_TargetAssemblyTypeName: ScrewRack, Assembly-CSharp
+        m_MethodName: OnPlace
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &5474694755952288932
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890381895085849938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2361130075998819763, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+--- !u!114 &600054477434738868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890381895085849938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnRun: 0
+  requestedItems:
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8557106933388146862}
+        m_TargetAssemblyTypeName: ScrewRack, Assembly-CSharp
+        m_MethodName: OnPlace
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &4158311036370618424
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322594010594606034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2361130075998819763, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+--- !u!114 &3592359554845131508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322594010594606034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnRun: 0
+  requestedItems:
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8557106933388146862}
+        m_TargetAssemblyTypeName: ScrewRack, Assembly-CSharp
+        m_MethodName: OnPlace
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &6994781947250954412
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821869375070500959}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2361130075998819763, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+--- !u!114 &2438116810184383081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821869375070500959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnRun: 0
+  requestedItems:
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8557106933388146862}
+        m_TargetAssemblyTypeName: ScrewRack, Assembly-CSharp
+        m_MethodName: OnPlace
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!64 &1957797372554016732
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630579851988337137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2361130075998819763, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+--- !u!114 &7938555309364678100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5630579851988337137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33ec264da37c3446b7ce894d28cdf40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnRun: 0
+  requestedItems:
+  - {fileID: 11400000, guid: 45d7ac92bd6bac34d99e9baf2671735b, type: 2}
+  - {fileID: 11400000, guid: 8751588c36416f04d87e7d0643e86f8c, type: 2}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8557106933388146862}
+        m_TargetAssemblyTypeName: ScrewRack, Assembly-CSharp
+        m_MethodName: OnPlace
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
