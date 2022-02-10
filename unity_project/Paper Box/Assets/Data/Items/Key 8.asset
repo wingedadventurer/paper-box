@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bf27d5cf04a274fa4c79a29c42099a, type: 3}
+  m_Name: Key 8
+  m_EditorClassIdentifier: 
+  name: Key
+  sortName: 08
+  sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}
