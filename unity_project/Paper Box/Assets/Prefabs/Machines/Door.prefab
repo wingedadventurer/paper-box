@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02921c2c15d8c749ab9b36094344302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataItemKey: {fileID: 0}
+  dataKey: {fileID: 0}
+  prefabKey: {fileID: 0}
   anim: {fileID: 2573980131039592246}
-  acOpen: {fileID: -3767692559409771237, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
-  iLock: {fileID: 7102312112102615516}
-  goKey: {fileID: 5292486412219348328}
+  inLock: {fileID: 7102312112102615516}
+  goKeyPos: {fileID: 5292486412219348328}
 --- !u!1001 &4423495764569230355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,15 +100,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1201956580613927607, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2223639932434330405, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9016591169505441273, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7479501173066888744, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
 --- !u!4 &4245153421040380920 stripped
 Transform:
@@ -118,6 +127,11 @@ Transform:
 --- !u!111 &2573980131039592246 stripped
 Animation:
   m_CorrespondingSourceObject: {fileID: 2223639932434330405, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
+  m_PrefabInstance: {fileID: 4423495764569230355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2946334845751186554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7674113868087240599, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
   m_PrefabInstance: {fileID: 4423495764569230355}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5292486412219348328 stripped
@@ -130,6 +144,32 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9195134198876975920, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
   m_PrefabInstance: {fileID: 4423495764569230355}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &5663140019433042998
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2946334845751186554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.0019999994, z: 0.019999992}
+  m_Center: {x: 0, y: 4.440891e-16, z: 0.009999996}
+--- !u!65 &1905409148231625805
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825822642756108067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.044444453, y: 0.007999997, z: 0.033333335}
+  m_Center: {x: 0.000000005587935, y: -0.005999996, z: -9.3132246e-10}
 --- !u!114 &7102312112102615516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +183,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requestedItems: []
   Interacted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3887767552877607961}
+        m_TargetAssemblyTypeName: Door, Assembly-CSharp
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
