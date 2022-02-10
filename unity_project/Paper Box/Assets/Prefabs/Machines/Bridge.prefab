@@ -134,6 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a93a3227edb3124ebeee4c776b87476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1725682902560281403}
+  data: {fileID: 11400000, guid: ade4fd8d276ef634082859d51425029c, type: 2}
+  sequence: 000100010101
   INs:
   - {fileID: 2575115061399436203}
   - {fileID: 9069939241876760062}
@@ -162,9 +165,6 @@ MonoBehaviour:
   - {fileID: 3103874655639014884}
   - {fileID: 515598103721640179}
   - {fileID: 7637174083542113579}
-  sequence: 000100010101
-  anim: {fileID: 1725682902560281403}
-  data: {fileID: 11400000, guid: ade4fd8d276ef634082859d51425029c, type: 2}
 --- !u!1001 &660111357685604382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -591,6 +591,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulled: 0
+  anim: {fileID: 3022481497615722053}
+  Pulled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9086145717237458505}
+        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
+        m_MethodName: OnSliderPull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!111 &8811393390443362130
 Animation:
   m_ObjectHideFlags: 0
@@ -621,6 +637,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulled: 0
+  anim: {fileID: 8811393390443362130}
+  Pulled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9086145717237458505}
+        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
+        m_MethodName: OnSliderPull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &3514208949925248047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -737,6 +769,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulled: 0
+  anim: {fileID: 3918818941151495343}
+  Pulled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9086145717237458505}
+        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
+        m_MethodName: OnSliderPull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &5887925006784163916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -853,6 +901,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulled: 0
+  anim: {fileID: 8183127702539944078}
+  Pulled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9086145717237458505}
+        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
+        m_MethodName: OnSliderPull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!111 &3193586039749742356
 Animation:
   m_ObjectHideFlags: 0
@@ -883,6 +947,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulled: 0
+  anim: {fileID: 3193586039749742356}
+  Pulled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9086145717237458505}
+        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
+        m_MethodName: OnSliderPull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &2117925278537628771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -956,6 +1036,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulled: 0
+  anim: {fileID: 6216188439952165006}
+  Pulled:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9086145717237458505}
+        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
+        m_MethodName: OnSliderPull
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &674096649165838758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1069,18 +1165,6 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 4347944829817295831}
         m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
         m_MethodName: Toggle
@@ -1206,18 +1290,6 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 372914140122132278}
         m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
         m_MethodName: Toggle
@@ -1343,18 +1415,6 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 515598103721640179}
         m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
         m_MethodName: Toggle
@@ -1480,18 +1540,6 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7637174083542113579}
         m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
         m_MethodName: Toggle
@@ -1617,18 +1665,6 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3103874655639014884}
         m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
         m_MethodName: Toggle
@@ -1754,18 +1790,6 @@ MonoBehaviour:
   Interacted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9086145717237458505}
-        m_TargetAssemblyTypeName: Bridge, Assembly-CSharp
-        m_MethodName: OnSliderPull
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3073861540621435585}
         m_TargetAssemblyTypeName: BridgeSlider, Assembly-CSharp
         m_MethodName: Toggle

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Bridge : MonoBehaviour
 {
+    public Animation anim;
+    public DataItem data;
+    public bool[] sequence;
     public Interactable[] INs;
     public Interactable[] INsSliders;
     public GameObject[] sliderBones;
     public BridgeSlider[] sliders;
-    public bool[] sequence;
-    public Animation anim;
-    public DataItem data;
 
     void Start()
     {
