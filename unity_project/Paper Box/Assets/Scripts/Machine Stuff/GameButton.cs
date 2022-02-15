@@ -27,28 +27,36 @@ public class GameButton : MonoBehaviour
         //transform.localPosition = Vector3.Lerp(transform.localPosition, pressed ? posStart + offset : posStart, 0.05f);
         tr.localPosition = Vector3.Lerp(tr.localPosition, posTarget, 0.1f);
 
-        if (tr.localPosition.magnitude - posTarget.magnitude <= 0.001f)
+        if (pressed && !toggle && (tr.localPosition - posTarget).magnitude <= 0.00005f)
         {
-            if (!pressed)
-            {
-                posTarget = posStart;
-            }
+            posTarget = posStart;
+            pressed = false;
         }
     }
 
-    public void SetPressed(bool value)
+    public void SetPressed(bool value, bool skipEvent = false)
     {
         pressed = value;
 
         if (pressed)
         {
             posTarget = posStart + offset;
-            Pressed.Invoke();
+            if (!skipEvent)
+            {
+                Pressed.Invoke();
+            }
         }
     }
 
-    public void SetEnabled(bool value)
+    public void SetInteractable(bool value)
     {
         interactable.gameObject.SetActive(value);
+    }
+
+    public void DoPress()
+    {
+        if (pressed) { return; }
+
+        SetPressed(true);
     }
 }

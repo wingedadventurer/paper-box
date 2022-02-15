@@ -15,7 +15,7 @@ public class ScatteredButtons : MonoBehaviour
     {
         mrs[index].sharedMaterial = matGreen;
         buttons[index].toggle = true;   
-        buttons[index].SetEnabled(false);
+        buttons[index].SetInteractable(false);
 
         count++;
         if (count == 10)
