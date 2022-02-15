@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class Item : MonoBehaviour
 {
     [SerializeField] private DataItem data;
-    [SerializeField] private Interactable interactable;
 
     [HideInInspector] public UnityEvent Picked;
 
