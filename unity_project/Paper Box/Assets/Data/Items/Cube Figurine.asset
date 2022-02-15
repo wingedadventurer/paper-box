@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cube Figurine
   sortName: cube figurine
-  sprite: {fileID: 21300000, guid: 013da41b8baaebf478e64a98658e603c, type: 3}
+  sprite: {fileID: 21300000, guid: a8e7b355f55abea4b8a11e9a97904ef6, type: 3}
