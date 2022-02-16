@@ -10,6 +10,7 @@ public class GameButton : MonoBehaviour
     public Vector3 offset;
     [SerializeField] private Transform tr;
     [SerializeField] private Interactable interactable;
+    [SerializeField] private bool addListener;
 
     private Vector3 posStart;
     private Vector3 posTarget;
@@ -20,11 +21,15 @@ public class GameButton : MonoBehaviour
     {
         posStart = tr.localPosition;
         posTarget = posStart;
+
+        if (addListener)
+        {
+            interactable.AddListener(DoPress);
+        }
     }
 
     private void Update()
     {
-        //transform.localPosition = Vector3.Lerp(transform.localPosition, pressed ? posStart + offset : posStart, 0.05f);
         tr.localPosition = Vector3.Lerp(tr.localPosition, posTarget, 0.1f);
 
         if (pressed && !toggle && (tr.localPosition - posTarget).magnitude <= 0.00005f)
@@ -45,6 +50,10 @@ public class GameButton : MonoBehaviour
             {
                 Pressed.Invoke();
             }
+        }
+        else
+        {
+            posTarget = posStart;
         }
     }
 

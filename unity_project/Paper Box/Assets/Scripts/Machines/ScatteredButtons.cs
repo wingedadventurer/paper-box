@@ -13,6 +13,8 @@ public class ScatteredButtons : MonoBehaviour
 
     public void OnButtonPressed(int index)
     {
+        Debug.Log("A");
+
         mrs[index].sharedMaterial = matGreen;
         buttons[index].toggle = true;   
         buttons[index].SetInteractable(false);

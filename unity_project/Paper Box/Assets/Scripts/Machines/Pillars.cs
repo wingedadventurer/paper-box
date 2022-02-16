@@ -18,6 +18,7 @@ public class Pillars : MonoBehaviour
             pillars[i].SetHeight(i);
         }
 
+        // initial
         SwapPillars(pillars[0], pillars[2]);
         SwapPillars(pillars[1], pillars[5]);
         SwapPillars(pillars[6], pillars[7]);
@@ -28,33 +29,44 @@ public class Pillars : MonoBehaviour
     {
         if (indexButtonPressed > -1)
         {
+            // button already pressed
+
             if (indexButtonPressed == i)
             {
-                buttons[i].SetPressed(false);
-                indexButtonPressed = -1;
+                // same button pressed
+
+                return;
             }
             else
             {
+                // 2nd button pressed
+
                 SwapPillars(pillars[i], pillars[indexButtonPressed]);
 
-                buttons[i].SetPressed(false);
-                buttons[indexButtonPressed].SetPressed(false);
+                buttons[indexButtonPressed].toggle = false;
+                buttons[indexButtonPressed].SetInteractable(true);
 
                 indexButtonPressed = -1;
 
                 if (IsSequenceCorrect())
                 {
-                    foreach (Interactable interactable in INButtons)
+                    foreach (GameButton button in buttons)
                     {
-                        interactable.SetActive(false);
+                        button.SetInteractable(false);
+                        button.toggle = true;
+                        button.SetPressed(true, true);
                     }
+
                     anim.Play();
                 }
             }
         }
         else
         {
-            buttons[i].SetPressed(true);
+            // first time press
+
+            buttons[i].toggle = true;
+            buttons[i].SetInteractable(false);
             indexButtonPressed = i;
         }
     }
