@@ -19,6 +19,11 @@ public class GameButton : MonoBehaviour
 
     private void Start()
     {
+        if (!tr)
+        {
+            tr = transform;
+        }
+
         posStart = tr.localPosition;
         posTarget = posStart;
 
