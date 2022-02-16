@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     public List<DataItem> requestedItems = new List<DataItem>();
 
     public UnityEvent Interacted;
+    [HideInInspector] public bool interactable = true;
 
     private void Start()
     {
@@ -26,6 +27,11 @@ public class Interactable : MonoBehaviour
     public void Interact()
     {
         Interacted.Invoke();
+    }
+
+    public void SetInteractable(bool value)
+    {
+        interactable = value;
     }
 
     public void SetActive(bool value)

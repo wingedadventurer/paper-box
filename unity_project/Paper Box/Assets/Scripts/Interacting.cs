@@ -76,19 +76,22 @@ public class Interacting : MonoBehaviour
 
             if (go.TryGetComponent(out Interactable interactable))
             {
-                Inventory inventory = Inventory.instance;
-                if (interactable.requestedItems.Count == 0)
+                if (interactable.interactable)
                 {
-                    if (inventory.GetEquippedItem() == null)
+                    Inventory inventory = Inventory.instance;
+                    if (interactable.requestedItems.Count == 0)
                     {
-                        newInteractable = interactable;
+                        if (inventory.GetEquippedItem() == null)
+                        {
+                            newInteractable = interactable;
+                        }
                     }
-                }
-                else
-                {
-                    if (interactable.requestedItems.Contains(inventory.GetEquippedItem()))
+                    else
                     {
-                        newInteractable = interactable;
+                        if (interactable.requestedItems.Contains(inventory.GetEquippedItem()))
+                        {
+                            newInteractable = interactable;
+                        }
                     }
                 }
             }

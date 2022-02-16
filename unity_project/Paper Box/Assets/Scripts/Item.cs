@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private DataItem data;
+    public DataItem data;
 
     [HideInInspector] public UnityEvent Picked;
 
@@ -16,6 +16,15 @@ public class Item : MonoBehaviour
             Inventory.instance.AddItem(data);
             Picked.Invoke();
             Destroy(gameObject);
+        }
+    }
+
+    public void SetInteractable(bool value)
+    {
+        foreach (Interactable interactable in GetComponentsInChildren<Interactable>())
+        {
+            //interactable.SetActive(value);
+            interactable.SetInteractable(value);
         }
     }
 }
