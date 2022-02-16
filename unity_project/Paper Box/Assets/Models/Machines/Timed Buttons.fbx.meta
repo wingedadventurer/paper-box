@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 491d4b9c757a89640aa342c44b128b04
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 2148642875016054395
+    second: Glass|Open
   externalObjects: {}
   materials:
     materialImportMode: 2

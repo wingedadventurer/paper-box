@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimedButtons : MonoBehaviour
 {
-    const float BUTTON_DURATION = 15; // [s]
+    const float BUTTON_DURATION = 60; // [s]
 
     [SerializeField] private Animation anim;
     [SerializeField] private GameButton[] buttons;
@@ -39,10 +39,8 @@ public class TimedButtons : MonoBehaviour
         // update visuals
         for (int i = 0; i < 6; i++)
         {
-            float n = Mathf.Lerp(bars[i].transform.localScale.x, times[i] / BUTTON_DURATION, 0.02f);
-
-            bars[i].transform.localScale = new Vector3(n, 1, n);
-
+            float n = Mathf.Lerp(bars[i].transform.localScale.z, times[i] / BUTTON_DURATION, 0.03f);
+            bars[i].transform.localScale = new Vector3(1, 1, n);
         }
     }
 
@@ -60,8 +58,7 @@ public class TimedButtons : MonoBehaviour
             {
                 times[i] = BUTTON_DURATION;
             }
-            Debug.Log("done");
-            //anim.Play();
+            anim.Play();
         }
     }
 

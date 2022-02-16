@@ -10,7 +10,7 @@ public class Interacting : MonoBehaviour
     [HideInInspector] public UnityEvent Exited;
     [HideInInspector] public UnityEvent Interacted;
 
-    const float DETECT_DISTANCE = 1.5f;
+    const float DETECT_DISTANCE = 1.75f;
     const float DETECT_DISTANCE_DOWN = 2.5f;
 
     private Interactable lastInteractable;
