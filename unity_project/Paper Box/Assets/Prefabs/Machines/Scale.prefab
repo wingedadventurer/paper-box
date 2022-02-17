@@ -29,7 +29,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4249906317452284166}
-  - {fileID: 2314292788451560498}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
@@ -63,7 +62,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 4427049679631572993}
+    m_TransformParent: {fileID: 3181049158681903843}
     m_Modifications:
     - target: {fileID: 14536278498004264, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_Name
@@ -71,35 +70,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.010000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.010000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.010000003
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3844
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8514
+      value: -0.000025
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0389
+      value: -0.0051794765
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70105815
+      value: -0.19134274
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4304586
+      value: -0.8001031
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.09229637
+      value: -0.33141297
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5609851
+      value: 0.46193978
       objectReference: {fileID: 0}
     - target: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -115,11 +126,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
---- !u!4 &2314292788451560498 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 525009045553124852, guid: 16137c1b4b9afc34c8d697e3d677da1b, type: 3}
-  m_PrefabInstance: {fileID: 2834789421103503814}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4427049678153482598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,6 +567,11 @@ GameObject:
 --- !u!4 &5600091957435043115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8126622162617629638, guid: ff3035cc6dbe047498d5ac8d6c22e45b, type: 3}
+  m_PrefabInstance: {fileID: 4427049678513895149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3181049158681903843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7974378087085657074, guid: ff3035cc6dbe047498d5ac8d6c22e45b, type: 3}
   m_PrefabInstance: {fileID: 4427049678513895149}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4427049678513895143

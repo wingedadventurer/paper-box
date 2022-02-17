@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Plates : MonoBehaviour
 {
+    [SerializeField] private Animation anim;
+    [SerializeField] private GameButton buttonEnd;
+    [SerializeField] private GameButton buttonRetry;
     [SerializeField] private PressurePlate[] plates;
     [SerializeField] private PressurePlate[] plateSequence;
-    [SerializeField] private Interactable iEnd;
-    [SerializeField] private Interactable iRetry;
-    [SerializeField] private Animation anim;
 
     private int indexCurrent;
     private bool failed;
@@ -21,14 +21,9 @@ public class Plates : MonoBehaviour
         {
             plate.Pressed.AddListener( delegate { OnPlatePressed(plate); } );
         }
-    }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Retry();
-        }
+        buttonRetry.SetPressed(true, true);
+        buttonRetry.SetInteractable(false);
     }
 
     private void OnPlatePressed(PressurePlate plate)
@@ -54,21 +49,31 @@ public class Plates : MonoBehaviour
 
     public void OnEndInteract()
     {
-        iEnd.SetActive(false);
+        buttonEnd.SetInteractable(false);
 
         if (succeeded)
         {
-            iRetry.SetActive(false);
-            anim.Play("Armature|ConsoleLift");
+            // success
+
+            foreach (PressurePlate plate in plates)
+            {
+                plate.Press();
+            }
+
+            anim.Play();
         }
         else
         {
             // fail
-        }
 
-        foreach (PressurePlate plate in plates)
-        {
-            plate.Press();
+            buttonRetry.SetInteractable(true);
+            buttonRetry.SetPressed(false);
+
+            foreach (PressurePlate plate in plates)
+            {
+                plate.Press();
+                plate.SetGlowing(false);
+            }
         }
     }
 
@@ -87,6 +92,10 @@ public class Plates : MonoBehaviour
         indexCurrent = 0;
         failed = false;
         succeeded = false;
-        iEnd.SetActive(true);
+
+        buttonRetry.SetPressed(true, true);
+        buttonRetry.SetInteractable(false);
+        buttonEnd.SetPressed(false);
+        buttonEnd.SetInteractable(true);
     }
 }
