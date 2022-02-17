@@ -25,10 +25,10 @@ public class Maze : MonoBehaviour
     void Update()
     {
         // debug move with keys
-        if (Input.GetKeyDown(KeyCode.I)) { MoveUp(); }
-        if (Input.GetKeyDown(KeyCode.K)) { MoveDown(); }
-        if (Input.GetKeyDown(KeyCode.J)) { MoveLeft(); }
-        if (Input.GetKeyDown(KeyCode.L)) { MoveRight(); }
+        //if (Input.GetKeyDown(KeyCode.I)) { MoveUp(); }
+        //if (Input.GetKeyDown(KeyCode.K)) { MoveDown(); }
+        //if (Input.GetKeyDown(KeyCode.J)) { MoveLeft(); }
+        //if (Input.GetKeyDown(KeyCode.L)) { MoveRight(); }
 
         trThing.localPosition = Vector3.Lerp(trThing.localPosition, new Vector3(-cellCurrent.x, 0, -cellCurrent.y) * CELL_SIZE, 0.15f);
     }
