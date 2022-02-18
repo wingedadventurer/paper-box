@@ -11,6 +11,7 @@ public class Rings : MonoBehaviour
     [SerializeField] private GameObject goSolidBefore;
     [SerializeField] private GameObject goSolidAfter;
     [SerializeField] private GameObject goKey;
+    [SerializeField] private GameButton[] buttons;
     private int[] rotations = new int[RING_COUNT];
     private float[] angles = new float[RING_COUNT];
 
@@ -29,9 +30,10 @@ public class Rings : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1)) { OnButtonPress(0); }
-        if (Input.GetKeyDown(KeyCode.Keypad2)) { OnButtonPress(1); }
-        if (Input.GetKeyDown(KeyCode.Keypad3)) { OnButtonPress(2); }
+        // debug control
+        //if (Input.GetKeyDown(KeyCode.Keypad1)) { OnButtonPress(0); }
+        //if (Input.GetKeyDown(KeyCode.Keypad2)) { OnButtonPress(1); }
+        //if (Input.GetKeyDown(KeyCode.Keypad3)) { OnButtonPress(2); }
 
         for (int i = 0; i < RING_COUNT; i++)
         {
@@ -96,6 +98,13 @@ public class Rings : MonoBehaviour
         for (int i = 0; i < RING_COUNT; i++)
         {
             if (rotations[i] != 0) { return false; }
+        }
+
+        foreach(GameButton button in buttons)
+        {
+            button.SetInteractable(false);
+            button.toggle = true;
+            button.SetPressed(true, true);
         }
 
         return true;

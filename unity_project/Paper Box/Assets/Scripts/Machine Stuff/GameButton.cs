@@ -64,7 +64,8 @@ public class GameButton : MonoBehaviour
 
     public void SetInteractable(bool value)
     {
-        interactable.gameObject.SetActive(value);
+        //interactable.gameObject.SetActive(value);
+        interactable.SetInteractable(value);
     }
 
     public void DoPress()

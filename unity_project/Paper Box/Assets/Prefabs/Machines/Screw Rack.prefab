@@ -69,6 +69,63 @@ MonoBehaviour:
   - {fileID: 3345983414139925748}
   - {fileID: 7938555309364678100}
   - {fileID: 600054477434738868}
+--- !u!1001 &317029085596373610
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5280386194465008394}
+    m_Modifications:
+    - target: {fileID: 14536278498004264, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_Name
+      value: Key 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000015348196
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000017881393
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525009045553124852, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60e15815bc7071f47b6f23fa6c8bdded, type: 3}
 --- !u!1001 &458913954053148119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167,6 +224,11 @@ Animation:
 --- !u!1 &4834119693607808936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4992343474712371839, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
+  m_PrefabInstance: {fileID: 458913954053148119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5280386194465008394 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5699816099507889885, guid: 68b86715344816946a35ffcf4f86196b, type: 3}
   m_PrefabInstance: {fileID: 458913954053148119}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5971193184875479515 stripped
@@ -279,6 +341,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
 --- !u!64 &2896047962288307633
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -324,6 +387,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
 --- !u!64 &5474694755952288932
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -369,6 +433,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
 --- !u!64 &4158311036370618424
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -414,6 +479,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
 --- !u!64 &6994781947250954412
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -459,6 +525,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
 --- !u!64 &1252537909403223898
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -518,6 +585,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
 --- !u!64 &5720234679032520441
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -15,11 +15,11 @@ public class Bridge : MonoBehaviour
     void Start()
     {
         INs[0].SetActive(false);
-        INs[1].SetActive(false);
-        sliderBones[2].SetActive(false);
+        sliderBones[1].SetActive(false);
+        INs[2].SetActive(false);
         INs[3].SetActive(false);
-        sliderBones[4].SetActive(false);
-        INs[5].SetActive(false);
+        INs[4].SetActive(false);
+        sliderBones[5].SetActive(false);
     }
 
     public void OnSliderPlace(int i)

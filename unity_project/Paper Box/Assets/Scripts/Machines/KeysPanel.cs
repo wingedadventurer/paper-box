@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KeysPanel : MonoBehaviour
 {
+    [SerializeField] private Animation anim;
     [SerializeField] private DataItem[] pattern;
     [SerializeField] private DataItem[] keyDatas;
     [SerializeField] private GameObject[] keyPrefabs;
@@ -84,7 +85,7 @@ public class KeysPanel : MonoBehaviour
 
         if (IsCompleted())
         {
-            Debug.Log("done");
+            OnDone();
         }
     }
 
@@ -97,7 +98,7 @@ public class KeysPanel : MonoBehaviour
 
         if (IsCompleted())
         {
-            Debug.Log("done");
+            OnDone();
         }
     }
 
@@ -118,5 +119,17 @@ public class KeysPanel : MonoBehaviour
         }
 
         return true;
+    }
+
+    private void OnDone()
+    {
+        Debug.Log("done");
+
+        foreach (Item item in GetComponentsInChildren<Item>())
+        {
+            item.SetInteractable(false);
+        }
+
+        anim.Play();
     }
 }
