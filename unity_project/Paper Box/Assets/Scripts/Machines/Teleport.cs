@@ -22,10 +22,11 @@ public class Teleport : MonoBehaviour
 
         for (int i = 0; i < 6; i++)
         {
+
             int a = i;
-            goButtons[i].SetActive(false);
             interactables[i].AddListener(delegate { OnButtonPlaced(a); });
             buttons[i].Pressed.AddListener(delegate { OnButtonPressed(a); });
+            goButtons[i].SetActive(false);
             interactables[i].gameObject.SetActive(true);
         }
 

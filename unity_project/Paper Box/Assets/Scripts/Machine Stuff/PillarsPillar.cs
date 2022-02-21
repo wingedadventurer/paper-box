@@ -32,6 +32,6 @@ public class PillarsPillar : MonoBehaviour
     {
         height = i;
         animating = true;
-        targetHeight = 0.001f + 0.0005f * height;
+        targetHeight = 0.1f + 0.05f * height;
     }
 }
