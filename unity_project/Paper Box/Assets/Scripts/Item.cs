@@ -3,26 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-//[System.Serializable]
-//public class ItemEvent : UnityEvent<Item> {}
-
 public class Item : MonoBehaviour
 {
     public DataItem data;
-    //public ItemEvent Picked;
 
     public UnityEvent Picked;
-    
 
     public void OnInteracted()
     {
         if (!Inventory.instance.GetEquippedItem())
         {
             Inventory.instance.AddItem(data);
-            //Picked.Invoke(this);
             Picked.Invoke();
             AudioSource sfx = AudioManager.instance.PlaySFX(AudioManager.instance.sfxPickup);
-            sfx.volume = 0.7f;
+            sfx.volume = 0.6f;
             Destroy(gameObject);
         }
     }
@@ -31,7 +25,6 @@ public class Item : MonoBehaviour
     {
         foreach (Interactable interactable in GetComponentsInChildren<Interactable>())
         {
-            //interactable.SetActive(value);
             interactable.SetInteractable(value);
         }
     }

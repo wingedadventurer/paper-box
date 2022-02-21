@@ -27,6 +27,8 @@ public class Pillars : MonoBehaviour
 
     public void OnButtonPressed(int i)
     {
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton);
+
         if (indexButtonPressed > -1)
         {
             // button already pressed
