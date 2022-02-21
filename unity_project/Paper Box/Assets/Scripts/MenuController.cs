@@ -12,6 +12,8 @@ public class MenuController : MonoBehaviour
         panelMain.SetActive(true);
         panelSettings.SetActive(false);
         panelCredits.SetActive(false);
+
+        AudioManager.instance.PlayMusic(AudioManager.instance.musicMenu);
     }
 
     public void StartGame()

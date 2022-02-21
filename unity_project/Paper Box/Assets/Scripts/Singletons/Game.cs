@@ -36,7 +36,6 @@ public class Game : MonoBehaviour
         SetPaused(false);
         LockMouse(true);
 
-
         // connect Inventory to Crosshair
         inventory.Equipped.AddListener( delegate { crosshair.SetEquipped(true); });
         inventory.Unequipped.AddListener( delegate { crosshair.SetEquipped(false); });
@@ -45,6 +44,8 @@ public class Game : MonoBehaviour
         interacting.Entered.AddListener(delegate { crosshair.SetCanInteract(true); });
         interacting.Exited.AddListener(delegate { crosshair.SetCanInteract(false); });
         interacting.Interacted.AddListener(crosshair.OnInteract);
+
+        AudioManager.instance.PlayMusic(AudioManager.instance.musicGame);
     }
 
     void Update()
