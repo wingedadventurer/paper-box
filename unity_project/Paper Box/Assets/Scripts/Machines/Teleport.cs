@@ -7,10 +7,9 @@ public class Teleport : MonoBehaviour
 
     [SerializeField] private Animation anim;
     [SerializeField] private int[] sequence;
-    [SerializeField] private DataItem[] datas;
-    [SerializeField] private GameObject[] buttons;
     [SerializeField] private Interactable[] interactables;
-    [SerializeField] private Interactable[] interactablesButtons;
+    [SerializeField] private GameObject[] goButtons;
+    [SerializeField] private GameButton[] buttons;
     [SerializeField] private Transform[] positions;
 
     private List<int> entered;
@@ -24,9 +23,9 @@ public class Teleport : MonoBehaviour
         for (int i = 0; i < 6; i++)
         {
             int a = i;
-            buttons[i].SetActive(false);
+            goButtons[i].SetActive(false);
             interactables[i].AddListener(delegate { OnButtonPlaced(a); });
-            interactablesButtons[i].AddListener(delegate { OnButtonPressed(a); });
+            buttons[i].Pressed.AddListener(delegate { OnButtonPressed(a); });
             interactables[i].gameObject.SetActive(true);
         }
     }
@@ -34,12 +33,9 @@ public class Teleport : MonoBehaviour
     private void OnButtonPlaced(int i)
     {
         Inventory inventory = Inventory.instance;
-        if (inventory.GetEquippedItem() == datas[i])
-        {
-            inventory.ConsumeEquippedItem();
-            interactables[i].gameObject.SetActive(false);
-            buttons[i].SetActive(true);
-        }
+        inventory.ConsumeEquippedItem();
+        interactables[i].gameObject.SetActive(false);
+        goButtons[i].SetActive(true);
     }
 
     private void OnButtonPressed(int i)
