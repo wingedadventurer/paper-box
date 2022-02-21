@@ -28,6 +28,10 @@ public class Teleport : MonoBehaviour
             buttons[i].Pressed.AddListener(delegate { OnButtonPressed(a); });
             interactables[i].gameObject.SetActive(true);
         }
+
+        // enable orange button
+        goButtons[3].SetActive(true);
+        interactables[3].gameObject.SetActive(false);
     }
 
     private void OnButtonPlaced(int i)
@@ -36,6 +40,8 @@ public class Teleport : MonoBehaviour
         inventory.ConsumeEquippedItem();
         interactables[i].gameObject.SetActive(false);
         goButtons[i].SetActive(true);
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxInsert);
     }
 
     private void OnButtonPressed(int i)

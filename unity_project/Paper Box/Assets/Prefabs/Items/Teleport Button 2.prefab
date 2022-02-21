@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: a5f8b018c2191554986875a3d025ff14, type: 2}
+  Picked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2083669701237180595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requestedItems: []
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -158,3 +162,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
