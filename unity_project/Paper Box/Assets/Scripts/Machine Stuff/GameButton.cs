@@ -37,7 +37,7 @@ public class GameButton : MonoBehaviour
     {
         tr.localPosition = Vector3.Lerp(tr.localPosition, posTarget, 0.1f);
 
-        if (pressed && !toggle && (tr.localPosition - posTarget).magnitude <= 0.00005f)
+        if (pressed && !toggle && (tr.localPosition - posTarget).magnitude <= 0.005f)
         {
             posTarget = posStart;
             pressed = false;
