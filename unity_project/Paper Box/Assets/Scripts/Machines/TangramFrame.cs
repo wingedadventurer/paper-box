@@ -28,5 +28,7 @@ public class TangramFrame : MonoBehaviour
         {
             anim.Play();
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxPlace);
     }
 }

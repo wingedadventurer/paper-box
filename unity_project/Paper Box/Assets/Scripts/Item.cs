@@ -16,7 +16,7 @@ public class Item : MonoBehaviour
             Inventory.instance.AddItem(data);
             Picked.Invoke();
             AudioSource sfx = AudioManager.instance.PlaySFX(AudioManager.instance.sfxPickup);
-            sfx.volume = 0.6f;
+            sfx.volume = 0.4f;
             Destroy(gameObject);
         }
     }

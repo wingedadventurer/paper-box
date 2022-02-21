@@ -11,6 +11,7 @@ public class GameButton : MonoBehaviour
     [SerializeField] private Transform tr;
     [SerializeField] private Interactable interactable;
     [SerializeField] private bool addListener;
+    [SerializeField] private bool playPressSFX = true;
 
     private Vector3 posStart;
     private Vector3 posTarget;
@@ -54,6 +55,11 @@ public class GameButton : MonoBehaviour
             if (!skipEvent)
             {
                 Pressed.Invoke();
+            }
+
+            if (playPressSFX)
+            {
+                AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton, transform.position);
             }
         }
         else

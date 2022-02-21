@@ -4,24 +4,36 @@ using UnityEngine;
 
 public class Symbol : MonoBehaviour
 {
+    private const int DRUM_COUNT = 4;
+
     [SerializeField] private Interactable[] interactables;
     [SerializeField] private GameObject[] drums;
     [SerializeField] private int[] sequenceRequired;
     [SerializeField] private Animation anim;
     [SerializeField] private AnimationClip ac;
 
-    private int[] sequenceCurrent;
+    private int[] sequenceCurrent = new int[DRUM_COUNT];
+    private float[] drumAngles = new float[DRUM_COUNT];
 
     void Start()
     {
-        interactables[0].AddListener(delegate { OnInteract(0); });
-        interactables[1].AddListener(delegate { OnInteract(1); });
-        interactables[2].AddListener(delegate { OnInteract(2); });
-        interactables[3].AddListener(delegate { OnInteract(3); });
-
-        sequenceCurrent = new int[4];
+        for (int i = 0; i < DRUM_COUNT; i++)
+        {
+            int a = i;
+            interactables[i].AddListener(delegate { OnInteract(a); });
+        }
 
         anim.AddClip(ac, ac.name);
+    }
+
+    private void Update()
+    {
+        // update drum rotations
+        for (int i = 0; i < DRUM_COUNT; i++)
+        {
+            drumAngles[i] = Mathf.LerpAngle(drumAngles[i], -sequenceCurrent[i] * 45, 0.1f);
+            drums[i].transform.localEulerAngles = new Vector3(drumAngles[i], 0, 0);
+        }
     }
 
     private void OnInteract(int i)
@@ -31,7 +43,6 @@ public class Symbol : MonoBehaviour
         {
             sequenceCurrent[i] = 0;
         }
-        drums[i].transform.localEulerAngles = new Vector3(-sequenceCurrent[i] * 45, 0, 0);
 
         if (IsSequenceCorrect())
         {
@@ -41,6 +52,8 @@ public class Symbol : MonoBehaviour
             }
             anim.Play(ac.name);
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxTurn);
     }
 
     private bool IsSequenceCorrect()

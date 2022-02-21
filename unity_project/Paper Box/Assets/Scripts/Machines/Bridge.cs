@@ -30,6 +30,8 @@ public class Bridge : MonoBehaviour
             INs[i].SetActive(false);
             sliderBones[i].SetActive(true);
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxInsert);
     }
 
     public void OnSliderPull()
@@ -42,6 +44,8 @@ public class Bridge : MonoBehaviour
             }
             anim.Play();
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxSwitch);
     }
 
     private bool IsSequenceCorrect()

@@ -29,6 +29,10 @@ public class Door : MonoBehaviour
         Inventory.instance.ConsumeEquippedItem();
         inLock.gameObject.SetActive(false);
         anim.Play();
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxInsert);
+
+        Invoke("TurnKeySFX", 0.8f);
         Invoke("PlaceEnd", 1.75f);
 
         // spawn and add key
@@ -37,6 +41,11 @@ public class Door : MonoBehaviour
         goKey.transform.localPosition = Vector3.zero;
         goKey.transform.localEulerAngles = new Vector3(0, 0, -90);
         goKey.GetComponent<Item>().SetInteractable(false);
+    }
+
+    private void TurnKeySFX()
+    {
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxKeyTurn);
     }
 
     private void PlaceEnd()

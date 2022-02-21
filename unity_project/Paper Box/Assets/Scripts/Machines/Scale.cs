@@ -27,18 +27,17 @@ public class Scale : MonoBehaviour
 
     public void AddWeight()
     {
-        if (Inventory.instance.GetEquippedItem() == itemWeight)
+        Inventory.instance.ConsumeEquippedItem();
+        weightsCollected++;
+        UpdateStuff();
+        if (weightsCollected == 5)
         {
-            Inventory.instance.ConsumeEquippedItem();
-            weightsCollected++;
-            UpdateStuff();
-            if (weightsCollected == 5)
-            {
-                interactablePlate.gameObject.SetActive(false);
+            interactablePlate.gameObject.SetActive(false);
 
-                anim.Play(acContainerOpen.name);
-            }
+            anim.Play(acContainerOpen.name);
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxPlace);
     }
 
     private void UpdateStuff()

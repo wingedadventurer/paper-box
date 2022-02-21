@@ -45,6 +45,8 @@ public class Plates : MonoBehaviour
         {
             failed = true;
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxPlatePush);
     }
 
     public void OnEndInteract()

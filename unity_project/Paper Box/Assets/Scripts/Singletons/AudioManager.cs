@@ -15,6 +15,13 @@ public class AudioManager : MonoBehaviour
     [Header("SFX")]
     public AudioClip sfxGameButton;
     public AudioClip sfxPickup;
+    public AudioClip sfxTurn;
+    public AudioClip sfxKeyTurn;
+    public AudioClip sfxSwitch;
+    public AudioClip sfxInsert;
+    public AudioClip sfxPlace;
+    public AudioClip sfxPlatePush;
+    public AudioClip sfxSlide;
 
     private AudioSource asMusic;
 
@@ -54,6 +61,14 @@ public class AudioManager : MonoBehaviour
         AudioSource ass = sfx.GetComponent<AudioSource>();
         ass.clip = clip;
         ass.Play();
+        return ass;
+    }
+
+    public AudioSource PlaySFX(AudioClip clip, Vector3 globalPosition)
+    {
+        AudioSource ass = PlaySFX(clip);
+        ass.spatialBlend = 1.0f;
+        ass.transform.position = globalPosition;
         return ass;
     }
 }

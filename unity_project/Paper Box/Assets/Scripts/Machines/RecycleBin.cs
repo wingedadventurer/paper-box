@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class RecycleBin : MonoBehaviour
 {
+    private const int BIN_COUNT = 5;
+
     [SerializeField] private Interactable[] interactables;
     [SerializeField] private GameObject[] goLids;
-    private bool[] openeds = new bool[5];
+    private bool[] openeds = new bool[BIN_COUNT];
+    private float[] angles = new float[BIN_COUNT];
     private int countDone;
 
     private void Start()
@@ -17,12 +20,12 @@ public class RecycleBin : MonoBehaviour
     private void Update()
     {
         // -90 open | 0 closed
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < BIN_COUNT; i++)
         {
+            angles[i] = Mathf.LerpAngle(angles[i], openeds[i] ? 0 : -90, 0.08f);
             Transform tr = goLids[i].transform;
             tr.localEulerAngles = new Vector3(
-                    //Mathf.Lerp(tr.localEulerAngles.x, openeds[i] ? 0 : -90, 0.05f),
-                    openeds[i] ? 0 : -90,
+                    angles[i],
                     tr.localEulerAngles.y,
                     tr.localEulerAngles.z
             );

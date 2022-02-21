@@ -11,12 +11,15 @@ public class HexagonsHexagon : MonoBehaviour
 
     public UnityEvent Spinned;
 
+    private float angle;
+
     private void Update()
     {
-        transform.localEulerAngles = new Vector3(n * 60.0f, 0, 0);
+        //transform.localEulerAngles = new Vector3(n * 60.0f, 0, 0);
 
         // wtf
-        //transform.localEulerAngles = new Vector3(Mathf.Lerp(transform.localEulerAngles.x, targetAngle, 0.05f), 0, 0);
+        angle = Mathf.LerpAngle(angle, n * 60.0f, 0.05f);
+        transform.localEulerAngles = new Vector3(angle, 0, 0);
     }
 
     public void SetInteractable(bool value)
@@ -31,6 +34,8 @@ public class HexagonsHexagon : MonoBehaviour
         {
             n = 0;
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxTurn);
 
         Spinned.Invoke();
     }

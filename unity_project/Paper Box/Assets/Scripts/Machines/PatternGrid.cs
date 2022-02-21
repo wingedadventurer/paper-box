@@ -33,8 +33,6 @@ public class PatternGrid : MonoBehaviour
                 button.SetPressed(true, true);
             }
         }
-
-        AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton);
     }
 
     private bool IsCompleted()

@@ -54,6 +54,10 @@ public class Interacting : MonoBehaviour
                     Interacted.Invoke();
                     lastInteractable = null;
                 }
+                else
+                {
+                    
+                }
             }
         }
         // get ray from camera
