@@ -11,6 +11,14 @@ public class Movement : MonoBehaviour
     public float gravity;
     public float speedJump;
 
+    [SerializeField] private AudioClip sfxStep1;
+    [SerializeField] private AudioClip sfxStep2;
+    [SerializeField] private AudioClip sfxJump;
+    [SerializeField] private float stepDistanceWalk;
+    [SerializeField] private float stepDistanceRun;
+    private float stepDistanceTotal;
+    private bool steppedOdd;
+
     [HideInInspector] public bool active;
 
     [Header("Ref")]
@@ -43,7 +51,8 @@ public class Movement : MonoBehaviour
             }
 
             // get move speed
-            float speedMove = Input.GetKey(KeyCode.LeftShift) ? speedRunMax : speedWalkMax;
+            bool isSprinting = Input.GetKey(KeyCode.LeftShift);
+            float speedMove = isSprinting ? speedRunMax : speedWalkMax;
 
             // update movement velocity
             if (inputMovement.x != 0)
@@ -74,6 +83,8 @@ public class Movement : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) && characterController.isGrounded)
             {
                 velocityY = speedJump;
+                AudioManager.instance.PlaySFX(sfxJump);
+                stepDistanceTotal = stepDistanceWalk - 0.05f;
             }
 
             // kill velocity y on ceiling hit
@@ -84,6 +95,18 @@ public class Movement : MonoBehaviour
 
             // apply movement and gravity
             characterController.Move((movement + Vector3.up * velocityY) * Time.deltaTime);
+
+            if (characterController.isGrounded)
+            {
+                stepDistanceTotal += movement.magnitude * Time.deltaTime;
+                float stepDistance = isSprinting ? stepDistanceRun : stepDistanceWalk;
+                if (stepDistanceTotal >= stepDistance)
+                {
+                    stepDistanceTotal -= stepDistance;
+                    AudioManager.instance.PlaySFX(steppedOdd ? sfxStep1 : sfxStep2);
+                    steppedOdd = !steppedOdd;
+                }
+            }
         }
     }
 }

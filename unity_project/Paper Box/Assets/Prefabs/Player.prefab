@@ -161,6 +161,11 @@ MonoBehaviour:
   speedRunMax: 4
   gravity: 12
   speedJump: 4.5
+  sfxStep1: {fileID: 8300000, guid: 6befed122a567c44eaabe57533f38239, type: 3}
+  sfxStep2: {fileID: 8300000, guid: 6fcfa79888067cb48ac8f281dc7bcc0b, type: 3}
+  sfxJump: {fileID: 8300000, guid: 5ba2f76323dadeb408599d9e9a437e68, type: 3}
+  stepDistanceWalk: 1
+  stepDistanceRun: 1.5
   active: 0
   characterController: {fileID: 4470392158604051388}
   camHead: {fileID: 884386163586549319}

@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("SFX")]
     public AudioClip sfxGameButton;
+    public AudioClip sfxPickup;
 
     private AudioSource asMusic;
 
@@ -47,11 +48,12 @@ public class AudioManager : MonoBehaviour
         asMusic.Play();
     }
 
-    public void PlaySFX(AudioClip clip)
+    public AudioSource PlaySFX(AudioClip clip)
     {
         GameObject sfx = Instantiate(prefabSFX, transform.position, Quaternion.identity);
         AudioSource ass = sfx.GetComponent<AudioSource>();
         ass.clip = clip;
         ass.Play();
+        return ass;
     }
 }

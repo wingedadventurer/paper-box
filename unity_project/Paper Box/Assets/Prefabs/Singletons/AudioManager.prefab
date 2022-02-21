@@ -47,3 +47,4 @@ MonoBehaviour:
   musicMenu: {fileID: 8300000, guid: ee4d97f87b0548842b83caace159af86, type: 3}
   musicGame: {fileID: 8300000, guid: 29c7d16955b70a14ea03671d9c56fddd, type: 3}
   sfxGameButton: {fileID: 8300000, guid: 0765982f5be6f544aa393bbe2584bad7, type: 3}
+  sfxPickup: {fileID: 8300000, guid: e291ee43edfc9f5489c97a0a7bdfea2b, type: 3}
