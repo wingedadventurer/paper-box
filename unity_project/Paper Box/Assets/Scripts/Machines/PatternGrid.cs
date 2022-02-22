@@ -10,6 +10,16 @@ public class PatternGrid : MonoBehaviour
     [SerializeField] private Material matNormal;
     [SerializeField] private Material matPressed;
 
+    private void Start()
+    {
+        foreach (GameButton button in buttons)
+        {
+            MeshRenderer mr = button.GetComponent<MeshRenderer>();
+            Material[] mats = mr.sharedMaterials;
+            mats[0] = matNormal;
+            mr.sharedMaterials = mats;
+        }
+    }
 
     public void OnButtonPressed(int index)
     {
