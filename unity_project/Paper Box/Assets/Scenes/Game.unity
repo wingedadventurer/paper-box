@@ -6290,8 +6290,7 @@ MonoBehaviour:
   goContainer: {fileID: 1626161374}
   textItemName: {fileID: 1610607480}
   dataItemEmpty: {fileID: 11400000, guid: ca46743e86e96684e92431ca937c50cc, type: 2}
-  initialItems:
-  - {fileID: 11400000, guid: 23b440adf6e4caf44a1d9b607a170d8c, type: 2}
+  initialItems: []
   uiItemEquipped: {fileID: 2115237263}
   Equipped:
     m_PersistentCalls:

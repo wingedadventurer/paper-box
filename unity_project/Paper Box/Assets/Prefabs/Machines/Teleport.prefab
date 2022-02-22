@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2c4825594b17354d8e776f3af15a9b9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2c4825594b17354d8e776f3af15a9b9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   toggle: 0
-  offset: {x: 0, y: 0, z: -0.006}
+  offset: {x: 0, y: 0, z: -0.02}
   tr: {fileID: 0}
   interactable: {fileID: 2884595931136947518}
   addListener: 1
@@ -173,10 +173,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7546558748728513475}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8720885351387174608, guid: a2c4825594b17354d8e776f3af15a9b9, type: 3}
 --- !u!114 &2884595931136947518
@@ -622,7 +622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d72e2512c34e7a43aa780b1e3ea10be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d72e2512c34e7a43aa780b1e3ea10be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   toggle: 0
-  offset: {x: 0, y: 0, z: -0.006}
+  offset: {x: 0, y: 0, z: -0.02}
   tr: {fileID: 0}
   interactable: {fileID: 3222266412534033901}
   addListener: 1
@@ -706,10 +706,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6763920985135337378}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9193023232892026067, guid: 1d72e2512c34e7a43aa780b1e3ea10be, type: 3}
 --- !u!114 &3222266412534033901
@@ -751,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b77c10dac869e54099cb1ec74f38859, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b77c10dac869e54099cb1ec74f38859, type: 3}
       propertyPath: m_LocalRotation.w
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   toggle: 0
-  offset: {x: 0, y: 0, z: -0.006}
+  offset: {x: 0, y: 0, z: -0.02}
   tr: {fileID: 0}
   interactable: {fileID: 4038233145925623443}
   addListener: 1
@@ -835,10 +835,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3078481417465663488}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4673479604065283206, guid: 2b77c10dac869e54099cb1ec74f38859, type: 3}
 --- !u!114 &4038233145925623443
@@ -880,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7605160ebc82c0648b00da18309b347e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7605160ebc82c0648b00da18309b347e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   toggle: 0
-  offset: {x: 0, y: 0, z: -0.006}
+  offset: {x: 0, y: 0, z: -0.02}
   tr: {fileID: 0}
   interactable: {fileID: 4498699628027390049}
   addListener: 1
@@ -964,10 +964,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7300357934405352971}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8743829870817483436, guid: 7605160ebc82c0648b00da18309b347e, type: 3}
 --- !u!114 &4498699628027390049
@@ -1009,7 +1009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c54ce0f22fe63414fb868bbc1ab82ef5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c54ce0f22fe63414fb868bbc1ab82ef5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   toggle: 0
-  offset: {x: 0, y: 0, z: -0.006}
+  offset: {x: 0, y: 0, z: -0.02}
   tr: {fileID: 0}
   interactable: {fileID: 1586822546650062025}
   addListener: 1
@@ -1093,10 +1093,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5351908287552669552}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3849738924506545674, guid: c54ce0f22fe63414fb868bbc1ab82ef5, type: 3}
 --- !u!114 &1586822546650062025
@@ -1138,7 +1138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b10ded9d308e994692e095f02d29664, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8b10ded9d308e994692e095f02d29664, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1206,7 +1206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   toggle: 0
-  offset: {x: 0, y: 0, z: -0.006}
+  offset: {x: 0, y: 0, z: -0.02}
   tr: {fileID: 0}
   interactable: {fileID: 6974193533047740117}
   addListener: 1
@@ -1222,10 +1222,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8051938930184708566}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5498195532428633790, guid: 8b10ded9d308e994692e095f02d29664, type: 3}
 --- !u!114 &6974193533047740117

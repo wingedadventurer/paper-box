@@ -105,8 +105,6 @@ public class KeysPanel : MonoBehaviour
 
     private bool IsCompleted()
     {
-        return true;
-
         for (int i = 0; i < placed.Length; i++)
         {
             if (i == 0)
@@ -126,8 +124,6 @@ public class KeysPanel : MonoBehaviour
 
     private void OnDone()
     {
-        Debug.Log("done");
-
         foreach (Item item in GetComponentsInChildren<Item>())
         {
             item.SetInteractable(false);
