@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: ec101dc39f7779b4cb4d04c9ef9dcd48, type: 2}
+  Picked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4796800740183928977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,19 +141,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -1496352022674229265, guid: 563694819dc1fbc4fa1af420f242e7eb, type: 3}
   m_PrefabInstance: {fileID: 4796800740183928977}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &7361778680333644855
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2333437712074809702}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0022, y: 0.0009999998, z: 0.00049999997}
-  m_Center: {x: 0, y: -0.00010000001, z: -0.0028500003}
 --- !u!114 &8379183426503017089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
-  requiredItem: {fileID: 0}
+  requestedItems: []
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -180,6 +170,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
+--- !u!64 &7440012272182055716
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333437712074809702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1628681134737618638, guid: 563694819dc1fbc4fa1af420f242e7eb, type: 3}
 --- !u!64 &8927980832029627836
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -207,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
-  requiredItem: {fileID: 0}
+  requestedItems: []
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -223,19 +228,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!65 &7430855058043579385
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6671048308406768367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.00080000004, y: 0.0005999999, z: 0.0012999999}
-  m_Center: {x: 0, y: -0.000100000005, z: -0.0037500001}
+  interactable: 1
 --- !u!114 &589455464719192591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
-  requiredItem: {fileID: 0}
+  requestedItems: []
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -265,3 +258,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
+--- !u!64 &1846394008074195093
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6671048308406768367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5701783607964905423, guid: 563694819dc1fbc4fa1af420f242e7eb, type: 3}

@@ -127,10 +127,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7206463931869478086}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3849738924506545674, guid: c54ce0f22fe63414fb868bbc1ab82ef5, type: 3}
 --- !u!114 &3382875172452733233

@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: f64d014af83035a428a5ad70af7f4f2c, type: 2}
+  Picked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &3418840541001341480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124,10 +127,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8713718009013959402}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1453314742190571923, guid: 0ffb1251ab8563245bfbb1f8837c968d, type: 3}
 --- !u!114 &9090177803326927778
@@ -143,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requestedItems: []
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -158,3 +162,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1

@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: e0b11c15421f5414c8c9e25a2329a31b, type: 2}
+  Picked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &643803754998684397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,19 +119,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -8286025625880548092, guid: 2607f3340cecc0f4fac07fe25394c2c0, type: 3}
   m_PrefabInstance: {fileID: 643803754998684397}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &3065157502368075134
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427102554176452585}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0016000005, y: 0.0006, z: 0.004599999}
-  m_Center: {x: 0, y: 0, z: 0.0018999994}
 --- !u!114 &142802675716306696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideOnRun: 1
+  requestedItems: []
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -157,3 +148,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  interactable: 1
+--- !u!65 &6454605354523859526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427102554176452585}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16000006, y: 0.06000001, z: 0.45999998}
+  m_Center: {x: 0, y: 0, z: 0.18999997}
