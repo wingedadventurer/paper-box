@@ -9,6 +9,7 @@ public class KeysPanel : MonoBehaviour
     [SerializeField] private DataItem[] keyDatas;
     [SerializeField] private GameObject[] keyPrefabs;
     [SerializeField] private Interactable[] interactables;
+    [SerializeField] private Item itemCube;
 
     private DataItem[] placed = new DataItem[192];
 
@@ -104,6 +105,8 @@ public class KeysPanel : MonoBehaviour
 
     private bool IsCompleted()
     {
+        return true;
+
         for (int i = 0; i < placed.Length; i++)
         {
             if (i == 0)
@@ -129,6 +132,8 @@ public class KeysPanel : MonoBehaviour
         {
             item.SetInteractable(false);
         }
+
+        itemCube.SetInteractable(true);
 
         anim.Play();
     }
