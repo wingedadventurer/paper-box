@@ -57,7 +57,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource PlaySFX(AudioClip clip)
     {
-        GameObject sfx = Instantiate(prefabSFX, transform.position, Quaternion.identity);
+        //GameObject sfx = Instantiate(prefabSFX, transform.position, Quaternion.identity);
+        GameObject sfx = Instantiate(prefabSFX, transform);
         AudioSource ass = sfx.GetComponent<AudioSource>();
         ass.clip = clip;
         ass.Play();
