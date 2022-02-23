@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 288e4560fc7bb9c49b6cc16d1e3632aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 4
+  mouseSensitivity: 3
   active: 0
   transformHead: {fileID: 4970877875814414149}
 --- !u!114 &5762246057294669704
