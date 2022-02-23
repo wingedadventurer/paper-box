@@ -5,23 +5,26 @@ using UnityEngine.Events;
 
 public class PipeGridTile : MonoBehaviour
 {
-    public Animation anim;
     public Interactable interactable;
-    public Transform trPipe;
 
-    public float animPosOffset;
-    public float animRotation;
+    private Animation anim;
+    private Transform trPipe;
 
-    public int rot;
+    [HideInInspector] public float animPosOffset;
+    [HideInInspector] public float animRotation;
+    [HideInInspector] public int rot;
 
     private bool rotating;
-
     private Vector3 posStart;
+    private float angle;
 
     public UnityEvent RotationDone;
 
     private void Start()
     {
+        anim = GetComponent<Animation>();
+        trPipe = transform;
+
         posStart = transform.localPosition;
     }
 
@@ -30,21 +33,27 @@ public class PipeGridTile : MonoBehaviour
         if (rotating)
         {
             transform.localPosition = new Vector3(posStart.x, posStart.y + animPosOffset, posStart.z);
-            transform.localEulerAngles = new Vector3(0, animRotation, 0);
+            angle = -animRotation + (rot - 1) * 90.0f;
+            //transform.localEulerAngles = new Vector3(0, animRotation, 0);
 
-            if(!anim.isPlaying)
+            if (!anim.isPlaying)
             {
                 rotating = false;
                 transform.localPosition = posStart;
 
-                transform.Rotate(Vector3.up, 90, Space.Self);
-                trPipe.Rotate(Vector3.up, -90, Space.Self);
+                animPosOffset = 0;
+                animRotation = 0;
+
+                //transform.Rotate(Vector3.up, 90, Space.Self);
+                //trPipe.Rotate(Vector3.up, -90, Space.Self);
 
                 interactable.SetActive(true);
 
                 RotationDone.Invoke();
             }
         }
+
+        transform.localEulerAngles = new Vector3(0, -angle, 0);
     }
 
     public void Rotate()

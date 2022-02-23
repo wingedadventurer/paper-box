@@ -285,6 +285,7 @@ MonoBehaviour:
   tr: {fileID: 0}
   interactable: {fileID: 4741233417589667882}
   addListener: 1
+  playPressSFX: 1
   Pressed:
     m_PersistentCalls:
       m_Calls:
@@ -350,6 +351,7 @@ MonoBehaviour:
   tr: {fileID: 0}
   interactable: {fileID: 4402097702664635356}
   addListener: 1
+  playPressSFX: 1
   Pressed:
     m_PersistentCalls:
       m_Calls:
@@ -376,7 +378,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6170245899964455053, guid: 5c57efafac7ca5d4f91c28b7e2c48926, type: 3}
 --- !u!64 &6092445752917652927
@@ -390,7 +392,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7295824715548157269, guid: 5c57efafac7ca5d4f91c28b7e2c48926, type: 3}
 --- !u!64 &201528704017993019
@@ -443,6 +445,7 @@ MonoBehaviour:
   tr: {fileID: 0}
   interactable: {fileID: 2006898655813515766}
   addListener: 1
+  playPressSFX: 1
   Pressed:
     m_PersistentCalls:
       m_Calls:

@@ -45,6 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabKey: {fileID: 0}
+  matColors:
+  - {fileID: 9003353085549565770, guid: a4c149bf30703ad48a6e4431afcffaf0, type: 3}
+  - {fileID: -2505642851634945670, guid: a4c149bf30703ad48a6e4431afcffaf0, type: 3}
+  - {fileID: -382652638819485698, guid: a4c149bf30703ad48a6e4431afcffaf0, type: 3}
+  - {fileID: 2926557707537190794, guid: a4c149bf30703ad48a6e4431afcffaf0, type: 3}
+  - {fileID: -2653651044934150266, guid: a4c149bf30703ad48a6e4431afcffaf0, type: 3}
+  - {fileID: 4913911580219713836, guid: a4c149bf30703ad48a6e4431afcffaf0, type: 3}
+  mrLock: {fileID: 602037522521937717}
   anim: {fileID: 2573980131039592246}
   inLock: {fileID: 7102312112102615516}
   goKeyPos: {fileID: 5292486412219348328}
@@ -148,6 +156,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4564577464659487881, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
   m_PrefabInstance: {fileID: 4423495764569230355}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &602037522521937717 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3835294580639030054, guid: 2d817f0b3a70a1f4b8815ee0946297b7, type: 3}
+  m_PrefabInstance: {fileID: 4423495764569230355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &7183274316475110198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -174,6 +187,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.09999999, z: 1.9999993}
   m_Center: {x: 0, y: 2.8421703e-14, z: 0.99999964}
+--- !u!65 &5245537775913720041
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825822642756108067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.666666, y: 0.4000003, z: 4.999999}
+  m_Center: {x: 0, y: -0.39999986, z: 0.0000003576278}
 --- !u!114 &7102312112102615516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,16 +230,3 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   interactable: 1
---- !u!65 &5245537775913720041
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825822642756108067}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 6.666666, y: 0.4000003, z: 4.999999}
-  m_Center: {x: 0, y: -0.39999986, z: 0.0000003576278}

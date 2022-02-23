@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Door : MonoBehaviour
 {
     [Header("Setup")]
     public GameObject prefabKey;
+
+    [Header("Colors")]
+    [SerializeField] private Material[] matColors = new Material[6];
+    [SerializeField] private MeshRenderer mrLock;
 
     [Header("Ref")]
     public Animation anim;
@@ -21,6 +26,12 @@ public class Door : MonoBehaviour
         {
             dataKey = prefabKey.GetComponent<Item>().data;
             inLock.requestedItems.Add(dataKey);
+
+            Material[] mats = mrLock.sharedMaterials;
+            //int n = int.Parse(prefabKey.name.Where(char.IsDigit).ToArray();
+            int n = int.Parse(string.Join("", prefabKey.name.ToCharArray().Where(char.IsDigit))) - 1;
+            mats[2] = matColors[n / 5];
+            mrLock.sharedMaterials = mats;
         }
     }
 
