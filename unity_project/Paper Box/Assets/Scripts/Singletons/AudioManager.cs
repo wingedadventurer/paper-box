@@ -33,7 +33,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip sfxMechanicalPull;
     public AudioClip sfxDoor;
 
-    private AudioSource asMusic;
+    [Header("Ref")]
+    public AudioSource asMusic;
 
     private void Awake()
     {
@@ -49,17 +50,8 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        GameObject go = new GameObject("Music");
-        go.transform.SetParent(transform);
-        asMusic = go.AddComponent<AudioSource>();
-    }
-
     public void PlayMusic(AudioClip clip)
     {
-        if (asMusic.clip == clip) { return; }
-
         asMusic.Stop();
         asMusic.clip = clip;
         asMusic.Play();

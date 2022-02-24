@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     public Panel panelPause;
     public Panel panelComplete;
     public Text textPlaytime;
+    public Text textFPS;
 
     private bool paused;
 
@@ -57,6 +58,8 @@ public class Game : MonoBehaviour
         interacting.Interacted.AddListener(crosshair.OnInteract);
 
         AudioManager.instance.PlayMusic(AudioManager.instance.musicGame);
+
+        InvokeRepeating("UpdateFPSText", 0, 0.5f);
     }
 
     void Update()
@@ -196,5 +199,10 @@ public class Game : MonoBehaviour
     public Vector3 GetPlayerPosition()
     {
         return goPlayer.transform.position;
+    }
+
+    private void UpdateFPSText()
+    {
+        textFPS.text = "FPS: " + (int)(1f / Time.unscaledDeltaTime);
     }
 }
