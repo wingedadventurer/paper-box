@@ -28,19 +28,21 @@ public class Pipe : MonoBehaviour
 
     public void OnInteractablePlace()
     {
-        if (Inventory.instance.GetEquippedItem() == requiredItem)
-        {
-            Inventory.instance.ConsumeEquippedItem();
-            goValve.SetActive(true);
-            interactablePlace.gameObject.SetActive(false);
-            interactableUse.gameObject.SetActive(true);
-            anim.Play(acPlace.name);
-        }
+        Inventory.instance.ConsumeEquippedItem();
+        goValve.SetActive(true);
+        interactablePlace.gameObject.SetActive(false);
+        interactableUse.gameObject.SetActive(true);
+        anim.Play(acPlace.name);
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxInsert);
     }
 
     public void OnInteractableUse()
     {
         interactableUse.gameObject.SetActive(false);
         anim.Play(acUse.name);
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxTurn);
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxSmolDoor).SetDelay(0.5f);
     }
 }

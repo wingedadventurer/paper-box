@@ -53,7 +53,7 @@ public class Symbol : MonoBehaviour
             anim.Play(ac.name);
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.sfxTurn).volume = 0.6f;
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxTurn).SetVolume(0.6f);
     }
 
     private bool IsSequenceCorrect()

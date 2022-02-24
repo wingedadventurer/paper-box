@@ -29,6 +29,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip sfxBreak;
     public AudioClip sfxButtonHover;
     public AudioClip sfxButtonClick;
+    public AudioClip sfxSmolDoor;
+    public AudioClip sfxMechanicalPull;
+    public AudioClip sfxDoor;
 
     private AudioSource asMusic;
 
@@ -62,14 +65,24 @@ public class AudioManager : MonoBehaviour
         asMusic.Play();
     }
 
-    public AudioSource PlaySFX(AudioClip clip)
+    public SFX CreateSFX()
     {
-        //GameObject sfx = Instantiate(prefabSFX, transform.position, Quaternion.identity);
-        GameObject sfx = Instantiate(prefabSFX, transform);
-        AudioSource ass = sfx.GetComponent<AudioSource>();
-        ass.clip = clip;
-        ass.Play();
-        return ass;
+        GameObject goSFX = Instantiate(prefabSFX, transform);
+        return goSFX.GetComponent<SFX>();
+    }
+
+    public SFX PlaySFX(AudioClip clip)
+    {
+        SFX sfx = CreateSFX();
+        sfx.SetClip(clip);
+        sfx.Play();
+        return sfx;
+    }
+
+    public SFX PlaySFX(AudioClip clip, float delay)
+    {
+        SFX sfx = CreateSFX().SetClip(clip).SetDelay(delay).Play();
+        return sfx;
     }
 
     public AudioSource PlaySFX(AudioClip clip, Vector3 globalPosition)

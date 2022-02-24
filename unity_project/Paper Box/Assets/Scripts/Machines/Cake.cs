@@ -79,7 +79,7 @@ public class Cake : MonoBehaviour
                 inflating = true;
             }
 
-            AudioManager.instance.PlaySFX(AudioManager.instance.sfxIgnite).volume = 0.6f;
+            AudioManager.instance.PlaySFX(AudioManager.instance.sfxIgnite).SetVolume(0.6f);
         }
     }
 }

@@ -59,7 +59,7 @@ public class GameButton : MonoBehaviour
 
             if (playPressSFX && !quiet)
             {
-                AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton, transform.position).volume = 0.8f;
+                AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton).SetPosition(transform.position).SetVolume(0.8f);
             }
         }
         else

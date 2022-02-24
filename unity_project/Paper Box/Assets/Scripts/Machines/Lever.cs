@@ -26,20 +26,23 @@ public class Lever : MonoBehaviour
 
     public void OnInteractablePlace()
     {
+        Inventory.instance.ConsumeEquippedItem();
+        goLeverHandle.SetActive(true);
+        interactablePlace.gameObject.SetActive(false);
+        interactableUse.gameObject.SetActive(true);
+        anim.Play(acPlace.name);
 
-        if (Inventory.instance.GetEquippedItem() == itemRequired)
-        {
-            Inventory.instance.ConsumeEquippedItem();
-            goLeverHandle.SetActive(true);
-            interactablePlace.gameObject.SetActive(false);
-            interactableUse.gameObject.SetActive(true);
-            anim.Play(acPlace.name);
-        }
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxInsert);
     }
 
     public void OnInteractableUse()
     {
         interactableUse.gameObject.SetActive(false);
         anim.Play(acUse.name);
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxMechanicalPull);
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxSmolDoor).SetDelay(0.5f);
     }
+
+
 }

@@ -28,7 +28,6 @@ public class Door : MonoBehaviour
             inLock.requestedItems.Add(dataKey);
 
             Material[] mats = mrLock.sharedMaterials;
-            //int n = int.Parse(prefabKey.name.Where(char.IsDigit).ToArray();
             int n = int.Parse(string.Join("", prefabKey.name.ToCharArray().Where(char.IsDigit))) - 1;
             mats[2] = matColors[n / 5];
             mrLock.sharedMaterials = mats;
@@ -42,8 +41,9 @@ public class Door : MonoBehaviour
         anim.Play();
 
         AudioManager.instance.PlaySFX(AudioManager.instance.sfxKeyInsert);
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxKeyTurn).SetDelay(0.8f);
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxDoor).SetDelay(1.75f).SetPosition(transform.position);
 
-        Invoke("TurnKeySFX", 0.8f);
         Invoke("PlaceEnd", 1.75f);
 
         // spawn and add key
@@ -52,11 +52,6 @@ public class Door : MonoBehaviour
         goKey.transform.localPosition = Vector3.zero;
         goKey.transform.localEulerAngles = new Vector3(0, 0, -90);
         goKey.GetComponent<Item>().SetInteractable(false);
-    }
-
-    private void TurnKeySFX()
-    {
-        AudioManager.instance.PlaySFX(AudioManager.instance.sfxKeyTurn);
     }
 
     private void PlaceEnd()

@@ -74,7 +74,7 @@ public class HeightKnobs : MonoBehaviour
             anim.Play();
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.sfxSlide).volume = 0.6f;
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxSlide).SetVolume(0.6f);
     }
 
     private bool IsPatternCorrect()

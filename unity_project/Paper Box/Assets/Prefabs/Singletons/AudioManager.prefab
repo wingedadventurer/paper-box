@@ -62,3 +62,6 @@ MonoBehaviour:
   sfxBreak: {fileID: 8300000, guid: a6baab9234bfab747b8e0f5834c33098, type: 3}
   sfxButtonHover: {fileID: 8300000, guid: cd50e98f50c896f4087afeb6aa8feb5e, type: 3}
   sfxButtonClick: {fileID: 8300000, guid: 440cc03c819a5d847a5db8d1eec28da2, type: 3}
+  sfxSmolDoor: {fileID: 8300000, guid: 59ab3bd38e720b646a3ad5b285ba17b1, type: 3}
+  sfxMechanicalPull: {fileID: 8300000, guid: c17d845a9910b3248a120f778bf7c135, type: 3}
+  sfxDoor: {fileID: 8300000, guid: 3bf5b5ca90efa0546a8f1b0fd92934b1, type: 3}
