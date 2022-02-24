@@ -45,7 +45,7 @@ public class GameButton : MonoBehaviour
         }
     }
 
-    public void SetPressed(bool value, bool skipEvent = false)
+    public void SetPressed(bool value, bool skipEvent = false, bool quiet = false)
     {
         pressed = value;
 
@@ -57,9 +57,9 @@ public class GameButton : MonoBehaviour
                 Pressed.Invoke();
             }
 
-            if (playPressSFX)
+            if (playPressSFX && !quiet)
             {
-                AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton, transform.position);
+                AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton, transform.position).volume = 0.8f;
             }
         }
         else

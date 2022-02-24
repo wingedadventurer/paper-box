@@ -35,7 +35,7 @@ public class HexagonsHexagon : MonoBehaviour
             n = 0;
         }
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.sfxTurn);
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxTurn).volume = 0.6f;
 
         Spinned.Invoke();
     }

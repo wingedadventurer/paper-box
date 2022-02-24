@@ -22,7 +22,7 @@ public class Plates : MonoBehaviour
             plate.Pressed.AddListener( delegate { OnPlatePressed(plate); } );
         }
 
-        buttonRetry.SetPressed(true, true);
+        buttonRetry.SetPressed(true, true, true);
         buttonRetry.SetInteractable(false);
     }
 
@@ -95,7 +95,7 @@ public class Plates : MonoBehaviour
         failed = false;
         succeeded = false;
 
-        buttonRetry.SetPressed(true, true);
+        buttonRetry.SetPressed(true, true, true);
         buttonRetry.SetInteractable(false);
         buttonEnd.SetPressed(false);
         buttonEnd.SetInteractable(true);

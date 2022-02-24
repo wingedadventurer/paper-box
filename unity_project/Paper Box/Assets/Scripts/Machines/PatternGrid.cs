@@ -40,7 +40,7 @@ public class PatternGrid : MonoBehaviour
 
                 button.SetInteractable(false);
                 button.toggle = true;
-                button.SetPressed(true, true);
+                button.SetPressed(true, true, true);
             }
         }
     }

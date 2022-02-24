@@ -27,8 +27,6 @@ public class Pillars : MonoBehaviour
 
     public void OnButtonPressed(int i)
     {
-        AudioManager.instance.PlaySFX(AudioManager.instance.sfxGameButton);
-
         if (indexButtonPressed > -1)
         {
             // button already pressed
@@ -56,7 +54,7 @@ public class Pillars : MonoBehaviour
                     {
                         button.SetInteractable(false);
                         button.toggle = true;
-                        button.SetPressed(true, true);
+                        button.SetPressed(true, true, true);
                     }
 
                     anim.Play();
