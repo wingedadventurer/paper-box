@@ -134,11 +134,13 @@ public class Inventory : MonoBehaviour
         textItemName.text = "";
         EquipItem(data);
         game.OnInventoryItemSelected(data);
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxButtonClick);
     }
 
     public void OnUIItemPointerEnter(DataItem dataItem)
     {
         textItemName.text = dataItem.name;
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxButtonHover);
     }
 
     public void OnUIItemPointerExit()

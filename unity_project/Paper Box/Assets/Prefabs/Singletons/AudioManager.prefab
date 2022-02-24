@@ -60,3 +60,5 @@ MonoBehaviour:
   sfxInsert: {fileID: 8300000, guid: fb66ad4a1ab70f94fbfb7e9c1c0c2688, type: 3}
   sfxPut: {fileID: 8300000, guid: 49f2b3d2e0578ed4699cbc8e8e9290b5, type: 3}
   sfxBreak: {fileID: 8300000, guid: a6baab9234bfab747b8e0f5834c33098, type: 3}
+  sfxButtonHover: {fileID: 8300000, guid: cd50e98f50c896f4087afeb6aa8feb5e, type: 3}
+  sfxButtonClick: {fileID: 8300000, guid: 440cc03c819a5d847a5db8d1eec28da2, type: 3}

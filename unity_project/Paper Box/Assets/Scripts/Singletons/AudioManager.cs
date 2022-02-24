@@ -27,6 +27,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip sfxInsert;
     public AudioClip sfxPut;
     public AudioClip sfxBreak;
+    public AudioClip sfxButtonHover;
+    public AudioClip sfxButtonClick;
 
     private AudioSource asMusic;
 
