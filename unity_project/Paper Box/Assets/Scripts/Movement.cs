@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour
     public CharacterController characterController;
     public Camera camHead;
     public CeilingChecker ceilingChecker;
+    public Animation animHeadBob;
 
     private Vector2 velocityMovement;
     private float velocityY;
@@ -96,6 +97,7 @@ public class Movement : MonoBehaviour
             // apply movement and gravity
             characterController.Move((movement + Vector3.up * velocityY) * Time.deltaTime);
 
+            // calculate step distance when grounded
             if (characterController.isGrounded)
             {
                 stepDistanceTotal += movement.magnitude * Time.deltaTime;
@@ -105,6 +107,8 @@ public class Movement : MonoBehaviour
                     stepDistanceTotal -= stepDistance;
                     AudioManager.instance.PlaySFX(steppedOdd ? sfxStep1 : sfxStep2);
                     steppedOdd = !steppedOdd;
+                    animHeadBob.Rewind();
+                    animHeadBob.Play();
                 }
             }
         }

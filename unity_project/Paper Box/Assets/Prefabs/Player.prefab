@@ -158,18 +158,19 @@ MonoBehaviour:
   accMove: 10
   dccMove: 16
   speedWalkMax: 2.25
-  speedRunMax: 4
+  speedRunMax: 3.5
   gravity: 12
   speedJump: 4.5
   sfxStep1: {fileID: 8300000, guid: 6befed122a567c44eaabe57533f38239, type: 3}
   sfxStep2: {fileID: 8300000, guid: 6fcfa79888067cb48ac8f281dc7bcc0b, type: 3}
   sfxJump: {fileID: 8300000, guid: 5ba2f76323dadeb408599d9e9a437e68, type: 3}
   stepDistanceWalk: 1
-  stepDistanceRun: 1.5
+  stepDistanceRun: 1.2
   active: 0
   characterController: {fileID: 4470392158604051388}
   camHead: {fileID: 884386163586549319}
   ceilingChecker: {fileID: 3196667378994553876}
+  animHeadBob: {fileID: 1053146535419959474}
 --- !u!136 &7033732765841943439
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -197,6 +198,7 @@ GameObject:
   - component: {fileID: 719078212002247240}
   - component: {fileID: 8173848905952342115}
   - component: {fileID: 8190110084783036803}
+  - component: {fileID: 1053146535419959474}
   m_Layer: 0
   m_Name: Head
   m_TagString: MainCamera
@@ -346,3 +348,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5163562771236228989}
   m_Enabled: 1
+--- !u!111 &1053146535419959474
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5163562771236228989}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4a2bff6067d082542909e7ae4941c10b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4a2bff6067d082542909e7ae4941c10b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
