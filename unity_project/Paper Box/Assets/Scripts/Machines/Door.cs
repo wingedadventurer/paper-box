@@ -41,7 +41,7 @@ public class Door : MonoBehaviour
         inLock.gameObject.SetActive(false);
         anim.Play();
 
-        AudioManager.instance.PlaySFX(AudioManager.instance.sfxInsert);
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxKeyInsert);
 
         Invoke("TurnKeySFX", 0.8f);
         Invoke("PlaceEnd", 1.75f);

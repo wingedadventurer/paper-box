@@ -49,9 +49,14 @@ MonoBehaviour:
   sfxGameButton: {fileID: 8300000, guid: 0765982f5be6f544aa393bbe2584bad7, type: 3}
   sfxPickup: {fileID: 8300000, guid: e291ee43edfc9f5489c97a0a7bdfea2b, type: 3}
   sfxTurn: {fileID: 8300000, guid: 05bed69aac8a29d46b9c67eb1c3abc0e, type: 3}
+  sfxKeyInsert: {fileID: 8300000, guid: f01858103744bdd488c66b89e0a99cff, type: 3}
   sfxKeyTurn: {fileID: 8300000, guid: b16816da3a8cd60428d80554fa915e20, type: 3}
   sfxSwitch: {fileID: 8300000, guid: 288e5253292eb6045a97046488cae7e7, type: 3}
-  sfxInsert: {fileID: 8300000, guid: f01858103744bdd488c66b89e0a99cff, type: 3}
   sfxPlace: {fileID: 8300000, guid: d32485e721b6bd0489282f10cb7411b2, type: 3}
   sfxPlatePush: {fileID: 8300000, guid: 92d6ef7fd442aae48978724db6a53b3c, type: 3}
   sfxSlide: {fileID: 8300000, guid: 036d796c9a4ca48478d9d03d29fa4657, type: 3}
+  sfxWater: {fileID: 8300000, guid: 17140c8053f621342a2b8a5bc8ea4332, type: 3}
+  sfxIgnite: {fileID: 8300000, guid: c822815d009ed854496bddc9719a3a5f, type: 3}
+  sfxInsert: {fileID: 8300000, guid: fb66ad4a1ab70f94fbfb7e9c1c0c2688, type: 3}
+  sfxPut: {fileID: 8300000, guid: 49f2b3d2e0578ed4699cbc8e8e9290b5, type: 3}
+  sfxBreak: {fileID: 8300000, guid: a6baab9234bfab747b8e0f5834c33098, type: 3}

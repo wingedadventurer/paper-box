@@ -16,12 +16,17 @@ public class AudioManager : MonoBehaviour
     public AudioClip sfxGameButton;
     public AudioClip sfxPickup;
     public AudioClip sfxTurn;
+    public AudioClip sfxKeyInsert;
     public AudioClip sfxKeyTurn;
     public AudioClip sfxSwitch;
-    public AudioClip sfxInsert;
     public AudioClip sfxPlace;
     public AudioClip sfxPlatePush;
     public AudioClip sfxSlide;
+    public AudioClip sfxWater;
+    public AudioClip sfxIgnite;
+    public AudioClip sfxInsert;
+    public AudioClip sfxPut;
+    public AudioClip sfxBreak;
 
     private AudioSource asMusic;
 

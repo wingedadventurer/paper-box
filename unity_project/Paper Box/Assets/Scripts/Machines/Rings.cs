@@ -90,6 +90,13 @@ public class Rings : MonoBehaviour
             goSolidBefore.SetActive(false);
             goSolidAfter.SetActive(true);
             goKey.SetActive(true);
+
+            foreach (GameButton button in buttons)
+            {
+                button.SetInteractable(false);
+                button.toggle = true;
+                button.SetPressed(true, true, true);
+            }
         }
     }
 
@@ -98,13 +105,6 @@ public class Rings : MonoBehaviour
         for (int i = 0; i < RING_COUNT; i++)
         {
             if (rotations[i] != 0) { return false; }
-        }
-
-        foreach(GameButton button in buttons)
-        {
-            button.SetInteractable(false);
-            button.toggle = true;
-            button.SetPressed(true, true);
         }
 
         return true;

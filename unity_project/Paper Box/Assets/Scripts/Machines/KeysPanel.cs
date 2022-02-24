@@ -84,6 +84,8 @@ public class KeysPanel : MonoBehaviour
 
         Inventory.instance.ConsumeEquippedItem();
 
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxKeyInsert);
+
         if (IsCompleted())
         {
             OnDone();

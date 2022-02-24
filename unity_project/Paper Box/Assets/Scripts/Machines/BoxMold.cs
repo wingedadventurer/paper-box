@@ -23,6 +23,8 @@ public class BoxMold : MonoBehaviour
             anim.Play();
             Invoke("OnMoldComplete", 1.6f);
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxPut);
     }
 
     private void OnMoldComplete()

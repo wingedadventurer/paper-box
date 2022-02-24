@@ -29,5 +29,7 @@ public class CrackedCube : MonoBehaviour
             cube.transform.rotation = t.rotation;
             t.gameObject.SetActive(false);
         }
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxBreak);
     }
 }

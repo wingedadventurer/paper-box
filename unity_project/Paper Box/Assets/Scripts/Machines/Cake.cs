@@ -61,6 +61,8 @@ public class Cake : MonoBehaviour
             inventory.ConsumeEquippedItem();
             goCandles[index].SetActive(true);
             iCandleSlots[index].gameObject.SetActive(false);
+
+            AudioManager.instance.PlaySFX(AudioManager.instance.sfxPut);
         }
     }
 
@@ -76,6 +78,8 @@ public class Cake : MonoBehaviour
             {
                 inflating = true;
             }
+
+            AudioManager.instance.PlaySFX(AudioManager.instance.sfxIgnite).volume = 0.6f;
         }
     }
 }

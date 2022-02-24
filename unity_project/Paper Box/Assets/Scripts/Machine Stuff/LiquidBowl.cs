@@ -53,6 +53,7 @@ public class LiquidBowl : MonoBehaviour
                 FillChanged.Invoke();
             }
         }
-        
+
+        AudioManager.instance.PlaySFX(AudioManager.instance.sfxWater);
     }
 }
