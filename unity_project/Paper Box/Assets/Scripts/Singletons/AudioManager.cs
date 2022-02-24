@@ -67,9 +67,12 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource PlaySFX(AudioClip clip, Vector3 globalPosition)
     {
-        AudioSource ass = PlaySFX(clip);
-        ass.spatialBlend = 1.0f;
+        GameObject sfx = Instantiate(prefabSFX, transform);
+        AudioSource ass = sfx.GetComponent<AudioSource>();
         ass.transform.position = globalPosition;
+        ass.spatialBlend = 1.0f;
+        ass.clip = clip;
+        ass.Play();
         return ass;
     }
 }
