@@ -9,7 +9,7 @@ public class EscapeCube : MonoBehaviour
     [SerializeField] private Interactable[] interactables;
     [SerializeField] private GameObject[] bones;
     [SerializeField] private Transform cubeTransform;
-
+    
     [SerializeField] private float posY;
     [SerializeField] private float offsetYMax;
     [SerializeField] private float rotateSpeed;
@@ -55,8 +55,13 @@ public class EscapeCube : MonoBehaviour
             placedCount++;
             if (placedCount == 6)
             {
-                // TODO: win the game?
+                Invoke("CompleteGame", 2);
             }
         }
+    }
+
+    private void CompleteGame()
+    {
+        Game.instance.CompleteGame();
     }
 }

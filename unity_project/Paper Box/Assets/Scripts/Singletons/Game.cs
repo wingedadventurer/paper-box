@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Game : MonoBehaviour
 {
     public GameObject ui;
-    public GameObject panelGame, panelInventory, panelPause;
+    public GameObject panelGame, panelInventory, panelPause, panelComplete;
+    public Text textPlaytime;
 
     private bool paused;
 
@@ -17,6 +18,8 @@ public class Game : MonoBehaviour
     [SerializeField] private GameObject goPlayer;
 
     public static Game instance;
+
+    private float playtime;
 
     private void Awake()
     {
@@ -33,6 +36,7 @@ public class Game : MonoBehaviour
 
         panelInventory.SetActive(false);
         panelPause.SetActive(false);
+        panelComplete.SetActive(false);
         SetPaused(false);
         LockMouse(true);
 
@@ -91,6 +95,8 @@ public class Game : MonoBehaviour
                 panelPause.SetActive(paused);
             }
         }
+
+        playtime += Time.deltaTime;
     }
 
     public void OnInventoryItemSelected(DataItem data)
@@ -138,6 +144,33 @@ public class Game : MonoBehaviour
         SetPaused(!paused);
         LockMouse(!paused);
         panelPause.SetActive(paused);
+    }
+
+    public void CompleteGame()
+    {
+        SetPaused(true);
+        LockMouse(false);
+        panelComplete.SetActive(true);
+
+        int seconds = (int)(playtime);
+        int hours = seconds / 3600;
+        seconds %= 3600;
+        int minutes = seconds / 60;
+        seconds %= 60;
+
+        string s = "";
+        if (hours > 0)
+        {
+            s += hours.ToString() + "h ";
+            s += minutes.ToString() + "m ";
+        }
+        else if (minutes > 0)
+        {
+            s += minutes.ToString() + "m ";
+        }
+        s += seconds.ToString() + "s";
+
+        textPlaytime.text = "TIME\n" + s;
     }
 
     public void EndGame()
