@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
 {
     public GameObject prefabUIItem;
     public GameObject goContainer;
+    public GameObject panelInventory;
     public Text textItemName;
     public DataItem dataItemEmpty;
     public List<DataItem> initialItems = new List<DataItem>();

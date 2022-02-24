@@ -5,8 +5,13 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    public bool debug;
+
     public GameObject ui;
-    public GameObject panelGame, panelInventory, panelPause, panelComplete;
+    public Panel panelGame;
+    public Panel panelInventory;
+    public Panel panelPause;
+    public Panel panelComplete;
     public Text textPlaytime;
 
     private bool paused;
@@ -21,6 +26,8 @@ public class Game : MonoBehaviour
 
     private float playtime;
 
+    private bool completed;
+
     private void Awake()
     {
         instance = this;
@@ -34,9 +41,9 @@ public class Game : MonoBehaviour
         crosshair = FindObjectOfType<Crosshair>();
         interacting = Interacting.instance;
 
-        panelInventory.SetActive(false);
-        panelPause.SetActive(false);
-        panelComplete.SetActive(false);
+        panelInventory.SetVisible(false, true);
+        panelPause.SetVisible(false, true);
+        panelComplete.SetVisible(false, true);
         SetPaused(false);
         LockMouse(true);
 
@@ -55,44 +62,46 @@ public class Game : MonoBehaviour
     void Update()
     {
         // INVENTORY
-        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetMouseButtonDown(1) && !completed)
         {
-            if (!panelPause.activeSelf)
+            if (!panelPause.visible)
             {
                 if (inventory.GetEquippedItem())
                 {
                     inventory.ClearEquippedItem();
-                    //crosshair.SetEquipped(false); // TODO: use events
                 }
                 else
                 {
                     SetPaused(!paused);
                     LockMouse(!paused);
-                    panelInventory.SetActive(paused);
+                    panelInventory.SetVisible(paused);
                 }
             }
         }
 
         // DEBUG: TELEPORTING
-        if (Input.GetKeyDown(KeyCode.Alpha1)) { PlayerTeleporter.instance.TeleportToRoom(0); }
-        if (Input.GetKeyDown(KeyCode.Alpha2)) { PlayerTeleporter.instance.TeleportToRoom(1); }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) { PlayerTeleporter.instance.TeleportToRoom(2); }
-        if (Input.GetKeyDown(KeyCode.Alpha4)) { PlayerTeleporter.instance.TeleportToRoom(3); }
-        if (Input.GetKeyDown(KeyCode.Alpha5)) { PlayerTeleporter.instance.TeleportToRoom(4); }
-        if (Input.GetKeyDown(KeyCode.Alpha6)) { PlayerTeleporter.instance.TeleportToRoom(5); }
+        if (debug)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1)) { PlayerTeleporter.instance.TeleportToRoom(0); }
+            if (Input.GetKeyDown(KeyCode.Alpha2)) { PlayerTeleporter.instance.TeleportToRoom(1); }
+            if (Input.GetKeyDown(KeyCode.Alpha3)) { PlayerTeleporter.instance.TeleportToRoom(2); }
+            if (Input.GetKeyDown(KeyCode.Alpha4)) { PlayerTeleporter.instance.TeleportToRoom(3); }
+            if (Input.GetKeyDown(KeyCode.Alpha5)) { PlayerTeleporter.instance.TeleportToRoom(4); }
+            if (Input.GetKeyDown(KeyCode.Alpha6)) { PlayerTeleporter.instance.TeleportToRoom(5); }
+        }
 
         // PAUSE
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !completed)
         {
             SetPaused(!paused);
             LockMouse(!paused);
-            if (panelInventory.activeSelf)
+            if (panelInventory.visible)
             {
-                panelInventory.SetActive(false);
+                panelInventory.SetVisible(false);
             }
             else
             {
-                panelPause.SetActive(paused);
+                panelPause.SetVisible(paused);
             }
         }
 
@@ -108,7 +117,7 @@ public class Game : MonoBehaviour
     {
         paused = value;
 
-        panelGame.SetActive(!paused);
+        panelGame.SetVisible(!paused);
 
         foreach (Movement o in FindObjectsOfType<Movement>())
         {
@@ -120,7 +129,6 @@ public class Game : MonoBehaviour
         }
         foreach (Interacting o in FindObjectsOfType<Interacting>())
         {
-            //o.active = !paused;
             o.enabled = !paused;
         }
 
@@ -136,21 +144,23 @@ public class Game : MonoBehaviour
     {
         SetPaused(false);
         LockMouse(true);
-        panelInventory.SetActive(false);
+        panelInventory.SetVisible(false);
     }
 
     public void ResumeGame()
     {
         SetPaused(!paused);
         LockMouse(!paused);
-        panelPause.SetActive(paused);
+        panelPause.SetVisible(paused);
     }
 
     public void CompleteGame()
     {
+        completed = true;
         SetPaused(true);
         LockMouse(false);
-        panelComplete.SetActive(true);
+        panelComplete.SetVisible(true);
+        panelGame.SetVisible(false);
 
         int seconds = (int)(playtime);
         int hours = seconds / 3600;
