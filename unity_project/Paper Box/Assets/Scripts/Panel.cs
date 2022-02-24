@@ -27,9 +27,20 @@ public class Panel : MonoBehaviour
         cg.alpha = Mathf.MoveTowards(cg.alpha, visible ? 1 : 0, fadeSpeed * Time.unscaledDeltaTime);
     }
 
+    public void SetVisible(bool value)
+    {
+        visible = value;
+        cg.interactable = visible;
+        cg.blocksRaycasts = visible;
+    }
+
     public void SetVisible(bool value, bool fast = false)
     {
         visible = value;
+        if (fast)
+        {
+            cg.alpha = visible ? 1 : 0;
+        }
         cg.interactable = visible;
         cg.blocksRaycasts = visible;
     }

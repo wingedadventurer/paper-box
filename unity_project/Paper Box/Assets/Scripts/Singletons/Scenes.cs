@@ -73,6 +73,7 @@ public class Scenes : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("quit");
+
         Application.Quit();
     }
 
