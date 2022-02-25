@@ -14,6 +14,7 @@ public class Game : MonoBehaviour
     public Panel panelComplete;
     public Text textPlaytime;
     public Text textFPS;
+    public Clock clock;
 
     private bool paused;
 
@@ -109,6 +110,8 @@ public class Game : MonoBehaviour
         }
 
         playtime += Time.deltaTime;
+
+        clock.SetTime(playtime);
     }
 
     public void OnInventoryItemSelected(DataItem data)
