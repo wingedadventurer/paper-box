@@ -5,16 +5,17 @@ using UnityEngine;
 public class ScatteredButtons : MonoBehaviour
 {
     public Animation anim;
-    public Material matGreen;
+    public Material matOn;
     public GameButton[] buttons;
-    public MeshRenderer[] mrs;
+    public MeshRenderer[] mrLeds;
 
     private int count;
 
     public void OnButtonPressed(int index)
     {
-        mrs[index].sharedMaterial = matGreen;
-        buttons[index].toggle = true;   
+        Material[] mats = mrLeds[index].sharedMaterials;
+        mats[1] = matOn;
+        mrLeds[index].sharedMaterials = mats;
         buttons[index].SetInteractable(false);
 
         count++;
